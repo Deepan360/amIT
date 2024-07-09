@@ -9,7 +9,7 @@
 /* Apply default styles to all elements */
 html, body {
     font-family: Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 100;
+  
     margin: 0;
     padding: 0;
     color: #666666;
@@ -42,6 +42,14 @@ a:hover {
     z-index: 1000; 
 }
 
+li.point{
+    width: 700px;
+   
+}
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Adjust opacity and color as needed */
+}
 /* Navbar link styling */
 .navbar-nav .nav-link {
     position: relative;
@@ -218,9 +226,10 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for circle */
 }
 
-.chart {
+.chart ul {
     list-style: none;
     padding: 0;
+    justify-content: center;
 }
 
 .point {
@@ -251,7 +260,8 @@ a:hover {
 }
 
 .content {
-    flex: 1;
+    flex: 0 0 1;
+  
 }
 
 .content h5 {
@@ -265,5 +275,105 @@ a:hover {
     color: #666666 !important; /* Text color for point content */
     margin: 0;
 }
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: #000000 !important;
+    color: #838383;
+    /* Grey background color */
+}
+
+/* Hero Section Styles */
 
 
+.hero {
+    position: relative;
+    background: #ffffff;
+    color: rgb(26, 26, 26);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 4.5rem;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+}
+
+.hero img {
+    max-width: 150px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+:root {
+    --color: #c54746;
+}
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background-color: var(--color);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -58vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.waves::before {
+    border-radius: 44%;
+    background: rgba(51, 51, 51, 1);
+    animation: waves 8s linear infinite;
+}
+
+.waves::after {
+    border-radius: 44%;
+    background: rgba(51, 51, 51, 0.5);
+    animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
