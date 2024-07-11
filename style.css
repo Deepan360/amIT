@@ -316,10 +316,10 @@ li.point{
 }
 
 .hero h2 {
-    font-size: 48px;
+    font-size: 52px;
     margin: 10px 0;
     color: #fafafa;
-   
+   font-weight: 600;
     z-index: 3;
     /* Ensure the heading is on top */
 }
