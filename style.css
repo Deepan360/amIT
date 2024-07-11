@@ -287,7 +287,23 @@ li.point{
 }
 
 /* Hero Section Styles */
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .waves {
+        height: 300px;
+        /* Adjust height for smaller screens */
+    }
 
+    .waves::before,
+    .waves::after {
+        width: 200vw;
+        /* Adjust width for smaller screens */
+        height: 200vw;
+        /* Adjust height for smaller screens */
+        top: -38vw;
+        /* Adjust top position for smaller screens */
+    }
+}
 :root {
     --color: #c54746;
 }
@@ -319,7 +335,7 @@ li.point{
     font-size: 52px;
     margin: 10px 0;
     color: #fafafa;
-   font-weight: 600;
+   font-weight: 500;
     z-index: 3;
     /* Ensure the heading is on top */
 }
@@ -379,5 +395,43 @@ background: rgba(51, 51, 51, 0.5);
 
     100% {
         transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+/* Media query for smaller screens */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #333333;
+        /* Adjust navbar background for contrast */
+        padding: 15px;
+        /* Add padding for better touch target */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        /* Ensure full width for dropdown on mobile */
+        text-align: center;
+        /* Center align items */
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        /* Display block for full width */
+        margin-bottom: 10px;
+        /* Add spacing between items */
+    }
+
+    .waves {
+        height: 300px;
+        /* Adjust height for smaller screens */
+    }
+
+    .waves::before,
+    .waves::after {
+        width: 200vw;
+        /* Adjust width for smaller screens */
+        height: 200vw;
+        /* Adjust height for smaller screens */
+        top: -38vw;
+        /* Adjust top position for smaller screens */
     }
 }
