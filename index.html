@@ -21,7 +21,7 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body >
 <header>
    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
         <div class="container">
@@ -266,10 +266,21 @@
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        AOS.init();
-    });
-    
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth > 768) {
+        AOS.init({
+            duration: 800,
+            delay: 200,
+            offset: 100
+        });
+    } else {
+        AOS.init({
+            disable: 'mobile', // Disable animations on mobile devices
+            duration: 0,       // Set duration to 0 for immediate appearance
+        });
+    }
+});
+
 </script>
 
 <script>
