@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -129,23 +129,25 @@
         </div>
     </nav>
 
-    <div class="hero">
-        <a class="image-fluid" href="#">
-            <img src="./assets/images/AMITLogo.png" alt="AMIT Logo" class="animate__animated animate__fadeInDown">
-        </a>
-        <h2 class="animate__animated animate__fadeInLeft">Welcome to amIT</h2>
-    </br>
-    <div> <p class="animate__animated animate__fadeInRight">Innovating the Future, Today.</p></div>
-       
-        <div class="waves"></div>
-    </div>
+<div class="hero">
+    <a class="image-fluid"   href="#">
+        <img src="./assets/images/AMITLogo.png" alt="AMIT Logo" data-aos="fade-down" class="animate__animated animate__fadeInDown">
+    </a>
+    <h2 class="animate__animated animate__fadeInLeft" data-aos="fade-left" data-aos-delay="3s" >Welcome to <span style="font-style: italic;color: #c54746;">amIT</span></h2>
+    <p class="animate__animated animate__fadeInRight" data-aos="fade-right" >Innovating the Future, Today.</p>
+    <div class="waves"></div>
+</div>
+
+
+
+
 </header>
     <main >
 
    
 
         
-        <div class="container-fluid bg-light py-5 text-white ">
+        <div class="container-fluid bg-light py-5 text-white " data-aos="fade-up" data-aos-delay="200">
             <div class="container card py-3  box-shadow-5">
             <h2 class="text-amit text-center animate__animated animate__fadeInDown">About Us</h2>
             <hr class="my-4 animate__animated animate__fadeInLeft">
@@ -153,60 +155,62 @@
             <p class="mb-4 txt_content animate__animated animate__fadeInUp">During the turbulent global market, we help our customers with cost-effective, high-quality solutions, especially to Small and Medium Enterprises. Our IT Consulting Division practices a proven approach that helps our customers acquire the best talents and assists the IT Staffs to deliver high-quality services.</p>
             <p class="mb-4 txt_content animate__animated animate__fadeInUp">AGS pioneers in Quality to visualize and establish standards in improving Software Quality and promoting the concept Quality As A Service (QAAS) which helps to reduce higher costs in maintenance of mission-critical applications.</p>
         </div></div>
-        <div class="container mt-4 mb-4  justify-content-center">
-            <div class="center-heading">
-                <h4>We at <span class="text-amit">AGS</span>, follow <span class="text-amit">5P’s</span> to our clients:</h4>
+<div class="container">
+
+<div class=" containers-d mt-4 mb-4 r">
+    <div class="center-heading">
+        <h4>We at <span class="text-amit">AGS</span>, follow <span class="text-amit">5P’s</span> to our clients:</h4>
+    </div>
+    <ul class="chart">
+        <li class="point point-1" data-aos="fade-right" data-aos-delay="100">
+            <div class="icon">
+                <i class="fas fa-clock"></i>
             </div>
-            <ul class="chart">
-                <li class="point point-1 ">
-                    <div class="icon">
-                        <i class="fas fa-clock"></i> <!-- Example icon for Period -->
-                    </div>
-                    <div class="content">
-                        <h5>Period</h5>
-                        <p>Yes, we have time to LISTEN to your needs..!</p>
-                    </div>
-                </li>
-                <li class="point point-2">
-                    <div class="icon">
-                        <i class="fas fa-heartbeat"></i> <!-- Example icon for Persistence -->
-                    </div>
-                    <div class="content">
-                        <h5>Persistence</h5>
-                        <p>Yes, we have a perseverance to UNDERSTAND your problems/concerns/issues..!</p>
-                    </div>
-                </li>
-                <li class="point point-3">
-                    <div class="icon">
-                        <i class="fas fa-users"></i> <!-- Example icon for Players -->
-                    </div>
-                    <div class="content">
-                        <h5>Players</h5>
-                        <p>Yes, we have PERFORMERS to nurture the system/product what we understand from you..!</p>
-                    </div>
-                </li>
-                <li class="point point-4">
-                    <div class="icon">
-                        <i class="fas fa-tasks"></i> <!-- Example icon for Provide -->
-                    </div>
-                    <div class="content">
-                        <h5>Provide</h5>
-                        <p>Yes, we have responsible deliverable resources to IMPLEMENT the systems..!</p>
-                    </div>
-                </li>
-                <li class="point point-5">
-                    <div class="icon">
-                        <i class="fas fa-chart-line"></i> <!-- Example icon for Profit -->
-                    </div>
-                    <div class="content">
-                        <h5>Profit</h5>
-                        <p>Yes, we have an impulse to bring SUCCESS to you..!</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
-        
+            <div class="content">
+                <h5>Period</h5>
+                <p>Yes, we have time to LISTEN to your needs..!</p>
+            </div>
+        </li>
+        <li class="point point-2" data-aos="fade-right" data-aos-delay="200">
+            <div class="icon">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="content">
+                <h5>Persistence</h5>
+                <p>Yes, we have a perseverance to UNDERSTAND your problems/concerns/issues..!</p>
+            </div>
+        </li>
+        <li class="point point-3" data-aos="fade-right" data-aos-delay="300">
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="content">
+                <h5>Players</h5>
+                <p>Yes, we have PERFORMERS to nurture the system/product what we understand from you..!</p>
+            </div>
+        </li>
+        <li class="point point-4" data-aos="fade-right" data-aos-delay="400">
+            <div class="icon">
+                <i class="fas fa-tasks"></i>
+            </div>
+            <div class="content">
+                <h5>Provide</h5>
+                <p>Yes, we have responsible deliverable resources to IMPLEMENT the systems..!</p>
+            </div>
+        </li>
+        <li class="point point-5" data-aos="fade-right" data-aos-delay="500">
+            <div class="icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="content">
+                <h5>Profit</h5>
+                <p>Yes, we have an impulse to bring SUCCESS to you..!</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</div>
         
         
         
@@ -229,15 +233,34 @@
         </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            easing: 'ease',
+            duration: 400,
+            delay: 0,
+            disable: 'mobile'
+        });
+    </script>
+
  <script>
 window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 0) {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 });
+
 
  </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
