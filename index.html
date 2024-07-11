@@ -4,7 +4,6 @@
     <title>amIT Global Solution</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="assets/images/amiticon.png" type="image/x-icon">
@@ -14,17 +13,19 @@
     
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Custom CSS -->
-    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header>
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand active" href="index.html">
                 <img src="./assets/images/amiticon.png" alt="AMIT Icon">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
@@ -33,9 +34,7 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./about.html" aria-current="page">About Us</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">IT Service</a>
                         <div class="sub-nav-item">
@@ -131,21 +130,19 @@
         </div>
     </nav>
 
-<div class="hero">
-    <a class="image-fluid"   href="#">
-        <img src="./assets/images/AMITLogo.png" alt="AMIT Logo" data-aos="fade-down" class="animate__animated animate__fadeInDown">
-    </a>
-    <h2 class="animate__animated animate__fadeInLeft"  data-aos="fade-left" data-aos-delay="3s" >Welcome to <span style="font-style: italic;color: #c54746;">amIT</span></h2>
-    <p class="animate__animated animate__fadeInRight" data-aos="fade-right" >Innovating the Future, Today.</p>
-    <div class="waves"></div>
-</div>
-
-
-
+    <div class="hero text-center">
+        <a class="image-fluid" href="#">
+            <img src="./assets/images/AMITLogo.png" alt="AMIT Logo" data-aos="fade-down" class="animate__animated animate__fadeInDown img-fluid">
+        </a>
+        <h2 class="animate__animated animate__fadeInLeft" data-aos="fade-left" data-aos-delay="3s">Welcome to <span style="font-style: italic;color: #c54746;">amIT</span></h2>
+        <p class="animate__animated animate__fadeInRight" data-aos="fade-right">Innovating the Future, Today.</p>
+        <div class="waves"></div>
+    </div>
 
 </header>
-    <main >
-        <div class="container-fluid bg-light py-5 text-white " data-aos="fade-up" data-aos-delay="400">
+
+<main>
+        <div class="container-fluid  py-5 text-white " data-aos="fade-up" data-aos-delay="400">
             <div class="container card py-3  box-shadow-5">
             <h2 class="text-amit text-center animate__animated animate__fadeInDown">About Us</h2>
             <hr class="my-4 animate__animated animate__fadeInLeft">
@@ -153,103 +150,131 @@
             <p class="mb-4 txt_content animate__animated animate__fadeInUp">During the turbulent global market, we help our customers with cost-effective, high-quality solutions, especially to Small and Medium Enterprises. Our IT Consulting Division practices a proven approach that helps our customers acquire the best talents and assists the IT Staffs to deliver high-quality services.</p>
             <p class="mb-4 txt_content animate__animated animate__fadeInUp">AGS pioneers in Quality to visualize and establish standards in improving Software Quality and promoting the concept Quality As A Service (QAAS) which helps to reduce higher costs in maintenance of mission-critical applications.</p>
         </div></div>
-<div class="container-fluid">
-
-<div class=" containers-d mt-4 mb-4 r">
-    <div class="center-heading">
-        <h4>We at <span class="text-amit">AGS</span>, follow <span class="text-amit">5P’s</span> to our clients:</h4>
+    <div class="container-fluid bg-amit py-5 text-dark " data-aos="fade-up" data-aos-delay="100">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">The 5 P's of <span style="color:#c54746">amIT</span></h2>
+            <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+                <li class="point point-1" data-aos="fade-right" data-aos-delay="100">
+                    <div class="icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Potential</h5>
+                        <p>We identify the potential for our client needs!</p>
+                    </div>
+                </li>
+                <li class="point point-2" data-aos="fade-left" data-aos-delay="200">
+                    <div class="icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Proficiency</h5>
+                        <p>We are proficient enough to serve!</p>
+                    </div>
+                </li>
+                <li class="point point-3" data-aos="fade-right" data-aos-delay="300">
+                    <div class="icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Professional</h5>
+                        <p>We provide professional support at every step!</p>
+                    </div>
+                </li>
+                <li class="point point-4" data-aos="fade-left" data-aos-delay="400">
+                    <div class="icon">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Personnel</h5>
+                        <p>Our team consists of skilled personnel!</p>
+                    </div>
+                </li>
+                <li class="point point-5" data-aos="fade-right" data-aos-delay="500">
+                    <div class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Presence</h5>
+                        <p>We are always there when you need us!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <ul class="chart">
-        <li class="point point-1" data-aos="fade-right" data-aos-delay="100">
-            <div class="icon">
-                <i class="fas fa-clock"></i>
-            </div>
-            <div class="content">
-                <h5>Period</h5>
-                <p>Yes, we have time to LISTEN to your needs..!</p>
-            </div>
-        </li>
-        <li class="point point-2" data-aos="fade-right" data-aos-delay="200">
-            <div class="icon">
-                <i class="fas fa-heartbeat"></i>
-            </div>
-            <div class="content">
-                <h5>Persistence</h5>
-                <p>Yes, we have a perseverance to UNDERSTAND your problems/concerns/issues..!</p>
-            </div>
-        </li>
-        <li class="point point-3" data-aos="fade-right" data-aos-delay="300">
-            <div class="icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="content">
-                <h5>Players</h5>
-                <p>Yes, we have PERFORMERS to nurture the system/product what we understand from you..!</p>
-            </div>
-        </li>
-        <li class="point point-4" data-aos="fade-right" data-aos-delay="400">
-            <div class="icon">
-                <i class="fas fa-tasks"></i>
-            </div>
-            <div class="content">
-                <h5>Provide</h5>
-                <p>Yes, we have responsible deliverable resources to IMPLEMENT the systems..!</p>
-            </div>
-        </li>
-        <li class="point point-5" data-aos="fade-right" data-aos-delay="500">
-            <div class="icon">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="content">
-                <h5>Profit</h5>
-                <p>Yes, we have an impulse to bring SUCCESS to you..!</p>
-            </div>
-        </li>
-    </ul>
-</div>
 
-</div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </main>
-    
-    <footer class="bg-dark text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p class="text-center">Copyright © 2024 amIT Global Solution. All Rights Reserved.</p>
+    <div class="container py-5">
+        <div class="row">
+                        <div class="col-md-6 mb-4">
+                <div class="card bg-light box-shadow-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-amit">IT Services</h5>
+                        <p class="card-text">IT Services refer to the proactive management of an organization's IT infrastructure and end-user systems by a third-party service provider, ensuring optimal performance, security, and scalability.</p>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-light box-shadow-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-amit">Professional Services</h5>
+                        <p class="card-text">Professional Services are specialized consulting services that help businesses optimize their processes, enhance productivity, and achieve their goals through expert advice and customized solutions.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+    </div>
+</main>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope"></i> info@amit.com</li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" class="text-white"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Subscribe</h5>
+                <form>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-outline-light" type="button"><i class="fas fa-envelope"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap JS and Popper.js v5.3.2 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 
-    <!-- AOS Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+<!-- jQuery v3.6.0 (optional for Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        AOS.init({
-            easing: 'ease',
-            duration: 400,
-            delay: 0,
-            disable: 'mobile'
-        });
-    </script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
+    
+</script>
 
- <script>
+<script>
+ 
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -259,9 +284,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
- </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</script>
 </body>
 </html>

@@ -36,6 +36,19 @@ a:hover {
     width: 100%;
     z-index: 1000; 
 }
+ @media (max-width: 768px) {
+
+     /* Disable animations on mobile */
+     [data-aos],
+     [data-aos-id] {
+         opacity: 1 !important;
+         visibility: visible !important;
+     }
+ }
+.bg-amit{
+    background-color: #bbbbbb;
+}
+
 
 li.point{
     width: 700px;
@@ -203,10 +216,7 @@ li.point{
     color: white;
 }
 
-.center-heading {
-    text-align: center;
-    margin-bottom: 30px;
-}
+
 
 .big-circle {
     width: 120px;
