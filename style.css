@@ -12,7 +12,7 @@ html, body {
   
     margin: 0;
     padding: 0;
-    color: #666666;
+color: #333;
 }
 
 
@@ -508,28 +508,63 @@ background: rgba(51, 51, 51, 0.5);
   }
 .testimonial-card {
     width: 100%;
-  
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    height: auto;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border: none;
-    border-radius: 10px;
+    margin: 15px;
+    border-radius: 20px;
+    /* More subtle rounded edges */
     display: flex;
-    background-color: #e2e2e2;
+    background-color: #ffffff;
+    /* White background for contrast */
     flex-direction: column;
-    gap: 3px;
+    gap: 10px;
+    /* Increased gap for better spacing */
     justify-content: center;
-   
+    border-left: 5px solid #c54746;
+    /* Left border for emphasis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
 }
 
 .testimonial-text {
     font-size: 16px;
-    margin-bottom: 15px;
+    /* Slightly larger text for readability */
+    margin: 2px;
+    /* Adjusted margins */
+    color: #333;
+    /* Darker text color for better readability */
 }
 
 .testimonial-author {
     font-weight: bold;
     color: #555;
+    text-align: right;
+    /* Align author to the right */
+}
+
+/* Adjustments for icon alignment */
+.d-flex.align-items-start {
+    display: flex;
+    align-items: center;
+    /* Center icon and text vertically */
 }
 
 .carousel-item {
     transition: transform 2s ease, opacity .5s ease-out;
+}
+
+.color-amit {
+    color: #c54746;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Additional space below the title */
 }
