@@ -568,3 +568,93 @@ background: rgba(51, 51, 51, 0.5);
     margin-bottom: 20px;
     /* Additional space below the title */
 }
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .accordion-button {
+        font-size: 14px;
+        /* Further adjust for very small screens */
+    }
+
+    .accordion-body {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+}
+.accordion-button {
+    background-color: #f8f9fa;
+    /* Default background */
+    color: #333;
+    /* Default text color */
+    border: 1px solid #ced4da;
+    /* Default border color */
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 10px rgba(197, 71, 70, 0.8);
+    /* Custom red shadow */
+    outline: none;
+    /* Remove default outline */
+    border-color: #c54746;
+    /* Change border color on focus */
+}
+
+.accordion-button.active {
+    background-color: #e9ecef;
+    /* Active background color */
+    border-color: #c54746;
+    /* Active border color */
+}
+
+.accordion-button:not(.active):hover {
+    background-color: #f1f1f1;
+    /* Hover background color */
+}
+.footer-background {
+    background-image: url('./assets/images/deefoo.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #ffffff;
+    /* Ensure this color is readable */
+}
+
+.footer-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Make this more transparent */
+    z-index: 1;
+    /* Ensure overlay is above background */
+}
+
+.footer-background .container {
+    position: relative;
+    z-index: 2;
+    /* Ensure content is above overlay */
+}
+.footer-background .container h5,
+.footer-background .container a {
+    text-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.7);
+    /* Add a shadow effect */
+}
+.text-grey{
+    color: #8f8f8f;
+}
