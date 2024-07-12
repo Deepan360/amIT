@@ -216,12 +216,14 @@ li.point{
 /* Ensure sub-navigation stays open when hovering over list items */
 .navbar-nav .sub-nav-item ul li:hover {
     background-color: #f1f1f1;  
+    border-left: 6px solid black;
     color: #c54746;
 }
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item:hover {
     background-color: #c54746;
+    border-left: 6px solid black;
     color: #fff;
     text-decoration: none;
 }
@@ -377,7 +379,7 @@ li.point{
         /* Adjust height for smaller screens */
         top: -38vw;
         /* Adjust top position for smaller screens */
-    }
+    }   
 }
 :root {
     --color: #c54746;
