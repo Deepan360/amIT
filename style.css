@@ -354,7 +354,14 @@ li.point{
     color: #ffffff !important;
     /* Grey background color */
 }
- Hero Section Styles */
+  .img-shadow {
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+      transition: filter 0.3s ease-in-out;
+  }
+
+  .img-shadow:hover {
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+  }
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .waves {
@@ -477,7 +484,7 @@ background: rgba(51, 51, 51, 0.5);
     .navbar-nav {
         width: 100%;
         /* Ensure full width for dropdown on mobile */
-        text-align: center;
+        text-align: end;
         /* Center align items */
     }
 
@@ -487,7 +494,34 @@ background: rgba(51, 51, 51, 0.5);
         margin-bottom: 10px;
         /* Add spacing between items */
     }
+.navbar-nav .sub-nav-item {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-left: 0px;
+    /* Ensure there's a gap between main and sub-nav */
+    width: 200px;
+    /* Adjust the width as needed */
+    opacity: 0;
+    /* Initially hide with opacity */
+    visibility: hidden;
+    /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    /* Smooth opacity transition */
+}
 
+
+
+
+/* Sub-navigation list item styling */
+.navbar-nav .sub-nav-item ul li {
+    text-align: center;
+
+
+}
     .waves {
         height: 200px;
         /* Adjust height for smaller screens */
