@@ -354,12 +354,11 @@ li.point{
     color: #ffffff !important;
     /* Grey background color */
 }
-
-/* Hero Section Styles */
+ Hero Section Styles */
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .waves {
-        height: 300px;
+        height: 100px;
         /* Adjust height for smaller screens */
     }
 
@@ -367,7 +366,7 @@ li.point{
     .waves::after {
         width: 200vw;
         /* Adjust width for smaller screens */
-        height: 200vw;
+        height: 100vw;
         /* Adjust height for smaller screens */
         top: -38vw;
         /* Adjust top position for smaller screens */
@@ -490,7 +489,7 @@ background: rgba(51, 51, 51, 0.5);
     }
 
     .waves {
-        height: 300px;
+        height: 200px;
         /* Adjust height for smaller screens */
     }
 

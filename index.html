@@ -634,8 +634,7 @@
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
- // Initialize AOS animations conditionally based on window width
-      document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth > 768) {
           AOS.init({
             duration: 800,
@@ -644,12 +643,13 @@
           });
         } else {
           AOS.init({
-            disable: "mobile", // Disable animations on mobile devices
+            duration: 400,
+            delay: 0,
+            offset: 0,
+            disable: "mobile" // Disable animations on mobile devices
           });
         }
       });
-
-
 </script>
 
 <script>
