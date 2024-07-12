@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Tabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add AOS CSS if using AOS animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Adjust if navbar height is different */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover, .sidebar ul li.active {
+    background-color: #ddd;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-tab {
+    display: none;
+}
+
+.content-tab.active {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Navbar content -->
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li data-target="content1" class="active">Topic 1</li>
+                <li data-target="content2">Topic 2</li>
+                <li data-target="content3">Topic 3</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="content1" class="content-tab active" data-aos="fade-up">
+                <h2>Topic 1</h2>
+                <p>This is the content for topic 1.</p>
+            </div>
+            <div id="content2" class="content-tab" data-aos="fade-up">
+                <h2>Topic 2</h2>
+                <p>This is the content for topic 2.</p>
+            </div>
+            <div id="content3" class="content-tab" data-aos="fade-up">
+                <h2>Topic 3</h2>
+                <p>This is the content for topic 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add AOS JS if using AOS animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS animations conditionally based on window width
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth > 768) {
+          AOS.init({
+            duration: 800,
+            delay: 200,
+            offset: 100,
+          });
+        } else {
+          AOS.init({
+            disable: "mobile", // Disable animations on mobile devices
+          });
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Tab navigation functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".sidebar ul li");
+        const contentTabs = document.querySelectorAll(".content-tab");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs
+            tabs.forEach((item) => item.classList.remove("active"));
+            // Add active class to clicked tab
+            tab.classList.add("active");
+
+            // Hide all content tabs
+            contentTabs.forEach((content) => content.classList.remove("active"));
+            // Show content tab corresponding to the clicked tab
+            const target = document.getElementById(tab.getAttribute("data-target"));
+            target.classList.add("active");
+          });
+        });
+      });
+    </script>
+</body>
+</html>
