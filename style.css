@@ -45,12 +45,70 @@ a:hover {
          visibility: visible !important;
      }
  }
-.bg-amit{
-    background-color: #919191;
-    color: #f1f1f1;
+.bg-amit {
+ background-color: rgba(51, 51, 51);
+    /* Set background color to black */
+    color: #d3d3d3;
+    /* Text color */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+    /* Optional: Add border radius for rounded corners */
+}
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
+.explore-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    /* Start below the card */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
+    /* Button text color */
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* Larger text for better visibility */
+    border: none;
+    /* No border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+    opacity: 0;
+    /* Hidden by default */
+    z-index: 1;
+    /* Ensure the button is above the overlay */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker semi-transparent black */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    /* Keep overlay below button */
+}
+
+.service-card:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.service-card:hover .explore-button {
+    transform: translate(-50%, 0);
+    /* Move button into view */
+    opacity: 1;
+    /* Show button on hover */
+}
 li.point{
     width: 700px;
    
@@ -658,4 +716,21 @@ background: rgba(51, 51, 51, 0.5);
 }
 .text-grey{
     color: #8f8f8f;
+}
+.img-fluid {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container's width */
+    height: auto;
+    /* Maintain the aspect ratio of the image */
+    display: block;
+    /* Ensure the image behaves like a block element */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    transition: transform 0.3s;
+    /* Add a transition for hover effect */
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the image on hover */
 }
