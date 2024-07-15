@@ -132,10 +132,13 @@ li.point{
     /* Adjust opacity and color as needed */
 }
 /* Navbar link styling */
-.navbar-nav .nav-link {
+.nav-link a{
+    font-weight: bold !important;
+}
+.navbar-nav .nav-link a {
     position: relative;
-    padding: 10px ;
-    font-variant: normal;
+    padding: 8px ;
+    font-weight: 400 !important;
     font-size: 16px;
     transition: all 0.3s ease;
 }
