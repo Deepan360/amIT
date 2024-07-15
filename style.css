@@ -4,19 +4,32 @@
 /* Color palette from logo */
 /* #8f8e8e,rgb(143,142,142)->its first color */
 /* #e2dddd,rgb(226,221,221)-->its second color */
-/* #c54746,rgb(197,71,70)--->its third color */
+/* #9B0000
+,rgb(197,71,70)--->its third color */
 
 /* Apply default styles to all elements */
 html, body {
-    font-family: Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Roboto', sans-serif;
   
     margin: 0;
     padding: 0;
 color: #333;
 }
+ .custom-navbar-bg {
+     background-color: #9B0000;
+     /* Or any other color you prefer */
+     color: #fff;
+     /* Adjust text color if needed */
+ }
 
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Specific styles for links */
 a {
@@ -133,7 +146,7 @@ li.point{
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: #9B0000;
     transition: all 0.3s ease;
 }
 
@@ -144,7 +157,7 @@ li.point{
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffffff !important;
+    color: #000000 !important;
     
     text-decoration: none;
 }
@@ -167,6 +180,7 @@ li.point{
 /* Display sub-navigation on hover */
 .navbar-nav .nav-item:hover .sub-nav-item {
     display: block;
+    width: max-content;
     opacity: 1; /* Show with full opacity */
     visibility: visible; /* Make visible */
     transition: opacity 0.3s ease, visibility 0s linear; /* Smooth transition */
@@ -176,6 +190,7 @@ li.point{
 /* Sub-navigation list styling */
 .navbar-nav .sub-nav-item ul {
     list-style: none;
+    
     padding: 0;
     margin: 0;
 }
@@ -183,7 +198,7 @@ li.point{
 /* Sub-navigation list item styling */
 .navbar-nav .sub-nav-item ul li {
     text-align: center;
-    padding:10px 20px;
+    padding:10px ;
     white-space: nowrap;
     transition: background-color 0.3s ease; /* Smooth background-color transition */
     font-size: 14px; /* Adjust font size for sub-menu items */
@@ -191,11 +206,13 @@ li.point{
     font-weight: 200;
 }
 .text-amit{
-    color: #c54746;
+    color: #9B0000
+;
 }
 /* Sub-navigation list item hover effect */
 .navbar-nav .sub-nav-item ul li:hover {
-    background-color: #c54746 !important; /* Light gray background on hover */
+    background-color: #9B0000
+!important; /* Light gray background on hover */
     color: #ffffff !important; /* Text color change on hover */
 }
 
@@ -217,12 +234,14 @@ li.point{
 .navbar-nav .sub-nav-item ul li:hover {
     background-color: #f1f1f1;  
     border-left: 6px solid black;
-    color: #c54746;
+    color: #9B0000
+;
 }
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item:hover {
-    background-color: #c54746;
+    background-color: #9B0000
+;
     border-left: 6px solid black;
     color: #fff;
     text-decoration: none;
@@ -283,7 +302,8 @@ li.point{
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: #c54746; /* Circle background color */
+    background-color: #9B0000
+; /* Circle background color */
     color: #fff; /* Circle text color */
     font-size: 36px;
     line-height: 120px;
@@ -318,7 +338,8 @@ li.point{
     line-height: 40px;
     border-radius: 50%;
     background-color: #e2dddd; /* Circle background color */
-    color: #c54746; /* Circle text color */
+    color: #9B0000
+; /* Circle text color */
     font-size: 18px;
     text-align: center;
     margin-right: 20px;
@@ -339,7 +360,8 @@ li.point{
     color: #333; /* Heading text color */
 }
 .content h5::first-letter{
-    color: #c54746;
+    color: #9B0000
+;
 }
 .content p {
     color: #666666 !important; /* Text color for point content */
@@ -382,47 +404,86 @@ li.point{
     }   
 }
 :root {
-    --color: #c54746;
+    --color: #9B0000
+;
 }
-
 .hero {
     position: relative;
-    background: #333333;
+    height: 100vh;
+    overflow: hidden;
     color: #ffffff;
-    height: 70vh;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+   height: 90%;
     text-align: center;
-    overflow: hidden;
-    z-index: 2;
-    /* Ensure the hero section is on top */
+   
+    /* Added padding for responsiveness */
+    z-index: 1;
+    /* Ensure content is above overlay */
 }
 
-.hero img {
-    max-width: 150px;
+.hero-content img {
+    max-width: 200px;
     margin-bottom: 20px;
-    position: relative;
-    z-index: 3;
-    /* Ensure the logo is on top */
 }
 
-.hero h2 {
-    font-size: 52px;
-    margin: 10px 0;
-    color: #fafafa;
-   font-weight: 500;
-    z-index: 3;
-    /* Ensure the heading is on top */
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.hero p {
-    font-size: 24px;
-    margin: 10px 0;
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+    background-color: #9B0000;
+    border-color: #9B0000;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    text-decoration: none;
     color: #ffffff;
-    z-index: 3;
-    /* Ensure the paragraph is on top */
+    /* Ensure text is white on button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.hero-content .btn-primary:hover {
+    background-color: #7a0000;
+    border-color: #7a0000;
+}
+
+/* Optional: Adding an overlay for better text visibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent black */
+    z-index: 0;
+    /* Behind content */
 }
 
 .waves {
@@ -553,7 +614,8 @@ background: rgba(51, 51, 51, 0.5);
   }
 
   .vision-mission h2 {
-      color: #c54746;
+      color: #9B0000
+;
       font-weight: bold;
       text-align: center;
       margin-bottom: 30px;
@@ -582,7 +644,8 @@ background: rgba(51, 51, 51, 0.5);
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       font-size: 18px;
-      color: #c54746;
+      color: #9B0000
+;
       position: absolute;
       left: 0;
       top: -1px;
@@ -616,7 +679,8 @@ background: rgba(51, 51, 51, 0.5);
     gap: 10px;
     /* Increased gap for better spacing */
     justify-content: center;
-    border-left: 5px solid #c54746;
+    border-left: 5px solid #9B0000
+;
     /* Left border for emphasis */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth hover effects */
@@ -657,7 +721,8 @@ background: rgba(51, 51, 51, 0.5);
 }
 
 .color-amit {
-    color: #c54746;
+    color: #9B0000
+;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -703,14 +768,16 @@ background: rgba(51, 51, 51, 0.5);
     /* Custom red shadow */
     outline: none !important;
     /* Remove default outline */
-    border-color: #c54746 !important;
+    border-color: #9B0000
+!important;
     /* Change border color on focus */
 }
 
 .accordion-button.active {
     background-color: #e9ecef !important;
     /* Active background color */
-    border-color: #c54746 !important;
+    border-color: #9B0000
+!important;
     /* Active border color */
 }
 
@@ -771,8 +838,95 @@ background: rgba(51, 51, 51, 0.5);
     /* Slightly enlarge the image on hover */
 }
 footer .fab:hover{
-color: #c54746;
+color: #9B0000
+;
 }
 .bg-black{
     background-color: #000;
+}
+.sidebar {
+    border-right: 2px solid #ddd;
+    padding-right: 20px;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    background: #f8f9fa;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    margin-bottom: 2px;
+}
+
+.sidebar ul li  {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+}
+
+.sidebar ul li  i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active
+{
+    background-color: #9B0000
+;
+    
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover{
+    background-color: #9B0000
+69;
+    color:#000000;
+}
+.contents {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.content-tab {
+    display: none;
+    /* Hide all content tabs by default */
+}
+
+.content-tab.active {
+    display: block;
+    /* Show active tab */
+}
+.it-section {
+    height: 100%;
+    /* Ensure it fills the container */
+    width: 100%;
+    background: url(./assets/illustration_and_gif/haze-exploring-virtual-reality-with-vr-headset-1.png) no-repeat center center;
+    background-size: 300% cover ;
+    /* Make the image larger */
+    animation: waveMotion 30s infinite alternate;
+    /* Adjust duration for the wave effect */
+}
+
+/* Keyframes for wave motion */
+@keyframes waveMotion {
+    0% {
+        transform: translateX(-10%) translateY(-10%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(10%) translateY(10%) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(-10%) translateY(-10%) rotate(-2deg);
+    }
 }

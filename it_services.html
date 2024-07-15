@@ -1,106 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>amIT Global Solution</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Content Tabs</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Add AOS CSS if using AOS animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-}
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
+    <link rel="shortcut icon" href="assets/images/amiticon.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-.navbar.scrolled {
-    background-color: #333;
-    color: #fff;
-}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
-.container {
-    display: flex;
-    margin-top: 60px; /* Adjust if navbar height is different */
-}
-
-.sidebar {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.sidebar ul li:hover, .sidebar ul li.active {
-    background-color: #ddd;
-}
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.content-tab {
-    display: none;
-}
-
-.content-tab.active {
-    display: block;
-}
-
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+        .heros {
+            height: 70vh;
+            background: url('./assets/images/office.png') no-repeat center center;
+            background-size: cover;
+        }
     </style>
 </head>
-<body>
-    <nav class="navbar">
-        <!-- Navbar content -->
-    </nav>
+<body >
+<header>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
+        <div class="container">
+            <a class="navbar-brand active" href="index.html">
+                <img src="./assets/images/amiticon.png" alt="AMIT Icon">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
 
-    <div class="container">
-        <div class="sidebar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">IT Service</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li href="it_services" >Application Development</li>
+                    <li href="it_services" >Quality As A Service</li>
+                    <li href="it_services" >Application Management</li>
+                    <li href="it_services" >Business Process Management</li>
+                    <li href="it_services" >Enterprise Solutions</li>
+                    <li href="it_services" >Web Technologies</li>
+                    <li href="it_services" >Enterprise Content Management</li>
+                    <li href="it_services" >Shared Services/Outsourcing</li>
+                    <li href="it_services" >Mobile Applications</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Professional Services</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Clients</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Products</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Careers</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                        <div class="sub-nav-item">
+                            <ul>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                                <li>Building The Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-phone"></i> &nbsp; Reach Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="tel:+123456789"><i class="fas fa-phone"></i>
+                                    Singapore</a>
+                                <a class="dropdown-item" href="tel:+987654321"><i class="fas fa-phone"></i>
+                                    Malaysia</a>
+                                <a class="dropdown-item" href="tel:+987654321"><i class="fas fa-phone"></i>
+                                    India(Cheenai)</a>
+                                     <a class="dropdown-item" href="tel:+987654321"><i class="fas fa-phone"></i>
+                                    India(Trichy)</a>
+                                     <a class="dropdown-item" href="tel:+987654321"><i class="fas fa-phone"></i>
+                                    Indonesia</a>
+                                     <a class="dropdown-item" href="tel:+987654321"><i class="fas fa-phone"></i>
+                                    USA</a>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="hero h-70 bg-amit " >
+      <div class="it-section" style="background: url(./assets/illustration_and_gif/haze-exploring-virtual-reality-with-vr-headset-1.png) no-repeat center ;object-fit: cover;">
+
+      </div>
+    </div>
+</header>
+<main>
+<div class="container mt-5 mb-5">
+  <div class="row">
+        <div class="col-md-4 sidebar">
             <ul>
-                <li data-target="content1" class="active">Topic 1</li>
-                <li data-target="content2">Topic 2</li>
-                <li data-target="content3">Topic 3</li>
+                <li data-target="content1" class="active "><i class="fas fa-cogs "></i>Application Development</li>
+                <li data-target="content2"><i class="fas fa-check-circle"></i>Quality As A Service</li>
+                <li data-target="content3"><i class="fas fa-tachometer-alt"></i>Application Management</li>
+                <li data-target="content4"><i class="fas fa-briefcase"></i>Business Process Management</li>
+                <li data-target="content5"><i class="fas fa-rocket"></i>Enterprise Solutions</li>
+                <li data-target="content6"><i class="fas fa-laptop-code"></i>Web Technologies</li>
+                <li data-target="content7"><i class="fas fa-archive"></i>Enterprise Content Mgmt</li>
+                <li data-target="content8"><i class="fas fa-share-alt"></i>Shared Services/Outsourcing</li>
+                <li data-target="content9"><i class="fas fa-mobile-alt"></i>Mobile Apps Development</li>
+                <li data-target="content10"><i class="fas fa-book"></i>e-Publishing</li>
             </ul>
         </div>
-        <div class="content">
+        <div class="col-md-8 contents">
             <div id="content1" class="content-tab active" data-aos="fade-up">
-                <h2>Topic 1</h2>
-                <p>This is the content for topic 1.</p>
+                <h2>Application Development</h2>
+                <p>This is the content for Application Development.</p>
             </div>
             <div id="content2" class="content-tab" data-aos="fade-up">
-                <h2>Topic 2</h2>
-                <p>This is the content for topic 2.</p>
+                <h2>Quality As A Service</h2>
+                <p>This is the content for Quality As A Service.</p>
             </div>
             <div id="content3" class="content-tab" data-aos="fade-up">
-                <h2>Topic 3</h2>
-                <p>This is the content for topic 3.</p>
+                <h2>Application Management</h2>
+                <p>This is the content for Application Management.</p>
+            </div>
+            <div id="content4" class="content-tab" data-aos="fade-up">
+                <h2>Business Process Management</h2>
+                <p>This is the content for Business Process Management.</p>
+            </div>
+            <div id="content5" class="content-tab" data-aos="fade-up">
+                <h2>Enterprise Solutions</h2>
+                <p>This is the content for Enterprise Solutions.</p>
+            </div>
+            <div id="content6" class="content-tab" data-aos="fade-up">
+                <h2>Web Technologies</h2>
+                <p>This is the content for Web Technologies.</p>
+            </div>
+            <div id="content7" class="content-tab" data-aos="fade-up">
+                <h2>Enterprise Content Mgmt</h2>
+                <p>This is the content for Enterprise Content Mgmt.</p>
+            </div>
+            <div id="content8" class="content-tab" data-aos="fade-up">
+                <h2>Shared Services/Outsourcing</h2>
+                <p>This is the content for Shared Services/Outsourcing.</p>
+            </div>
+            <div id="content9" class="content-tab" data-aos="fade-up">
+                <h2>Mobile Apps Development</h2>
+                <p>This is the content for Mobile Apps Development.</p>
+            </div>
+            <div id="content10" class="content-tab" data-aos="fade-up">
+                <h2>e-Publishing</h2>
+                <p>This is the content for e-Publishing.</p>
             </div>
         </div>
     </div>
+</div>
+</main>
+<footer class="bg-secondary py-4 footer-background" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-amit"><i class="fa fa-solid fa-desktop m-2"></i>IT Services</h5>
+                <ul class="list-unstyled text-grey">
+                    <li><a href="it_services_apps_develop.html" class="text-grey">Application Development</a></li>
+                    <li><a href="it_services_apps_quality.html" class="text-grey">Quality As A Service</a></li>
+                    <li><a href="it_services_apps_AM.html" class="text-grey">Application Management</a></li>
+                    <li><a href="it_services_apps_BPM.html" class="text-grey">Business Process Management</a></li>
+                    <li><a href="it_services_apps_Enterprise.html" class="text-grey">Enterprise Solutions</a></li>
+                    <li><a href="it_services_apps_webtechnologies.html" class="text-grey">Web Technologies</a></li>
+                    <li><a href="it_services_apps_ECM.html" class="text-grey">Enterprise Content Management</a></li>
+                    <li><a href="it_services_SSO.html" class="text-grey">Shared Services/Outsourcing</a></li>
+                    <li><a href="it_services_apps_MobileApps.html" class="text-grey">Mobile Applications</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-amit "><i class="fa fa-solid fa-briefcase m-2"></i>Professional Services</h5>
+                <ul class="list-unstyled text-grey">
+                    <li><a href="professional_services_CWS.html" class="text-grey">Complete Workforce Solutions</a></li>
+                    <li><a href="professional_services_AGS.html" class="text-grey">AGS Staffing Quality Process</a></li>
+                </ul>
+       
+            </div>
+            <div class="col-md-4">
+                         <h5 class="text-amit"><i class="fa fa-solid fa-earth"></i> World Wide</h5>
+                <div class="accordion" id="companyDetails">
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="true" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse show" aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingMalaysia">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
+                                Malaysia
+                            </button>
+                        </h2>
+                        <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                amIT Global Solutions SDN BHD<br />
+                                Company No: 953305-A<br />
+                                A-3-08, CoPlace 2<br />
+                                2260 Jalan Usahawan 1<br />
+                                63000 Cyberjaya, Selangor Darul Ehsan<br />
+                                Malaysia
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingIndiaChennai">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
+                                India (Chennai)
+                            </button>
+                        </h2>
+                        <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                amIT Global Solutions Pvt Ltd<br />
+                                No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
+                                Velachery Main Road, Little Mount<br />
+                                Saidapet<br />
+                                Chennai 600 015<br />
+                                Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
+                                Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingIndiaTrichy">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
+                                India (Trichy)
+                            </button>
+                        </h2>
+                        <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                Akilam Technology LLP<br />
+                                D25, 10th Cross West Extn.<br />
+                                Thillai Nagar,<br />
+                                Trichy,<br />
+                                Tamil Nadu 620018<br />
+                                Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingIndonesia">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
+                                Indonesia
+                            </button>
+                        </h2>
+                        <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                PT. AMIT GLOBAL SOLUTIONS,<br />
+                                Menara Karya, 28th Floor,<br />
+                                Jl. H.R. Rasuna Said Blok X-5,<br />
+                                Kav. 1-2, Jakarta 12950,<br />
+                                Indonesia<br />
+                                <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-secondary text-light">
+                        <h2 class="accordion-header" id="headingUSA">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
+                                USA (Partner Office)
+                            </button>
+                        </h2>
+                        <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                342 Michelle Cir,<br />
+                                Edison,<br />
+                                NJ-08820
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <!-- Add AOS JS if using AOS animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      // Initialize AOS animations conditionally based on window width
-      document.addEventListener("DOMContentLoaded", function () {
+
+<footer class="bg-black text-white py-3">
+    <div class="container text-center">
+        <div>
+            <a href="index.html" class="text-white">Home</a> |
+            <a href="it_services_apps_develop.html" class="text-white">IT Services</a> |
+            <a href="professional_services_CWS.html" class="text-white">Professional Services</a> |
+            <a href="clients.html" class="text-white">Clients</a> |
+            <a href="products_iCare.html" class="text-white">Products</a> |
+            <a href="career.html" class="text-white">Careers</a> |
+            <a href="contacts.html" class="text-white">Contact Us</a>
+        </div>
+        <div class="mt-2">
+            <span>2024 Copyright AGS, All rights reserved.</span>
+        </div>
+        <div class="mt-2">
+            <span>Connect with us: </span>&nbsp;
+            <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="fab fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="fab fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="fab fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS and Popper.js v5.3.2 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery v3.6.0 (optional for Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script  src="index.js"></script>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth > 768) {
           AOS.init({
             duration: 800,
@@ -109,41 +398,29 @@
           });
         } else {
           AOS.init({
-            disable: "mobile", // Disable animations on mobile devices
+            duration: 400,
+            delay: 0,
+            offset: 0,
+            disable: "mobile" // Disable animations on mobile devices
           });
         }
       });
+</script>
 
-      // Navbar scroll effect
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
+<script>
 
-      // Tab navigation functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll(".sidebar ul li");
-        const contentTabs = document.querySelectorAll(".content-tab");
 
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function () {
-            // Remove active class from all tabs
-            tabs.forEach((item) => item.classList.remove("active"));
-            // Add active class to clicked tab
-            tab.classList.add("active");
+ 
 
-            // Hide all content tabs
-            contentTabs.forEach((content) => content.classList.remove("active"));
-            // Show content tab corresponding to the clicked tab
-            const target = document.getElementById(tab.getAttribute("data-target"));
-            target.classList.add("active");
-          });
-        });
-      });
-    </script>
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+</script>
 </body>
 </html>
