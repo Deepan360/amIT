@@ -133,8 +133,9 @@ li.point{
 /* Navbar link styling */
 .navbar-nav .nav-link {
     position: relative;
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 10px ;
+    font-variant: normal;
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
