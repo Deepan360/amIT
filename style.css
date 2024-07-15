@@ -1,3 +1,38 @@
+/* Define your font-families here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+/* Font families for each nav-link */
+.font-1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-2 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.font-3 {
+    font-family: 'inter', sans-serif;
+}
+
+.font-4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-6 {
+    font-family: 'Merriweather', sans-serif;
+}
+
+
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
