@@ -132,14 +132,12 @@ li.point{
     /* Adjust opacity and color as needed */
 }
 /* Navbar link styling */
-.nav-link a{
-    font-weight: bold !important;
-}
-.navbar-nav .nav-link a {
+
+.navbar-nav .nav-link  {
     position: relative;
     padding: 8px ;
-    font-weight: 400 !important;
-    font-size: 16px;
+    font-weight: 600 !important;
+    font-size: 14px;
     transition: all 0.3s ease;
 }
 .navbar-nav .nav-item:hover>.nav-link {
@@ -178,7 +176,7 @@ li.point{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 padding: 5px 0px;
-   
+   font-size: 14px !important;
     margin-top: 0px; /* Ensure there's a gap between main and sub-nav */
     width: 400px; /* Adjust the width as needed */
     opacity: 0; /* Initially hide with opacity */
