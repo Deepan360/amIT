@@ -443,7 +443,7 @@ padding: 5px 0px;
 /* Mobile Devices (Portrait) */
 @media (max-width: 575.98px) {
     .hero {
-        height: 80vh;
+        height: 100vh;
         /* Reduce height for small screens */
         padding: 0 10px;
         /* Add some padding */
@@ -470,7 +470,7 @@ padding: 5px 0px;
 /* Tablets and Small Screens */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .hero {
-        height: 90vh;
+        height: 100vh;
         /* Slightly reduced height for tablets */
         padding: 0 15px;
         /* Add padding for better spacing */
@@ -497,7 +497,7 @@ padding: 5px 0px;
 /* Small Laptops and Larger Devices */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .hero {
-        height: 90vh;
+        height: 100vh;
         /* Maintain height for smaller laptops */
         padding: 0 20px;
         /* Add more padding for spacing */
@@ -671,7 +671,7 @@ background: rgba(51, 51, 51, 0.5);
 /* Media query for smaller screens */
 @media (max-width: 992px) {
     .navbar-collapse {
-        background-color: #333333;
+      
         /* Adjust navbar background for contrast */
         padding: 15px;
         /* Add padding for better touch target */
@@ -681,13 +681,15 @@ background: rgba(51, 51, 51, 0.5);
         width: 100%;
         /* Ensure full width for dropdown on mobile */
         text-align: end;
+        
         /* Center align items */
     }
 
     .navbar-nav .nav-item {
         display: block;
         /* Display block for full width */
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+      
         /* Add spacing between items */
     }
 .navbar-nav .sub-nav-item {
