@@ -46,6 +46,7 @@ a:hover {
 /* Navbar styling */
 .navbar {
     font-size: 14px;
+
     width: 100%;
     z-index: 1000; 
 }
@@ -138,17 +139,20 @@ li.point{
     font-size: 16px;
     transition: all 0.3s ease;
 }
-
-/* Navbar link hover underline effect */
-.navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
+.navbar-nav .nav-item:hover>.nav-link {
     background-color: #9B0000;
-    transition: all 0.3s ease;
+    color: #ffffff !important;
+    /* Ensure the text is white */
+}
+/* Navbar link hover underline effect */
+
+.navbar-nav .sub-nav-item .nav-link:hover {
+    background-color: #9B0000;
+    /* Background color on hover */
+    color: #ffffff;
+    /* Text color on hover */
+    text-decoration: none;
+    /* Remove underline on hover */
 }
 
 /* Navbar link hover effect */
@@ -167,12 +171,13 @@ li.point{
 .navbar-nav .sub-nav-item {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #c4c4c4;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 5px;
+padding: 5px 0px;
+   
     margin-top: 0px; /* Ensure there's a gap between main and sub-nav */
-    width: 200px; /* Adjust the width as needed */
+    width: 400px; /* Adjust the width as needed */
     opacity: 0; /* Initially hide with opacity */
     visibility: hidden; /* Initially hidden */
     transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Smooth opacity transition */
@@ -188,6 +193,24 @@ li.point{
  
 }
 
+/* Arrow styling */
+.navbar-nav .sub-nav-item::before {
+    content: '';
+    position: absolute;
+    top: -19px;
+    /* Position the arrow above the dropdown */
+    left: 0px;
+    /* Align the arrow horizontally centered with the dropdown */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #c4c4c4 transparent;
+    /* Creates a triangle pointing upwards */
+}
+
+/* Optional: Add hover effect for better visibility */
+.navbar-nav .nav-item:hover .sub-nav-item::before {
+    display: block;
+}
 /* Sub-navigation list styling */
 .navbar-nav .sub-nav-item ul {
     list-style: none;
@@ -198,7 +221,7 @@ li.point{
 
 /* Sub-navigation list item styling */
 .navbar-nav .sub-nav-item ul li {
-    text-align: center;
+    text-align: left;
     padding:10px ;
     white-space: nowrap;
     transition: background-color 0.3s ease; /* Smooth background-color transition */
@@ -234,7 +257,7 @@ li.point{
 /* Ensure sub-navigation stays open when hovering over list items */
 .navbar-nav .sub-nav-item ul li:hover {
     background-color: #f1f1f1;  
-    border-left: 6px solid black;
+
     color: #9B0000
 ;
 }
@@ -414,7 +437,113 @@ li.point{
     overflow: hidden;
     color: #ffffff;
 }
+/* Mobile Devices (Portrait) */
+@media (max-width: 575.98px) {
+    .hero {
+        height: 80vh;
+        /* Reduce height for small screens */
+        padding: 0 10px;
+        /* Add some padding */
+    }
 
+    .hero-content h2 {
+        font-size: 2rem;
+        /* Smaller font size for h2 */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        /* Smaller font size for paragraph */
+    }
+
+    .hero-content .btn-primary {
+        padding: 8px 16px;
+        /* Smaller padding for buttons */
+        font-size: 1rem;
+        /* Smaller font size for buttons */
+    }
+}
+
+/* Tablets and Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero {
+        height: 90vh;
+        /* Slightly reduced height for tablets */
+        padding: 0 15px;
+        /* Add padding for better spacing */
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+        /* Adjusted font size for h2 */
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        /* Adjusted font size for paragraph */
+    }
+
+    .hero-content .btn-primary {
+        padding: 10px 18px;
+        /* Adjusted padding for buttons */
+        font-size: 1.1rem;
+        /* Adjusted font size for buttons */
+    }
+}
+
+/* Small Laptops and Larger Devices */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero {
+        height: 90vh;
+        /* Maintain height for smaller laptops */
+        padding: 0 20px;
+        /* Add more padding for spacing */
+    }
+
+    .hero-content h2 {
+        font-size: 2.8rem;
+        /* Adjusted font size for h2 */
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        /* Adjusted font size for paragraph */
+    }
+
+    .hero-content .btn-primary {
+        padding: 12px 20px;
+        /* Adjusted padding for buttons */
+        font-size: 1.2rem;
+        /* Adjusted font size for buttons */
+    }
+}
+
+/* Desktops and Larger Screens */
+@media (min-width: 992px) {
+    .hero {
+        height: 100vh;
+        /* Full height for larger screens */
+        padding: 0 25px;
+        /* Padding for large screens */
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+        /* Larger font size for h2 */
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        /* Larger font size for paragraph */
+    }
+
+    .hero-content .btn-primary {
+        padding: 10px 20px;
+        /* Standard padding for buttons */
+        font-size: 1.25rem;
+        /* Standard font size for buttons */
+    }
+}
 .hero video {
     position: absolute;
     top: 0;
@@ -559,11 +688,7 @@ background: rgba(51, 51, 51, 0.5);
         /* Add spacing between items */
     }
 .navbar-nav .sub-nav-item {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+
     border-radius: 5px;
     margin-left: 0px;
     /* Ensure there's a gap between main and sub-nav */
