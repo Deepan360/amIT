@@ -64,8 +64,11 @@ h4,
 h5,
 h6 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
-
+p{
+    font-weight: 200;
+}
 /* Specific styles for links */
 a {
  
@@ -590,6 +593,16 @@ padding: 5px 0px;
     z-index: -1;
 }
 
+.about video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .hero-content {
     position: relative;
     display: flex;
@@ -764,13 +777,102 @@ background: rgba(51, 51, 51, 0.5);
         /* Adjust top position for smaller screens */
     }
 }
-  .vision-mission {
-      padding: 80px 0;
-      background-image: url('path_to_your_background_image.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-  }
+.vision-mission {
+ 
+    /* Ensure the section has a black background */
+    padding: 5rem 0;
+}
+
+.vision-card,
+.mission-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white background for readability */
+    border: none;
+    /* Remove default card border */
+    
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.vision-card {
+    background: url('/assets/illustration_and_gif/vision.png') no-repeat center center;
+    background-size: contain;
+    color: #ffffff;
+}
+.mission-card {
+    background: url('/assets/illustration_and_gif/mission.png') no-repeat center center;
+    background-size: contain;
+    color: #ffffff;
+}
+
+.vision-card .card-body:hover{
+background: rgba(0, 0, 0, 0.4) !important;
+}
+.mission-card .card-body:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+.vision-card .card-body {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+}
+.mission-card .card-body {
+    background: rgba(0, 0, 0, 0.6) !important;
+    padding: 2rem;
+}
+.card-title.text-amit {
+    color: #9B0000;
+    font-weight: bold;
+}
+
+.vision-list,
+.mission-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.vision-list li,
+.mission-list li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.vision-list li:before,
+.mission-list li:before {
+    content: "\f058";
+
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    color: #9B0000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+
+    .vision-card,
+    .mission-card {
+        margin-bottom: 1.5rem;
+        /* Space between cards on smaller screens */
+    }
+
+    .vision-list li,
+    .mission-list li {
+        padding-left: 1.5rem;
+        /* Adjusted padding on smaller screens */
+    }
+
+    .vision-list li:before,
+    .mission-list li:before {
+        font-size: 16px;
+        /* Smaller icon size on smaller screens */
+    }
+}
+
 
   .vision-mission .card {
       background-color: rgba(255, 255, 255, 0.9);
@@ -1005,8 +1107,29 @@ footer .fab:hover{
 color: #9B0000
 ;
 }
-.bg-black{
-    background-color: #000;
+/* Pure Black */
+.bg-black {
+    background-color: #000000;
+}
+
+/* Charcoal Black */
+.bg-charcoal {
+    background-color: #333333;
+}
+
+/* Rich Black */
+.bg-rich-black {
+    background-color: #000D1A;
+}
+
+/* Jet Black */
+.bg-jet-black {
+    background-color: #343434;
+}
+
+/* Onyx */
+.bg-onyx {
+    background-color: #353839;
 }
 .sidebar {
     border-right: 2px solid #ddd;
@@ -1079,7 +1202,9 @@ color: #9B0000
     animation: waveMotion 30s infinite alternate;
     /* Adjust duration for the wave effect */
 }
-
+.text-amit{
+color: #9B0000;
+}
 /* Keyframes for wave motion */
 @keyframes waveMotion {
     0% {
@@ -1093,4 +1218,89 @@ color: #9B0000
     100% {
         transform: translateX(-10%) translateY(-10%) rotate(-2deg);
     }
+}
+
+.bg-gradirnt-amit{
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+}
+.container-fluid.bg-amit .container {
+    position: relative;
+    z-index: 2;
+}
+.container-fluid.text-white {
+    position: relative;
+    background-color: #000;
+    /* Ensures the outer container has a black background */
+}
+
+.container.about {
+    position: relative;
+    z-index: 1;
+
+    /* Sets a semi-transparent black background for the inner container */
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.container.about video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Ensures the video is behind the content */
+}
+
+.container.mainpoints video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+ 
+}
+
+h2.text-amit {
+    margin-bottom: 1rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #fff;
+    margin: 2rem 0;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.video-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Ensures the video is behind the content */
+    filter: brightness(0.5);
+    /* Adjusts the brightness to dim the video */
+}
+.video-filter-half{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        /* Ensures the video is behind the content */
+        filter: brightness(0.7);
+        border: none;
 }
