@@ -141,7 +141,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4) !important  ;
     /* Darker semi-transparent black */
     opacity: 0;
     /* Hidden by default */
@@ -1086,23 +1086,22 @@ background: rgba(0, 0, 0, 0.4) !important;
 .text-grey{
     color: #8f8f8f;
 }
-.img-fluid {
-    max-width: 100%;
-    /* Ensure the image doesn't exceed its container's width */
-    height: auto;
-    /* Maintain the aspect ratio of the image */
-    display: block;
-    /* Ensure the image behaves like a block element */
-    margin: 0 auto;
-    /* Center the image horizontally */
-    transition: transform 0.3s;
-    /* Add a transition for hover effect */
+/* Image Fluid Container */
+.img-fluid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.img-fluid:hover {
-    transform: scale(1.05);
-    /* Slightly enlarge the image on hover */
+.img-fluid-container img {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    transition: transform 0.3s;
 }
+
+
 footer .fab:hover{
 color: #9B0000
 ;
@@ -1303,4 +1302,201 @@ p {
         /* Ensures the video is behind the content */
         filter: brightness(0.7);
         border: none;
+}
+.bg-white{
+    background-color: #fff;
+}
+ .btn-amit {
+    background-color: #9B0000;
+    border-color: #9B0000;
+
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    /* Ensure text is white on button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+ .btn-amit:hover {
+    background-color: #7a0000;
+    border-color: #7a0000;
+    color: #fff;
+    text-decoration: none;
+}
+h5 {
+    margin-bottom: 1rem;
+}
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+    /* Adjust brightness */
+}
+
+        
+                /* Service Card */
+                .service-card {
+                    position: relative;
+                    overflow: hidden;
+                    border: none;
+                  
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                }
+        
+                .service-card:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                }
+                             
+                
+                             
+                
+                                .client-logos-wrapper {
+                                    overflow: hidden;
+                                    position: relative;
+                                }
+                
+                                .client-logos {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-around;
+                                    animation: scroll 30s linear infinite;
+                                }
+                
+                                .client-logo {
+                                    flex: 0 0 auto;
+                                    margin: 0 15px;
+                                }
+                
+                                .client-logo img {
+                                    max-height: 100px;
+                                    transition: transform 0.3s, filter 0.3s;
+                                }
+                
+                                .client-logos:hover {
+                                    animation-play-state: paused;
+                                }
+                
+                                .client-logo:hover img {
+                                    filter: brightness(1.2);
+                                    transform: scale(1.1);
+                                }
+                
+                                @keyframes scroll {
+                                    0% {
+                                        transform: translateX(0);
+                                    }
+                
+                                    100% {
+                                        transform: translateX(-100%);
+                                    }
+                                }
+                
+                                @media (max-width: 768px) {
+                                    .client-logo img {
+                                        max-height: 60px;
+                                    }
+                                }
+                
+                                .blur-overlay {
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    width: 100px;
+                                    background: linear-gradient(to right, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0));
+                                    pointer-events: none;
+                                    z-index: 1;
+                                }
+                
+                                .left-blur {
+                                    left: 0;
+                                }
+                
+                                .right-blur {
+                                    right: 0;
+                                    transform: scaleX(-1);
+                                }
+.bg-amit-black {
+    background-color: #e6e6e6;
+    position: relative;
+    overflow: hidden;
+}
+.bg-amit-gradient {
+    background: linear-gradient(to right, #383838, #cacacade);
+    position: relative;
+    overflow: hidden;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+.video-background {
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .video-background {
+        object-fit: fill;
+        /* Adjust this if necessary for better fitting */
+        height: 100%;
+    }
+
+    .mainpoints {
+        padding: 20px;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video-background {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .mainpoints {
+        padding: 40px;
+    }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1025px) {
+    .video-background {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .mainpoints {
+        padding: 60px;
+    }
 }
