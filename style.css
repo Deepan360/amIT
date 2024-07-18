@@ -114,7 +114,7 @@ a:hover {
 
 .explore-button {
     position: absolute;
-    bottom: 20px;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50%, 100%);
     /* Start below the card */
@@ -1346,11 +1346,11 @@ h5 {
                     border: none;
                   
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                   
                 }
         
                 .service-card:hover {
-                    transform: scale(1.05);
+                  
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
                 }
                                 .client-logos-wrapper {
