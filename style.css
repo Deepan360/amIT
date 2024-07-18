@@ -1573,20 +1573,20 @@ transition: transform 0.3s ease;
     transform: translateX(-50%);
     opacity: 0;
     transition: bottom 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-    background-color: #ffffff;
-        border-color: #ffffff;
+    background-color: #9B0000;
+        border-color: #9B0000;
         padding: 10px 20px;
  font-weight: 500;
         border-radius: 30px;
         text-decoration: none;
-        color: #9B0000 !important;
+        color: #ffffff !important;
    
 }
 
 .small-service-card:hover .explore-button {
     bottom: 10px;
     /* Move button up to visible position */
-    color: #9B0000 !important;
+    color: #ffffff !important;
     opacity: 1;
 }
 
@@ -1643,19 +1643,7 @@ transition: transform 0.3s ease;
     /* Hide overflow to clip background transition */
 }
 
-.service-card .overlay,
-.small-service-card .overlay {
-    position: absolute;
-    top: -100%;
-    /* Start overlay above the card */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Adjust overlay color */
-    transition: top 0.3s ease;
-    /* Smooth transition for top position */
-}
+
 
 
 
@@ -1679,12 +1667,28 @@ transition: transform 0.3s ease;
 }
 .small-service-card:hover{
     
-    background-color: #9b0000;
+    background-color: #ffffff;
     /* Change background color on hover */
     font-size: 2px;
-    color: #9b0000 !important;
+    color: #ffffff !important;
 }
-.small-service-card:hover i{
- color: #ffffff;
 
+.small-service-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+
+.small-service-card .card-body i {
+    
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.small-service-card:hover .card-body i {
+    transform: scale(1.5);
+}
+
+
