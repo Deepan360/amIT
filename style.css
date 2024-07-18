@@ -1299,8 +1299,7 @@ p {
         height: 100%;
         object-fit: cover;
         z-index: -1;
-        /* Ensures the video is behind the content */
-        filter: brightness(0.7);
+
         border: none;
 }
 .bg-white{
@@ -1499,4 +1498,17 @@ h5 {
     .mainpoints {
         padding: 60px;
     }
+}
+
+.carde {
+    position: relative;
+    overflow: hidden;
+    border: none;
+transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.carde:hover {
+    transform: translateY(-20px) scale(1.05) !important;
+    /* Scale up and rotate on both X and Y axes */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
