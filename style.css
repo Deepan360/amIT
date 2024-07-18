@@ -1503,8 +1503,9 @@ h5 {
 .carde {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
     border: none;
-transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+transition: transform 1s ease-in, box-shadow  ease-out;
 }
 
 .carde:hover {
