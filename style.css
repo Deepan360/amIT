@@ -1248,7 +1248,7 @@ color: #9B0000;
         background: linear-gradient(135deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.925)) !important;
         position: relative;
             overflow: hidden;
-            z-index: 1000;
+           
 }
 .container-fluid.bg-amit .container {
     position: relative;
@@ -1690,5 +1690,19 @@ transition: transform 0.3s ease;
 .small-service-card:hover .card-body i {
     transform: scale(1.5);
 }
+/* Custom styles for FAQ section */
+
+
+
+.accordion-item {
+
+ margin-bottom: 10px;
+   
+    
+    overflow: hidden;
+
+    /* Gray border */
+}
+
 
 
