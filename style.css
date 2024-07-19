@@ -818,14 +818,14 @@ background: rgba(51, 51, 51, 0.5);
 .vision-card {
     background: url('/assets/illustration_and_gif/vision.png') no-repeat center center;
     background-size: contain;
-  background-color: none !important;
+  background-color: #f1f1f1 !important;
     color: #ffffff;
 }
 .mission-card {
     background: url('/assets/illustration_and_gif/mission.png') no-repeat center center;
     background-size: contain;
     color: #ffffff !important;
-    background-color: none !important;
+    background-color: #f1f1f1 !important;
 }
 
 .vision-card .card-body:hover{
@@ -835,11 +835,13 @@ background: rgba(0, 0, 0, 0.4) !important;
     background: rgba(0, 0, 0, 0.4) !important;
 }
 .vision-card .card-body {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1 !important;
     padding: 2rem;
 }
 .mission-card .card-body {
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 1 !important;
     padding: 2rem;
 }
 .card-title.text-amit {
@@ -1263,7 +1265,7 @@ color: #9B0000;
 .container.about {
     position: relative;
     z-index: 1;
-
+    background-color: rgba(0, 0, 0, 0.2);
     /* Sets a semi-transparent black background for the inner container */
     padding: 2rem;
     border-radius: 0.5rem;
@@ -1689,6 +1691,63 @@ transition: transform 0.3s ease;
 
     /* Gray border */
 }
+/* General styles */
+.bg-image {
+    background-image: url('./assets/images/techhand.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 10% !important;
 
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about {
+    position: relative;
+    z-index: 2;
+}
+
+/* Media query for mobile view */
+@media (max-width: 560px) {
+    .container-fluid {
+        background-image: url('./assets/images/techhand.jpg');
+        background-size:cover ;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container-fluid::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .about {
+        position: relative;
+        z-index: 2;
+    }
+}
 
 
