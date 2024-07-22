@@ -1,32 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize AOS
-  AOS.init({
-    duration: 1000,
-    once: false,
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  
+  function switchTab(targetId) {
+    
+    document
+      .querySelectorAll(".sidebar ul li")
+      .forEach((li) => li.classList.remove("active"));
+    document
+      .querySelectorAll(".content-tab")
+      .forEach((tab) => tab.classList.remove("active"));
 
-  // Click event handler for sidebar items
-  document.querySelectorAll(".sidebar li").forEach(function (item) {
-    item.addEventListener("click", function () {
-      // Remove active class from all tabs
-      document.querySelectorAll(".content-tab").forEach(function (tab) {
-        tab.classList.remove("active");
-      });
+    const targetItem = document.querySelector(
+      `.sidebar ul li[data-target="${targetId}"]`
+    );
+    if (targetItem) {
+      targetItem.classList.add("active");
+    }
 
-      // Remove active class from all sidebar items
-      document.querySelectorAll(".sidebar li").forEach(function (li) {
-        li.classList.remove("active");
-      });
+    const targetTab = document.getElementById(targetId);
+    if (targetTab) {
+      targetTab.classList.add("active");
+    }
+  }
 
-      // Add active class to the clicked item
-      this.classList.add("active");
-
-      // Show the corresponding content tab
-      var targetId = this.getAttribute("data-target");
-      document.getElementById(targetId).classList.add("active");
-
-      // Refresh AOS animations for the new content
-      AOS.refresh(); // Refresh AOS to trigger animations for newly visible elements
+  document.querySelectorAll(".sidebar ul li").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const targetId = event.currentTarget.getAttribute("data-target");
+      switchTab(targetId);
+    
+      history.replaceState(null, null, `#${targetId}`);
     });
   });
+
+  const hash = window.location.hash.substring(1); 
+  if (hash) {
+    switchTab(hash);
+  } else {
+    // Set default tab if no hash is present
+    const defaultItem = document.querySelector(".sidebar ul li");
+    if (defaultItem) {
+      const defaultId = defaultItem.getAttribute("data-target");
+      if (defaultId) {
+        switchTab(defaultId);
+      }
+    }
+  }
 });
