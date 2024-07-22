@@ -1076,7 +1076,7 @@ background: rgba(0, 0, 0, 0.4) !important;
     /* Hover background color */
 }
 .footer-background {
-    background-image: url('./assets/images/deefoo.svg');
+    background-image: url('./assets/images/footerwave.svg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1091,7 +1091,6 @@ background: rgba(0, 0, 0, 0.4) !important;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
     /* Make this more transparent */
     z-index: 1;
     /* Ensure overlay is above background */
