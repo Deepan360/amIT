@@ -1,13 +1,13 @@
 /* Define your font-families here */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap'); */
 /* Font families for each nav-link */
-.font-1 {
+/* .font-1 {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -29,12 +29,12 @@
 
 .font-6 {
     font-family: 'Merriweather', sans-serif;
-}
+} */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 /* Color palette from logo */
 /* #8f8e8e,rgb(143,142,142)->its first color */
@@ -44,8 +44,9 @@
 
 /* Apply default styles to all elements */
 html, body {
-    font-family: sans-serif;
-  
+    font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+  font-weight: 300;
     margin: 0;
     padding: 0;
 color: #333;
@@ -63,16 +64,19 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
 }
 p{
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: 300;
 }
 /* Specific styles for links */
 
 a {
     text-decoration: none;
+    font-family: "Outfit";
+    font-weight: 300;
     color: black;
 }
 
@@ -197,7 +201,8 @@ li.point{
     position: relative;
     padding: 8px ;
     font-weight: 600 !important;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "outfit";
     transition: all 0.3s ease;
 }
 .navbar-nav .nav-item:hover>.nav-link {
@@ -290,7 +295,7 @@ padding: 5px 0px;
     font-size: 14px;
     /* Adjust font size for sub-menu items */
     color: #000;
-    font-weight: 200;
+    
 }
 
 /* Styling for links inside sub-navigation list items */
@@ -298,6 +303,8 @@ padding: 5px 0px;
     text-decoration: none;
     color: black;
     /* Default link color */
+   font-weight: 400;
+   font-size: 14px;
     display: block;
     /* Ensure link occupies full width of list item */
     transition: color 0.3s ease;
@@ -666,6 +673,7 @@ padding: 5px 0px;
 
 .hero-content p {
     font-size: 1.5rem;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -862,7 +870,7 @@ background: rgba(0, 0, 0, 0.4) !important;
 }
 .card-title.text-amit {
     color: #9B0000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .vision-list,
@@ -884,7 +892,7 @@ background: rgba(0, 0, 0, 0.4) !important;
     content: "\f058";
 
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 700;
     font-size: 18px;
     color: #9B0000;
     position: absolute;
@@ -940,10 +948,12 @@ background: rgba(0, 0, 0, 0.4) !important;
   .mission-list li,
   .vision-list li {
       margin-bottom: 20px;
+      font-weight: 300 !important;
       position: relative;
       padding-left: 30px;
   }
 
+  
   .mission-list li:before,
   .vision-list li:before {
       content: "\f058";
@@ -1779,7 +1789,7 @@ transition: transform 0.3s ease;
     box-shadow:   0px 1px 20px 0px  rgba(0, 0, 0, 0.2);
 }
 
-.sidebar ul li::before:hover{
+.sidebar ul li:hover{
     background:rgba(117, 117, 117, 0.774);
     color: #fff;
 }
