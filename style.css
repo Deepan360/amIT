@@ -1062,15 +1062,11 @@ background: rgba(0, 0, 0, 0.4) !important;
 !important;
     /* Change border color on focus */
 }
-
 .accordion-button.active {
     background-color: #e9ecef !important;
-    /* Active background color */
     border-color: #9B0000
 !important;
-    /* Active border color */
 }
-
 .accordion-button:not(.active):hover {
     background-color: #f1f1f1 !important;
     /* Hover background color */
