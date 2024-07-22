@@ -71,7 +71,16 @@ p{
 }
 /* Specific styles for links */
 
+a {
+    text-decoration: none;
+    color: black;
+}
 
+/* General link hover effect */
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
 /* Container styling */
 
 /* Navbar styling */
