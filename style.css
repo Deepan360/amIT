@@ -1743,34 +1743,7 @@ transition: transform 0.3s ease;
 }
 
 /* Media query for mobile view */
-@media (max-width: 560px) {
-    .container-fluid {
-        background-image: url('./assets/images/techhand.jpg');
-        background-size:cover ;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        overflow: hidden;
-    }
 
-    .container-fluid::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .about {
-        position: relative;
-        z-index: 2;
-    }
-}
 .content-tab {
     display: none;
 }
@@ -1810,4 +1783,66 @@ i {
 }
 .bg-pure-white{
     background-color: #fff;
+}
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 180px;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-card .icon {
+    font-size: 20px;
+    color: #4973ff;
+    /* Adjust color as needed */
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.step-card h5 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.mainpoints {
+    position: relative;
+    padding: 50px 0;
+}
+
+.mainpoints video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.mainpoints .container {
+    position: relative;
+    z-index: 2;
+}
+
+.text-amit {
+    font-weight: bold;
 }
