@@ -1779,38 +1779,31 @@ transition: transform 0.3s ease;
     display: block;
 }
 
-/* Sidebar styling */
+
 .sidebar {
     background: rgba(255, 255, 255, 0.5);
     padding: 5px;
     box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* Sidebar list item styling */
 .sidebar ul li {
     cursor: pointer;
 }
 
-/* Icon styling */
 i {
     color: #9B0000 !important;
 }
 
-/* Active icon styling */
 .sidebar ul li.active i {
     color: #ffffff !important;
 }
 
-/* Sidebar active list item styling */
 .sidebar ul li.active {
     font-weight: 700;
     background: #9b0000de;
-    /* Same as hover background color */
     color: #fff;
-    /* Ensure text color is white */
 }
 
-/* Sidebar list item hover effect, excluding active items */
 .sidebar ul li:hover:not(.active) {
     background: #000000;
     color: #fff;
