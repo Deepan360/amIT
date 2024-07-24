@@ -1,35 +1,35 @@
 /* Define your font-families here */
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap'); 
-
-.font-1 {
-    font-family: 'Roboto', sans-serif !important;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap'); */
+/* Font families for each nav-link */
+/* .font-1 {
+    font-family: 'Roboto', sans-serif;
 }
 
 .font-2 {
-    font-family: 'Nunito', sans-serif !important;
+    font-family: 'Nunito', sans-serif;
 }
 
 .font-3 {
-    font-family: 'inter', sans-serif !important;
+    font-family: 'inter', sans-serif;
 }
 
 .font-4 {
-    font-family: 'Outfit', sans-serif  !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .font-5 {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .font-6 {
-    font-family: 'Merriweather', sans-serif !important;
-}
+    font-family: 'Merriweather', sans-serif;
+} */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
@@ -1792,11 +1792,7 @@ i {
 
 .step-card {
     background-color: #fff;
-<<<<<<< HEAD
     
-=======
-  
->>>>>>> c0c09666d6ddf0586c9b5b63c8bd11c87d05a7c3
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
