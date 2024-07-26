@@ -822,76 +822,67 @@ background: rgba(51, 51, 51, 0.5);
         /* Adjust top position for smaller screens */
     }
 }
-.vision-mission {
- 
-    /* Ensure the section has a black background */
-    padding: 5rem 0;
+
+/* Image styles */
+.vision-mission .vision-image img,
+.vision-mission .mission-image img {
+    width: 400px;
+    /* Fixed width for images */
+    height: 400px;
+    /* Fixed height for images */
+    border-radius: 0.5rem;
+    /* Rounded corners for images */
+    object-fit: cover;
+    /* Ensure images cover the area without distortion */
 }
 
-.vision-card,
-.mission-card {
-  
-    /* Semi-transparent white background for readability */
+/* Card styles */
+.vision-mission .card {
+   
+
+    /* Text color for contrast */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
     border: none;
     /* Remove default card border */
-    
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+    border-radius: 0.5rem;
+    /* Rounded corners for cards */
+    padding: 2rem;
+    /* Add padding inside the card */
 }
 
-.vision-card {
-    background: url('/assets/illustration_and_gif/vision.png') no-repeat center center;
-    background-size: contain;
-  background-color: #f1f1f1 !important;
-    color: #ffffff;
-}
-.mission-card {
-    background: url('/assets/illustration_and_gif/mission.png') no-repeat center center;
-    background-size: contain;
-    color: #ffffff !important;
-    background-color: #f1f1f1 !important;
+.vision-mission .card:hover .card-body {
+    background: rgba(255, 255, 255, 0.4) !important;
+    /* Darker background on hover */
 }
 
-.vision-card .card-body:hover{
-background: rgba(0, 0, 0, 0.4) !important;
-}
-.mission-card .card-body:hover {
-    background: rgba(0, 0, 0, 0.4) !important;
-}
-.vision-card .card-body {
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1 !important;
-    padding: 2rem;
-}
-.mission-card .card-body {
-    background: rgba(0, 0, 0, 0.5) !important;
-    z-index: 1 !important;
-    padding: 2rem;
-}
-.card-title.text-amit {
+/* Card titles */
+.vision-mission .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #9B0000;
+    /* Card title color */
     font-weight: 700;
 }
 
-.vision-list,
-.mission-list {
+/* List styles */
+.vision-mission .vision-list,
+.vision-mission .mission-list {
     list-style: none;
     padding-left: 0;
 }
 
-.vision-list li,
-.mission-list li {
+.vision-mission .vision-list li,
+.vision-mission .mission-list li {
     margin-bottom: 1rem;
     font-size: 1rem;
     position: relative;
     padding-left: 2rem;
 }
 
-.vision-list li:before,
-.mission-list li:before {
+.vision-mission .vision-list li:before,
+.vision-mission .mission-list li:before {
     content: "\f058";
-
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     font-size: 18px;
@@ -901,86 +892,40 @@ background: rgba(0, 0, 0, 0.4) !important;
     top: 0;
 }
 
-@media (max-width: 768px) {
+/* Responsive styles */
+@media (max-width: 991px) {
+    .vision-mission .row {
+        flex-direction: column;
+    }
+}
 
-    .vision-card,
-    .mission-card {
+@media (max-width: 768px) {
+    .vision-mission .card {
         margin-bottom: 1.5rem;
         /* Space between cards on smaller screens */
     }
 
-    .vision-list li,
-    .mission-list li {
+    .vision-mission .vision-list li,
+    .vision-mission .mission-list li {
         padding-left: 1.5rem;
         /* Adjusted padding on smaller screens */
     }
 
-    .vision-list li:before,
-    .mission-list li:before {
+    .vision-mission .vision-list li:before,
+    .vision-mission .mission-list li:before {
         font-size: 16px;
         /* Smaller icon size on smaller screens */
     }
 }
 
+@media (max-width: 576px) {
 
-  .vision-mission .card {
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .vision-mission h2 {
-      color: #9B0000
-;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
-  }
-
-  .vision-mission .card-body {
-      padding: 30px;
-  }
-
-  .mission-list,
-  .vision-list {
-      list-style: none;
-      padding-left: 0;
-  }
-
-  .mission-list li,
-  .vision-list li {
-      margin-bottom: 20px;
-      font-weight: 300 !important;
-      position: relative;
-      padding-left: 30px;
-  }
-
-  
-  .mission-list li:before,
-  .vision-list li:before {
-      content: "\f058";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 18px;
-      color: #9B0000
-;
-      position: absolute;
-      left: 0;
-      top: -1px;
-  }
-  
-
-  @media (max-width: 768px) {
-
-      .mission-list li,
-      .vision-list li {
-          padding-left: 25px;
-      }
-
-      .mission-list li:before,
-      .vision-list li:before {
-          font-size: 16px;
-      }
-  }
+    .vision-mission .vision-list li,
+    .vision-mission .mission-list li {
+        padding-left: 1.25rem;
+        /* Further adjust padding for extra-small screens */
+    }
+}
 .testimonial-card {
     width: 100%;
     height: auto;
@@ -1290,7 +1235,7 @@ color: #9B0000;
     background-color: rgba(0, 0, 0, 0.1);
     /* Sets a semi-transparent black background for the inner container */
     padding: 2rem;
-    border-radius: 0.5rem;
+    
 }
 
 .container.about video {
