@@ -47,22 +47,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
-  const speed = 200; // The lower the slower
+  const speed = 500; // Increased duration to slow down the counting
 
-  counters.forEach((counter) => {
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-count");
-      const count = +counter.innerText;
-      const inc = target / speed;
+  const startCounting = () => {
+    counters.forEach((counter) => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-count");
+        const count = +counter.innerText;
+        const inc = target / speed;
 
-      if (count < target) {
-        counter.innerText = Math.ceil(count + inc);
-        setTimeout(updateCount, 1);
-      } else {
-        counter.innerText = target;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 10); // Increased timeout for slower updates
+        } else {
+          counter.innerText = target; // Ensure we reach the target
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.unobserve(entry.target); // Stop observing after starting the count
       }
-    };
-
-    updateCount();
+    });
   });
+
+  const countSection = document.querySelector(".country-clients");
+  if (countSection) {
+    observer.observe(countSection); // Observe the section for visibility
+  }
 });
+
+
+ document.addEventListener("DOMContentLoaded", () => {
+   const video = document.getElementById("myVideo");
+    video.playbackRate = 0.75;  // Set playback rate to 50% of the original speed
+ });
+ 

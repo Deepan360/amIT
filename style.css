@@ -1287,7 +1287,7 @@ color: #9B0000;
 .container.about {
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     /* Sets a semi-transparent black background for the inner container */
     padding: 2rem;
     border-radius: 0.5rem;
@@ -1784,71 +1784,15 @@ i {
 .bg-pure-white{
     background-color: #fff;
 }
-.step-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
-.step-card {
-    background-color: #fff;
-    
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    min-width: 180px;
-    max-width: 200px;
-    transition: transform 0.3s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-10px);
-}
-
-.step-card .icon {
-    font-size: 20px;
-    color: #4973ff;
-    /* Adjust color as needed */
-    margin-bottom: 10px;
-    margin: auto;
-}
-
-.step-card h5 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.step-card p {
-    color: #666;
-    font-size: 14px;
-}
-
-.mainpoints {
-    position: relative;
-    padding: 50px 0;
-}
-
-.mainpoints video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.mainpoints .container {
-    position: relative;
-    z-index: 2;
-}
 
 .text-amit {
     font-weight: bold;
+    color: #9B0000 !important; 
 }
 #about {
     position: relative;
-    padding: 300px 0;
+    padding: 100px;
     overflow: hidden;
 }
 
@@ -1866,7 +1810,7 @@ i {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5);
+  
 }
 
 .content-container {
@@ -1885,7 +1829,7 @@ hr {
 }
 
 .country-clients {
-    padding: 50px 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -1893,7 +1837,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 20px;
 }
 
 .client-widget {
@@ -1917,13 +1861,25 @@ hr {
     margin: 10px 0;
 }
 
-.icon {
-   text-align: center;
-   align-items: center;
-    color: #fff;
-    margin: auto;
+@media (max-width: 768px) {
+    #about {
+            position: relative;
+            padding: 5px;
+            overflow: hidden;
+        }
+    .client-widget {
+        max-width: 100%;
+    }
 }
 
+.icon {
+    margin: auto;
+    color: #fff;
+    background-color: #fff;
+}
+.text-amit{
+    color: #9B0000;
+}
 .count {
     font-size: 2rem;
     font-weight: bold;
@@ -1934,8 +1890,43 @@ hr {
     text-align: center;
 }
 
+.step-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.step-card .icon {
+   margin: auto;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.text-amit {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
-    .client-widget {
+    .step-card {
         max-width: 100%;
     }
 }
