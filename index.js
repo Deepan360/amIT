@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(countSection); // Observe the section for visibility
   }
 });
-
+//scrolling for video background in the pages
 
  document.addEventListener("DOMContentLoaded", () => {
    const video = document.getElementById("myVideo");
@@ -92,3 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
  document.addEventListener("DOMContentLoaded", () => {
    document.documentElement.style.scrollBehavior = "smooth";
  });
+
+   document.addEventListener("scroll", function () {
+     var scrollTop = window.scrollY || document.documentElement.scrollTop;
+     var videoBackground = document.querySelector(".video-background");
+
+     // Adjust scale factor for video based on scroll position
+     var scaleValue = Math.max(1, 2 - scrollTop /2000); // Decrease scale with scroll
+
+     // Apply scaling transformation to keep video centered
+     videoBackground.style.transform = `scale(${scaleValue})`;
+   });
+
+  
+
+ 
+///end of scrolling video in the main index page
