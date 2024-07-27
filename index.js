@@ -89,3 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     video.playbackRate = 0.75;  // Set playback rate to 50% of the original speed
  });
  
+ document.addEventListener("DOMContentLoaded", () => {
+   document.documentElement.style.scrollBehavior = "smooth";
+ });
