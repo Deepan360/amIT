@@ -1469,7 +1469,14 @@ margin-top: 100px;
 
     /* Ensure this starts below the hero section */
 }
-
+:root {
+    --primary: #007bff;
+    --white: #ffffff;
+    --black: #333333;
+    --dark-3: #6c757d;
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-4: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .video-background {
@@ -1901,7 +1908,7 @@ hr {
     content: "";
     height: 80px;
     width: 50px;
-    border: 1px solid var(--primary);
+    border: 1px solid #007bff;
     border-radius: 0 0 0 30px;
     right: -1px;
     top: -1px;
@@ -1913,7 +1920,7 @@ hr {
     content: "";
     height: 40px;
     width: 40px;
-    border: 1px solid var(--primary);
+    border: 1px solid #007bff;
     border-radius: 50px;
     right: 60px;
     top: 10px;
