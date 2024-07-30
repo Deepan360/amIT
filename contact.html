@@ -10,95 +10,118 @@
     
     <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
+    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <style>
-/* ===== Buttons Css ===== */
-.header-one .header-content-area .primary-btn-outline {
-  border-color: var(--amit-blue);
-  color: var(--amit-blue);
-}
-.header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
-  background: var(--primary-dark);
-  color: var(--white);
-}
-.header-one .header-content-area .deactive.primary-btn-outline {
-  color: var(--dark-3);
-  border-color: var(--gray-4);
-  pointer-events: none;
+    <style>
+        /* ===== Buttons Css ===== */
+        .header-one .header-content-area .primary-btn-outline {
+            border-color: var(--amit-contact);
+            color: var(--amit-contact);
+        }
+        .header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+        .header-one .header-content-area .deactive.primary-btn-outline {
+            color: var(--dark-3);
+            border-color: var(--gray-4);
+            pointer-events: none;
+        }
+        /*===== HEADER ONE =====*/
+        .header-one {
+            position: relative;
+        }
+        .header-one .header-content-area {
+            background-color: var(--amit-contact);
+            position: relative;
+            padding: 130px 0;
+        }
+        .header-one .header-content-area .primary-btn-outline {
+            border-color: var(--white);
+            background-color: var(--white);
+            color: var(--amit-contact);
+        }
+        .header-one .header-content-area .primary-btn-outline:hover {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+        .header-one .header-wrapper {
+            position: relative;
+        }
+        .header-one .header-content {
+            max-width: 540px;
+            position: relative;
+            z-index: 5;
+        }
+        .header-one .header-title {
+            color: var(--white);
+            font-weight: 800;
+        }
+        .header-one .text-lg {
+            color: var(--white);
+            font-weight: 300;
+            margin-top: 16px;
+        }
+        .header-one .header-btn {
+            margin-top: 40px;
+        }
+        .header-one .header-image {
+            text-align: center;
+        }
+        .header-one .header-image .image {
+            box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px !important;
+            max-width: 730px;
+        }
+        .header-one .header-image .image img {
+            border-radius: 15px !important;
+            filter: brightness(0.7);
+            width: 100%;
+        }
+        .header-one .header-shape {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        .header-one .header-shape img {
+            width: 100%;
+        }
+        .client {
+            color: var(--amit-contact);
+        }
+.contact-section .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/*===== HEADER ONE =====*/
-.header-one {
-  position: relative;
-}
-.header-one .header-content-area {
-  background-color: var(--amit-blue);
-  position: relative;
-  padding: 130px 0;
+.contact-section .card-body {
+    flex: 1;
 }
 
-.header-one .header-content-area .primary-btn-outline {
-  border-color: var(--white);
-  background-color: var(--white);
-  color: var(--amit-blue);
-}
-.header-one .header-content-area .primary-btn-outline:hover {
-  background-color: transparent;
-  border-color: var(--white);
-  color: var(--white);
-}
-.header-one .header-wrapper {
-  position: relative;
-}
-.header-one .header-content {
-  max-width: 540px;
-  position: relative;
-  z-index: 5;
-}
-.header-one .header-title {
-  color: var(--white);
-  font-weight: 800;
-}
-.header-one .text-lg {
-  color: var(--white);
-  font-weight: 300;
-  margin-top: 16px;
-}
-.header-one .header-btn {
-  margin-top: 40px;
-}
-.header-one .header-image {
-  text-align: center;
-}
-.header-one .header-image .image {
-  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 15px !important;
-  max-width: 730px;
+.contact-section .iframe-container {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
 }
 
-.header-one .header-image .image img {
-    border-radius: 15px !important;
-    filter: brightness(0.7);
-  width: 100%;
-}
-.header-one .header-shape {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-.header-one .header-shape img {
-  width: 100%;
-}
-.client{
-    color: var(--amit-blue);
+.contact-section .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
     </style>
 </head>
@@ -164,7 +187,12 @@
         </div>
     </div>
 </nav>
-<section class="it-hero-section header-area header-one h-70">
+
+
+</header>
+<main>
+
+<section class="contact-hero-section header-area header-one h-70">
    <div class="header-content-area">
       <div class="container">
          <div class="row align-items-center">
@@ -172,13 +200,14 @@
                <div class="header-wrapper">
                   <div class="header-content">
                      <h1 class="header-title">
-                          Our Valued Clients Drive Our Success
+                          Get in Touch with Us
                      </h1>
                        <p class="text-lg">
-                            We proudly serve a diverse range of clients across various industries. Our commitment to excellence and personalized service ensures that each client receives tailored solutions to meet their unique needs and achieve their business goals.                     </p>
+                            We’re here to help with any inquiries you may have. Whether you're looking for more information about our services or need support, feel free to reach out. Our team is dedicated to providing you with the best possible assistance and ensuring your needs are met efficiently.
+                     </p>
                      <div class="header-btn rounded-buttons">
-                               <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
-                           LEARN MORE
+                               <a class="btn primary-btn-outline btn-lg" href="contact.html">
+                           CONTACT US
                         </a>
                      </div>
                   </div>
@@ -189,10 +218,9 @@
                <div class="header-image d-none d-lg-block">
                   <div class="image">
                      <img
-                    
-                        src="./assets/images/clientsheader.jpg"
-                        alt="Header"
-                        />
+                        src="./assets/images/bigstock_How_Can_I_Help_You__1662197.jpg"
+                        alt="Contact Us"
+                     />
                   </div>
                </div>
             </div>
@@ -206,202 +234,122 @@
    <!-- header content area -->
 </section>
 
-</header>
-<main>
-
- <section class="testimonial-one mt-0 mb-0 py-5">
-    <!--======  Start Section Title Seven ======-->
-    <div class="section-title-seven">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title align-center">
-              <span class="client"> Testimonial </span>
-              <h2 class="fw-bold">What People Says</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- container -->
-    </div>
-    <!--====== End Section Title Seven ======-->
+<section class="contact-section py-5">
     <div class="container">
-      <div class="testimonial-one-wrapper">
-        <div class="row justify-content-center">
-          <div class="col-md-9 col-lg-12">
-            <div class="row testimonial-one-active">
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-1.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
+        <div class="row">
+            <!-- Singapore Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.200860262271!2d103.8502495696094!3d1.292342040682304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a1348881bd%3A0xf9b403a3d2a9c140!2samIT%20Global%20Solutions%20Pte%20Ltd!5e0!3m2!1sen!2sin!4v1722339740892!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Singapore Office</h5>
+                        <p class="card-text">
+                            amIT Global Solutions (Pte.) Ltd<br />
+                            (EA Licence # 11C3599)<br />
+                            No.111 North Bridge Road,<br />
+                            #27-01 Peninsula Plaza,<br />
+                            Singapore 179098<br />
+                            <strong>Phone:</strong> +65 1234 5678<br />
+                            <strong>Email:</strong> <a href="mailto:singapore@amitglobal.com" class="text-dark">singapore@amitglobal.com</a>
+                        </p>
                     </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Isabela Moreira</h6>
-                    <span class="sub-title">CEO, GrayGrids</span>
-                  </div>
                 </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-2.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Fajar Siddiq</h6>
-                    <span class="sub-title">Founder, MakerFlix</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-3.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Fiona</h6>
-                    <span class="sub-title">Lead Designer, UIdeck</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-4.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Elon Musk</h6>
-                    <span class="sub-title">CEO, SpaceX</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
             </div>
-            <!-- row -->
-          </div>
+            <!-- Malaysia Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.616562310905!2d101.66076357570942!3d2.926060754481972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb65827955555%3A0x3eb28337cdfb205c!2samIT%20Global%20Solutions%20Sdn%20Bhd!5e0!3m2!1sen!2sin!4v1722341449490!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Malaysia Office</h5>
+                        <p class="card-text">
+                            amIT Global Solutions SDN BHD<br />
+                            Company No: 953305-A<br />
+                            A-3-08, CoPlace 2<br />
+                            2260 Jalan Usahawan 1<br />
+                            63000 Cyberjaya, Selangor Darul Ehsan<br />
+                            Malaysia<br />
+                            <strong>Phone:</strong> +60 123 4567<br />
+                            <strong>Email:</strong> <a href="mailto:malaysia@amitglobal.com" class="text-dark">malaysia@amitglobal.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- India (Chennai) Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3544549187877!2d80.22163747575607!3d13.013085513965969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670790a107af%3A0x4d13a3696902c031!2samIT%20Global%20Solutions%20Pvt.%20Ltd.%2C%20Chennai!5e0!3m2!1sen!2sus!4v1722341500938!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">India (Chennai) Office</h5>
+                        <p class="card-text">
+                            amIT Global Solutions Pvt Ltd<br />
+                            No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
+                            Velachery Main Road, Little Mount<br />
+                            Saidapet<br />
+                            Chennai 600 015<br />
+                            <strong>Jobs:</strong> <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
+                            <strong>Sales:</strong> <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- India (Trichy) Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8677094872714!2d78.67835077573633!3d10.821434458360502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5a3d31f6c45%3A0x90bbab8e3d738ed2!2sAkilam%20Technology%20LLP!5e0!3m2!1sen!2sus!4v1722341536520!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">India (Trichy) Office</h5>
+                        <p class="card-text">
+                            Akilam Technology LLP<br />
+                            D25, 10th Cross West Extn.<br />
+                            Thillai Nagar,<br />
+                            Trichy,<br />
+                            Tamil Nadu 620018<br />
+                            <strong>Mail:</strong> <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Indonesia Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2395164637796!2d106.82688658406055!3d-6.232123744914129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8cbb9e497%3A0xc9b90fc0ac3963bc!2sMenara%20Kadin%20Indonesia%2C%20Jl.%20H.%20R.%20Rasuna%20Said%20Blok%20X-5%20No.Kav.%202-3%2C%20RT.1%2FRW.2%2C%20Kuningan%2C%20Kuningan%20Tim.%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012950%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1722341601112!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Indonesia Office</h5>
+                        <p class="card-text">
+                            PT. AMIT GLOBAL SOLUTIONS,<br />
+                            Menara Karya, 28th Floor,<br />
+                            Jl. H.R. Rasuna Said Blok X-5,<br />
+                            Kav. 1-2, Jakarta 12950,<br />
+                            Indonesia<br />
+                            <strong>Email:</strong> <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- USA Office -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="iframe-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.514980733784!2d-74.4018099235673!3d40.55230354737614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b7f38e402311%3A0x1275f88f48ce5e43!2s342%20Michelle%20Cir%2C%20Edison%2C%20NJ%2008820!5e0!3m2!1sen!2sus!4v1722341663526!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">USA Office</h5>
+                        <p class="card-text">
+                            342 Michelle Cir,<br />
+                            Edison,<br />
+                            NJ-08820<br />
+                            <strong>Phone:</strong> +1 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- container -->
-  </section>
-
-   <section class="client-logo-area client-logo-one">
-      <!--======  Start Section Title Two ======-->
-      <div class="section-title-two">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="content">
-                 
-                     <h2 class="fw-bold client">Our Trusted Clients</h2>
-                     <p>
-                        We take pride in our collaborations with industry-leading clients who trust us for their business needs. Our commitment to delivering exceptional value and results has earned us the trust of a diverse range of organizations.
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- container -->
-      </div>
-      <!--====== End Section Title Two ======-->
-
-      <div class="container-fluid">
-         <h2 class="mb-5 text-center text-amit"></h2>
-         <div class="position-relative">
-            <div class="client-logos-wrapper overflow-hidden position-relative">
-               <div class="client-logos d-flex flex-nowrap">
-                  <!-- Add your client logos here -->
-                  <div class="client-logo">
-                     <img src="./assets/clients/client1.jpg" alt="Client 1">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client2.png" alt="Client 2">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client3.png" alt="Client 3">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client4.png" alt="Client 4">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client5.png" alt="Client 5">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client10.png" alt="Client 10">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/images/logotest.png" alt="Client 11">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client11.png" alt="Client 12">
-                  </div>
-                  <!-- Repeated logos for scrolling effect -->
-                  <div class="client-logo">
-                     <img src="./assets/clients/client1.jpg" alt="Client 1">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client2.png" alt="Client 2">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client3.png" alt="Client 3">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client4.png" alt="Client 4">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client5.png" alt="Client 5">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client10.png" alt="Client 10">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/images/logotest.png" alt="Client 11">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client11.png" alt="Client 12">
-                  </div>
-               </div>
-            </div>
-            <div class="blur-overlay left-blur"></div>
-            <div class="blur-overlay right-blur"></div>
-         </div>
-      </div>
-      <!-- container -->
-   </section>
+</section>
 </main>
 
 <footer class="bg-secondary py-4 footer-background font-weight-600" >

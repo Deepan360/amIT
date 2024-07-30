@@ -520,7 +520,7 @@ padding: 5px 0px;
 --amit-blue: #10009bce;
 --amit-orange: #9b6a00ce;
 --amit-green:#009b41ce;
---amit-contact:rgba(3, 182, 182, 0.685);
+--amit-contact:rgba(51, 165, 165, 0.685);
 }
 .hero {
     position: relative;
