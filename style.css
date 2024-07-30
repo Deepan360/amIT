@@ -519,6 +519,8 @@ padding: 5px 0px;
     --amit-purple: #48009bce;
 --amit-blue: #10009bce;
 --amit-orange: #9b6a00ce;
+--amit-green:#009b41ce;
+--amit-contact:rgba(3, 182, 182, 0.685);
 }
 .hero {
     position: relative;
@@ -2359,3 +2361,10 @@ border: 1px solid #9B0000;
   line-height: 24px;
   color: var(--dark-3);
 }
+.header-one .header-content-area .primary-btn-outline {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 20px !important;
+  line-height: normal !important;
+}
+

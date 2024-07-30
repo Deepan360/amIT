@@ -98,8 +98,34 @@
   width: 100%;
 }
 .professional{
-    color: var(--amit-purple);
+    color: var(--amit-purple) !important;
 }
+/* Sidebar styles */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li.active {
+    background-color: #48009bce; /* Active state color */
+    color: white;
+}
+
+.sidebar li:hover {
+    background-color: rgba(72, 0, 155, 0.1); /* Light hover effect */
+}
+
+/* Heading color */
+.professional, #staffing-quality-process h2, #it-staffing-solutions h2 {
+    color: #48009bce; /* Heading color */
+}
+
     </style>
 </head>
 <body >
@@ -219,7 +245,7 @@
             </div>
             <div class="col-md-8   sidebar-content  p-3 bg-white ">
         <div id="content1" class="content-tab active" data-aos="fade-up">
-  <h2 class="professional">Complete Workforce Solutions (CWS)</h2>
+  <h2 >Complete Workforce Solutions (CWS)</h2>
   <p>
     AGS aims to enable you to achieve your business targets faster, cheaper, and more accurately. While we are recognized as the best IT staffing providers worldwide, we provide a full range of workforce solutions and Service Delivery Models to equip you with the people, skills, and competencies required to get IT done.
   </p>
