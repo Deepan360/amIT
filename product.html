@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <style>
 /* ===== Buttons Css ===== */
 .header-one .header-content-area .primary-btn-outline {
-  border-color: var(--amit-blue);
-  color: var(--amit-blue);
+  border-color: var(--amit-orange);
+  color: var(--amit-orange);
 }
 .header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
   background: var(--primary-dark);
@@ -38,7 +38,7 @@
   position: relative;
 }
 .header-one .header-content-area {
-  background-color: var(--amit-blue);
+  background-color: var(--amit-orange);
   position: relative;
   padding: 130px 0;
 }
@@ -46,7 +46,7 @@
 .header-one .header-content-area .primary-btn-outline {
   border-color: var(--white);
   background-color: var(--white);
-  color: var(--amit-blue);
+  color: var(--amit-orange);
 }
 .header-one .header-content-area .primary-btn-outline:hover {
   background-color: transparent;
@@ -97,9 +97,35 @@
 .header-one .header-shape img {
   width: 100%;
 }
-.client{
-    color: var(--amit-blue);
+.professional{
+    color: var(--amit-orange) !important;
 }
+/* Sidebar styles */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li.active {
+    background-color: #48009bce; /* Active state color */
+    color: white;
+}
+
+.sidebar li:hover {
+    background-color: rgba(72, 0, 155, 0.1); /* Light hover effect */
+}
+
+/* Heading color */
+.professional, #staffing-quality-process h2, #it-staffing-solutions h2 {
+    color: #48009bce; /* Heading color */
+}
+
     </style>
 </head>
 <body >
@@ -172,10 +198,10 @@
                <div class="header-wrapper">
                   <div class="header-content">
                      <h1 class="header-title">
-                          Our Valued Clients Drive Our Success
+                        Innovative Products to Elevate Your Business
                      </h1>
                        <p class="text-lg">
-                            We proudly serve a diverse range of clients across various industries. Our commitment to excellence and personalized service ensures that each client receives tailored solutions to meet their unique needs and achieve their business goals.                     </p>
+ Explore our diverse range of cutting-edge products designed to meet your business needs. From advanced technology solutions to user-friendly applications, our products are crafted to enhance efficiency and drive growth.                     </p>
                      <div class="header-btn rounded-buttons">
                                <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
                            LEARN MORE
@@ -190,7 +216,7 @@
                   <div class="image">
                      <img
                     
-                        src="./assets/images/clientsheader.jpg"
+                        src="./assets/images/bigstock_Happy_young_businesspeople_hav_13080158.jpg"
                         alt="Header"
                         />
                   </div>
@@ -208,202 +234,51 @@
 
 </header>
 <main>
-
- <section class="testimonial-one mt-0 mb-0 py-5">
-    <!--======  Start Section Title Seven ======-->
-    <div class="section-title-seven">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title align-center">
-              <span class="client"> Testimonial </span>
-              <h2 class="fw-bold">What People Says</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
+    <div class="container p-5  ">
+        <div class="row ">
+            <div class="col-md-3 sidebar bg-white ">
+                <ul>
+                    <li data-target="content1" class="active "><i class="fas fa-users "></i> iCare Hospital Management System</li>
+                    <li data-target="content2"><i class="fas fa-medal"></i> Sedna Space</li>
+                     <li data-target="content3"><i class="fas fa-medal"></i> Fleet Tracking System (GPS)</li>
+                </ul>
             </div>
-          </div>
+            <div class="col-md-8   sidebar-content  p-3 bg-white ">
+        <div id="content1" class="content-tab active" data-aos="fade-up">
+  <h2 > iCare Hospital Management System</h2>
+  <p>
+iCare Hospital Management System is powerful, flexible, easy to use and is designed and developed to deliver real conceivable benefits to hospitals and clinics. iCare is designed for multispeciality hospitals, to cover a wide range of hospital administration and management processes.It is an integrated end-to-end Hospital Management System that provides relevant information across the hospital to support effective decision making for patient care, hospital administration and critical financial accounting, in a seamless flow.  </p>
+<p>
+    iCare consists of the modules like Registration, Billing, Financial Accounting, Hospital Fixed Assets, Payroll for employees, Outpatient Management, Inpatient Management, Pharmacy, General Stores, Laboratory, Radiology, Nuclear Medicine, Physiotherapy, Oncology, Haematology and User Administration.
+</p>
+      </div>
+
+<div id="content2" class="content-tab" data-aos="fade-up">
+   <section id="staffing-quality-process">
+       <h2 >Sedna Space</h2>
+  <p>
+Sednaspace is a browser based software development platform for the technical and non-technical people to develop web based software products/projects having BPM, Workflow and SOA. </p>
+  <p>
+Deploy applications without any effort, which can co-exist with the existing applications in any environment such as .Net, Flex, Java, PHP and Cloud Computing.  </p>
+  <p>
+    To be able to track an object you need a GPS device with an Internet connection, access to a eTrack Server and a web browser.
+  </p>
+
+</div>
+    <div id="content3" class="content-tab active" data-aos="fade-up">
+  <h2 > Fleet Tracking System (GPS)</h2>
+  <p>
+A GPS receiver receives information from these satellites and uses it to locate itself. GPS works best in open environments, with an accuracy of a few meters under good conditions.  </p>
+  <p>
+    GPS tracking with INENS is based on GPS receivers that have a connection to the Internet so that they can transmit their position information to a eTrack Server. Common objects to track include persons, vehicles, animals and valuable assets.
+  </p>
+  <p>
+SednaSpace also offers its own real elastic cloud computing platform for private/public cloud.  </p>
+      </div>
+            </div>
         </div>
-      </div>
-      <!-- container -->
     </div>
-    <!--====== End Section Title Seven ======-->
-    <div class="container">
-      <div class="testimonial-one-wrapper">
-        <div class="row justify-content-center">
-          <div class="col-md-9 col-lg-12">
-            <div class="row testimonial-one-active">
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-1.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Isabela Moreira</h6>
-                    <span class="sub-title">CEO, GrayGrids</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-2.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Fajar Siddiq</h6>
-                    <span class="sub-title">Founder, MakerFlix</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-3.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Fiona</h6>
-                    <span class="sub-title">Lead Designer, UIdeck</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-              <div class="col-lg-4">
-                <div class="single-testimonial text-center">
-                  <div class="testimonial-image">
-                    <img src="https://cdn.ayroui.com/1.0/images/testimonial/author-4.jpg" alt="Author" />
-                    <div class="quote-icon">
-                      <i class="lni lni-quotation"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial-content">
-                    <p class="text">
-                      Stop wasting time and money designing and managing a
-                      website that doesn’t get results. Happiness lorem guaranteed!
-                    </p>
-                    <h6 class="author-name">Elon Musk</h6>
-                    <span class="sub-title">CEO, SpaceX</span>
-                  </div>
-                </div>
-                <!-- single testimonial -->
-              </div>
-            </div>
-            <!-- row -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- container -->
-  </section>
-
-   <section class="client-logo-area client-logo-one">
-      <!--======  Start Section Title Two ======-->
-      <div class="section-title-two">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="content">
-                 
-                     <h2 class="fw-bold client">Our Trusted Clients</h2>
-                     <p>
-                        We take pride in our collaborations with industry-leading clients who trust us for their business needs. Our commitment to delivering exceptional value and results has earned us the trust of a diverse range of organizations.
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- container -->
-      </div>
-      <!--====== End Section Title Two ======-->
-
-      <div class="container-fluid">
-         <h2 class="mb-5 text-center text-amit"></h2>
-         <div class="position-relative">
-            <div class="client-logos-wrapper overflow-hidden position-relative">
-               <div class="client-logos d-flex flex-nowrap">
-                  <!-- Add your client logos here -->
-                  <div class="client-logo">
-                     <img src="./assets/clients/client1.jpg" alt="Client 1">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client2.png" alt="Client 2">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client3.png" alt="Client 3">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client4.png" alt="Client 4">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client5.png" alt="Client 5">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client10.png" alt="Client 10">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/images/logotest.png" alt="Client 11">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client11.png" alt="Client 12">
-                  </div>
-                  <!-- Repeated logos for scrolling effect -->
-                  <div class="client-logo">
-                     <img src="./assets/clients/client1.jpg" alt="Client 1">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client2.png" alt="Client 2">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client3.png" alt="Client 3">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client4.png" alt="Client 4">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client5.png" alt="Client 5">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client10.png" alt="Client 10">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/images/logotest.png" alt="Client 11">
-                  </div>
-                  <div class="client-logo">
-                     <img src="./assets/clients/client11.png" alt="Client 12">
-                  </div>
-               </div>
-            </div>
-            <div class="blur-overlay left-blur"></div>
-            <div class="blur-overlay right-blur"></div>
-         </div>
-      </div>
-      <!-- container -->
-   </section>
 </main>
-
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
     <div class="container">
         <div class="row">
@@ -575,38 +450,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- AOS JS -->
-  <script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script></script>
-
-  <script>
-    //======== tiny slider for testimonial-one
-    tns({
-      autoplay: true,
-      autoplayButtonOutput: false,
-      mouseDrag: true,
-      gutter: 0,
-      container: ".testimonial-one-active",
-      center: true,
-      nav: true,
-      controls: false,
-      speed: 400,
-      controlsText: [
-        '<i class="lni lni-arrow-left-circle"></i>',
-        '<i class="lni lni-arrow-right-circle"></i>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 3,
-        },
-      },
-    });
-  </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script  src="index.js"></script>
 <script>

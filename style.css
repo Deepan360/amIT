@@ -1162,6 +1162,7 @@ color: #9B0000
 
 .sidebar ul li  i {
     margin-right: 10px;
+    color: #000 !important;
 }
 
 .sidebar ul li.active
@@ -1174,9 +1175,8 @@ color: #9B0000
 }
 
 .sidebar ul li:hover{
-    background-color: #9B0000
-69;
-    color:#000000;
+
+    color:#ffffff !important;
 }
 .contents {
     flex: 1;
@@ -1730,7 +1730,7 @@ margin-left: auto;
 }
 .sidebar-content h2{
 text-align: center;
-color: #9B0000 !important;
+color: #000000 !important;
 }
 
 .sidebar ul li {
@@ -1741,18 +1741,23 @@ i {
     color: #9B0000 !important;
 }
 
+.sidebar i{
+    color: #fffdfd;
+}
+
+
 .sidebar ul li.active i {
     color: #ffffff !important;
 }
 
 .sidebar ul li.active {
     font-weight: 700;
-    background: #9b0000de;
+    background: #333333de;
     color: #fff;
 }
 
 .sidebar ul li:hover:not(.active) {
-    background: #000000;
+    background: #bbbbbb;
     color: #fff;
 }
 .bg-pure-white{
@@ -2368,3 +2373,22 @@ border: 1px solid #9B0000;
   line-height: normal !important;
 }
 
+.btn-primary-car{
+    background-color: var(--amit-green);
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 30px;
+}
+.btn-primary-car:hover {
+    background-color: white;
+    border-color:var(--amit-green); ;
+    color:var(--amit-green);
+    
+   
+}
+.btn-primary-car-outline{
+    background-color: white !important;
+        border-color: var(--amit-green) !important;
+        ;
+        color: var(--amit-green) !important;
+}

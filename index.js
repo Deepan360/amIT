@@ -108,3 +108,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
  
 ///end of scrolling video in the main index page
+////carrer page loader
+document.addEventListener("DOMContentLoaded", function () {
+  const jobListings = [
+    {
+      title: "Software Developer",
+      location: "Remote",
+      type: "Full-Time",
+      description:
+        "We are looking for a talented software developer to join our team. The ideal candidate will have experience with full-stack development and be proficient in modern web technologies.",
+    },
+    {
+      title: "Project Manager",
+      location: "New York, NY",
+      type: "Full-Time",
+      description:
+        "We are seeking an experienced project manager to lead and manage software development projects. The candidate should have excellent organizational and communication skills.",
+    },
+    {
+      title: "UX/UI Designer",
+      location: "San Francisco, CA",
+      type: "Contract",
+      description:
+        "Join our design team as a UX/UI Designer. The ideal candidate will have a strong portfolio showcasing their design skills and experience with user-centered design principles.",
+    },
+    {
+      title: "Data Analyst",
+      location: "India",
+      type: "Part-Time",
+      description:
+        "Looking for a detail-oriented data analyst to collect, process, and perform statistical analyses on large datasets.",
+    },
+    {
+      title: "DevOps Engineer",
+      location: "Remote",
+      type: "Full-Time",
+      description:
+        "We need a DevOps Engineer with experience in continuous integration and deployment to maintain and improve our infrastructure.",
+    },
+    {
+      title: "Marketing Specialist",
+      location: "USA",
+      type: "Contract",
+      description:
+        "Join our team as a marketing specialist to create and execute marketing strategies that will drive growth.",
+    },
+    // Add more job listings as needed
+  ];
+
+  const jobContainer = document.getElementById("job-listings");
+  const loadMoreButton = document.getElementById("load-more");
+  let jobsPerPage = 3;
+  let currentPage = 1;
+
+  function loadJobs(page) {
+    const startIndex = (page - 1) * jobsPerPage;
+    const endIndex = page * jobsPerPage;
+    const jobsToLoad = jobListings.slice(startIndex, endIndex);
+
+    jobsToLoad.forEach((job) => {
+      const jobElement = document.createElement("div");
+      jobElement.classList.add("col-md-4");
+      jobElement.innerHTML = `
+        <div class="job-listing p-3 mb-4">
+          <h3>${job.title}</h3>
+          <p><strong>Location:</strong> ${job.location}</p>
+          <p><strong>Type:</strong> ${job.type}</p>
+          <p>${job.description}</p>
+          <a class="btn btn-primary-car" href="javascript:void(0)">Apply Now</a>
+        </div>
+      `;
+      jobContainer.appendChild(jobElement);
+    });
+
+    if (endIndex >= jobListings.length) {
+      loadMoreButton.style.display = "none";
+    }
+  }
+
+  loadMoreButton.addEventListener("click", function () {
+    currentPage++;
+    loadJobs(currentPage);
+  });
+
+  // Load the first set of jobs
+  loadJobs(currentPage);
+});
