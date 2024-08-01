@@ -54,9 +54,7 @@ color: #333;
 }
  .custom-navbar-bg {
      background-color: #9B0000;
-     /* Or any other color you prefer */
      color: #fff;
-     /* Adjust text color if needed */
     }
 
 li{
@@ -78,11 +76,8 @@ h6 {
 }
 p{
   font-family: sans-serif !important;
-  
-    
-
 }
-/* Specific styles for links */
+
 
 a{
     font-family: "outfit";
@@ -524,12 +519,12 @@ padding: 5px 0px;
 }
 :root {
     --color: #9B0000;
-    --amit:#9b0000ce;
-    --amit-purple: #48009bce;
---amit-blue: #10009bce;
---amit-orange: #9b6a00ce;
---amit-green:#009b41ce;
---amit-contact:rgba(51, 165, 165, 0.685);
+    --amit:#9b0000;
+    --amit-purple: #5101ad;
+--amit-blue: #10009b;
+--amit-orange: #aa7400;
+--amit-green:#00a846;
+--amit-contact:rgb(0, 179, 179);
 }
 .hero {
     position: relative;
