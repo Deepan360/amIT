@@ -194,3 +194,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load the first set of jobs
   loadJobs(currentPage);
 });
+
+
+///reload glitch for navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo(0, 0);
+    });
+
+    function checkAndReload(event) {
+      const currentUrl = window.location.href.split("#")[0];
+      const targetUrl = event.target.href.split("#")[0];
+
+      if (currentUrl === targetUrl) {
+        event.preventDefault();
+        window.location.hash = event.target.hash;
+        window.location.reload();
+      }
+    }
+///navbar

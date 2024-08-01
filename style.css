@@ -46,8 +46,9 @@
 html, body {
     font-family: "Outfit", sans-serif;
         font-optical-sizing: auto;
-  font-weight: 300;
+
     margin: 0;
+    scroll-behavior: smooth;
     padding: 0;
 color: #333;
 }
@@ -56,7 +57,15 @@ color: #333;
      /* Or any other color you prefer */
      color: #fff;
      /* Adjust text color if needed */
- }
+    }
+
+li{
+    font-family: sans-serif;
+}
+
+li span{
+    font-family: "outfit";
+}
 
 h1,
 h2,
@@ -68,25 +77,29 @@ h6 {
     font-weight: 600;
 }
 p{
-    font-family: "Outfit";
-    font-size: 14px;
-    font-weight: 300;
+  font-family: sans-serif !important;
+  
+    
 
 }
 /* Specific styles for links */
 
-a {
+a{
+    font-family: "outfit";
+    text-decoration: none;
+}
+
+nav .sub-nav-item ul li a {
     text-decoration: none;
     font-family: "Outfit";
     font-weight: 300;
     color: black;
 }
-ul{
-    font-family:"Outfit" ;
-}
+
 /* General link hover effect */
-a:hover {
-    text-decoration: none;
+ a:hover {
+    text-decoration:underline;
+
     color: #fff;
 }
 /* Container styling */
@@ -2014,7 +2027,7 @@ hr {
     --shadow-4:0 8px 16px rgba(0, 0, 0, 0.4);
 }  
 body {
-    font-family: Arial, sans-serif;
+   
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
