@@ -97,11 +97,7 @@ nav .sub-nav-item ul li a {
 }
 
 /* General link hover effect */
- a:hover {
-    text-decoration:underline;
 
-    color: #fff;
-}
 /* Container styling */
 
 /* Navbar styling */
