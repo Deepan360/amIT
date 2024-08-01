@@ -2052,6 +2052,7 @@ body {
 
 .about-one .single-about-items:hover {
     box-shadow: var(--shadow-4);
+
 }
 
 .about-one .single-about-items::before {
@@ -2071,7 +2072,7 @@ body {
     content: "";
     height: 40px;
     width: 40px;
-border: 1px solid #9B0000;
+    border: 1px solid #9B0000;
     border-radius: 50px;
     right: 60px;
     top: 10px;
