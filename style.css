@@ -2396,7 +2396,7 @@ border: 1px solid #9B0000;
 .contact-form .single-form .input-form .primary-btn {
     background: var(--primary);
     color: var(--white);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-4);
 }
 
 .contact-form .single-form .input-form .active.primary-btn,
