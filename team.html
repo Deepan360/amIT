@@ -10,118 +10,234 @@
     
     <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
+ <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        /* ===== Buttons Css ===== */
-        .header-one .header-content-area .primary-btn-outline {
-            border-color: var(--amit-contact);
-            color: var(--amit-contact);
-        }
-        .header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
-            background: var(--primary-dark);
-            color: var(--white);
-        }
-        .header-one .header-content-area .deactive.primary-btn-outline {
-            color: var(--dark-3);
-            border-color: var(--gray-4);
-            pointer-events: none;
-        }
-        /*===== HEADER ONE =====*/
-        .header-one {
-            position: relative;
-        }
-        .header-one .header-content-area {
-            background-color: var(--amit-contact);
-            position: relative;
-            padding: 130px 0;
-        }
-        .header-one .header-content-area .primary-btn-outline {
-            border-color: var(--white);
-            background-color: var(--white);
-            color: var(--amit-contact);
-        }
-        .header-one .header-content-area .primary-btn-outline:hover {
-            background-color: transparent;
-            border-color: var(--white);
-            color: var(--white);
-        }
-        .header-one .header-wrapper {
-            position: relative;
-        }
-        .header-one .header-content {
-            max-width: 540px;
-            position: relative;
-            z-index: 5;
-        }
-        .header-one .header-title {
-            color: var(--white);
-            font-weight: 800;
-        }
-        .header-one .text-lg {
-            color: var(--white);
-            font-weight: 300;
-            margin-top: 16px;
-        }
-        .header-one .header-btn {
-            margin-top: 40px;
-        }
-        .header-one .header-image {
-            text-align: center;
-        }
-        .header-one .header-image .image {
-            box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 15px !important;
-            max-width: 730px;
-        }
-        .header-one .header-image .image img {
-            border-radius: 15px !important;
-            filter: brightness(0.7);
-            width: 100%;
-        }
-        .header-one .header-shape {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        .header-one .header-shape img {
-            width: 100%;
-        }
-        .client {
-            color: var(--amit-contact);
-        }
-.contact-section .card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-section .card-body {
-    flex: 1;
-}
-
-.contact-section .iframe-container {
+        <style>
+            .hero-section {
     position: relative;
-    height: 150px;
-    overflow: hidden;
+    color: #fff;
+    text-align: center;
 }
 
-.contact-section .iframe-container iframe {
+.hero-section::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    background: rgba(0, 0, 0, 0.1); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p {
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+}
+
+.hero-section .btn {
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+    background-color: #ff7f50; /* Color change on hover */
+    transform: translateY(-5px);
+}
+
+.section-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .section-subtitle {
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .card {
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    .card-body p {
+        color: #666;
+    }
+
+    .card-img-top {
+        transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+        transform: translate3d(30);
+    }
+
+    .text-muted {
+        font-size: 0.875rem;
+        color: #999;
+    }
+/* ===== Buttons Css ===== */
+.header-one .header-content-area .primary-btn-outline {
+  border-color: var(--amit-green);
+  color: var(--amit-green);
+}
+.header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+.header-one .header-content-area .deactive.primary-btn-outline {
+  color: var(--dark-3);
+  border-color: var(--gray-4);
+  pointer-events: none;
+}
+
+/*===== HEADER ONE =====*/
+.header-one {
+  position: relative;
+}
+.header-one .header-content-area {
+  background-color: var(--amit-green);
+  position: relative;
+  padding: 130px 0;
+}
+
+.header-one .header-content-area .primary-btn-outline {
+  border-color: var(--white);
+  background-color: var(--white);
+  color: var(--amit-green);
+}
+.header-one .header-content-area .primary-btn-outline:hover {
+  background-color: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+.header-one .header-wrapper {
+  position: relative;
+}
+.header-one .header-content {
+  max-width: 540px;
+  position: relative;
+  z-index: 5;
+}
+.header-one .header-title {
+  color: var(--white);
+  font-weight: 800;
+}
+.header-one .text-lg {
+  color: var(--white);
+  font-weight: 300;
+  margin-top: 16px;
+}
+.header-one .header-btn {
+  margin-top: 40px;
+}
+.header-one .header-image {
+  text-align: center;
+}
+.header-one .header-image .image {
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px !important;
+  max-width: 730px;
+}
+
+.header-one .header-image .image img {
+    border-radius: 15px !important;
+    filter: brightness(0.7);
+  width: 100%;
+}
+.header-one .header-shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.header-one .header-shape img {
+  width: 100%;
+}
+.client{
+    color: var(--amit-green);
+}
+ .header-title {
+    color: var(--amit-green);
+}
+
+.text-lg {
+    color: var(--amit-green);
+}
+
+.job-listing {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensures all job cards have the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-listing p {
+    flex-grow: 1; /* Ensures the description grows to take up available space */
+    margin-bottom: 1rem; /* Add margin at the bottom for space */
+}
+
+.job-listing .btn {
+    align-self: flex-start; /* Ensures the button is aligned at the bottom */
+}
+
+.job-listing:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust margin for each column and row gap */
+.job-listings-section .row > div {
+    margin-bottom: 10px;
+}
+
+.cta-section {
+    background-color: var(--amit-green);
+    color: white;
+    padding: 40px 0;
+}
+
+.cta-section h2 {
+    color: white;
+}
+.cta-section .btn-primary-car-outline{
+    background-color: white !important;
+        border-color: var(--amit-green) !important;
+        ;
+        color: var(--amit-green) !important;
+}
+.btn-primary-car-outline {
+    background-color: white !important;
+    border-color: var(--amit-green) !important;
+    color: var(--amit-green) !important;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary-car-outline:hover {
+    background-color: var(--amit-green) !important;
+    color: white !important;
+    border-color: #fff !important;
+    border: 1px solid;
 }
     </style>
 </head>
@@ -190,270 +306,202 @@
         </div>
     </nav>
 
-
 </header>
 <main>
-
-<section class="contact-hero-section header-area header-one h-70">
-   <div class="header-content-area">
-      <div class="container">
-         <div class="row align-items-center">
-            <div class="col-lg-6 col-12">
-               <div class="header-wrapper">
-                  <div class="header-content">
-                     <h1 class="header-title">
-                          Get in Touch with Us
-                     </h1>
-                       <p class="text-lg">
-                            We’re here to help with any inquiries you may have. Whether you're looking for more information about our services or need support, feel free to reach out. Our team is dedicated to providing you with the best possible assistance and ensuring your needs are met efficiently.
-                     </p>
-                     <div class="header-btn rounded-buttons">
-                               <a class="btn primary-btn-outline btn-lg" href="contact.html">
-                           CONTACT US
-                        </a>
-                     </div>
-                  </div>
-                  <!-- header content -->
-               </div>
-            </div>
-            <div class="col-lg-6 col-12">
-               <div class="header-image d-none d-lg-block">
-                  <div class="image">
-                     <img
-                        src="./assets/images/bigstock_How_Can_I_Help_You__1662197.jpg"
-                        alt="Contact Us"
-                     />
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- row -->
-      </div>
-      <!-- container -->
-
-      <!-- header-shape -->
-   </div>
-   <!-- header content area -->
-</section>
-
-<section class="contact-section py-5">
-    <div class="container">
+    <div class="container my-5 py-5">
+    <!-- Hero Section -->
+<section class="hero-section bg-amits text-white " style="background-image: url('/assets/images/bigstock_Business_Teamwork_-_Business_M_1287336.jpg'); background-size: cover; background-position: center;">
+    <div class="container-fluid text-center justify-content-end d-flex">
         <div class="row">
-            <!-- Singapore Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.200860262271!2d103.8502495696094!3d1.292342040682304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a1348881bd%3A0xf9b403a3d2a9c140!2samIT%20Global%20Solutions%20Pte%20Ltd!5e0!3m2!1sen!2sin!4v1722339740892!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Singapore Office</h5>
-                        <p class="card-text">
-                            amIT Global Solutions (Pte.) Ltd<br />
-                            (EA Licence # 11C3599)<br />
-                            No.111 North Bridge Road,<br />
-                            #27-01 Peninsula Plaza,<br />
-                            Singapore 179098<br />
-                            <strong>Phone:</strong>+65 6749 1270<br />
-                            <!-- <strong>Email:</strong> <a href="mailto:singapore@amitglobal.com" class="text-dark">singapore@amitglobal.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Malaysia Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.616562310905!2d101.66076357570942!3d2.926060754481972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb65827955555%3A0x3eb28337cdfb205c!2samIT%20Global%20Solutions%20Sdn%20Bhd!5e0!3m2!1sen!2sin!4v1722341449490!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Malaysia Office</h5>
-                        <p class="card-text">
-                            amIT Global Solutions SDN BHD<br />
-                            Company No: 953305-A<br />
-                            A-3-08, CoPlace 2<br />
-                            2260 Jalan Usahawan 1<br />
-                            63000 Cyberjaya, Selangor Darul Ehsan<br />
-                            Malaysia<br />
-                            <strong>Phone:</strong> +603 8325 1270<br />
-                            <!-- <strong>Email:</strong> <a href="mailto:malaysia@amitglobal.com" class="text-dark">malaysia@amitglobal.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- India (Chennai) Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3544549187877!2d80.22163747575607!3d13.013085513965969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670790a107af%3A0x4d13a3696902c031!2samIT%20Global%20Solutions%20Pvt.%20Ltd.%2C%20Chennai!5e0!3m2!1sen!2sus!4v1722341500938!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">India (Chennai) Office</h5>
-                        <p class="card-text">
-                            amIT Global Solutions Pvt Ltd<br />
-                            No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
-                            Velachery Main Road, Little Mount<br />
-                            Saidapet<br />
-                            Chennai 600 015<br />
-                            <strong>Phone:</strong> + 91 44 4215 7186<br />
-                            <!-- <strong>Jobs:</strong> <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
-                            <strong>Sales:</strong> <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- India (Trichy) Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8677094872714!2d78.67835077573633!3d10.821434458360502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5a3d31f6c45%3A0x90bbab8e3d738ed2!2sAkilam%20Technology%20LLP!5e0!3m2!1sen!2sus!4v1722341536520!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">India (Trichy) Office</h5>
-                        <p class="card-text">
-                            Akilam Technology LLP<br />
-                            D25, 10th Cross West Extn.<br />
-                            Thillai Nagar,<br />
-                            Trichy,<br />
-                            Tamil Nadu 620018<br />
-                             <strong>Phone:</strong> +91 78458 65524<br />
-                            <!-- <strong>Mail:</strong> <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Indonesia Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2395164637796!2d106.82688658406055!3d-6.232123744914129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8cbb9e497%3A0xc9b90fc0ac3963bc!2sMenara%20Kadin%20Indonesia%2C%20Jl.%20H.%20R.%20Rasuna%20Said%20Blok%20X-5%20No.Kav.%202-3%2C%20RT.1%2FRW.2%2C%20Kuningan%2C%20Kuningan%20Tim.%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012950%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1722341601112!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Indonesia Office</h5>
-                        <p class="card-text">
-                            PT. AMIT GLOBAL SOLUTIONS,<br />
-                            Menara Karya, 28th Floor,<br />
-                            Jl. H.R. Rasuna Said Blok X-5,<br />
-                            Kav. 1-2, Jakarta 12950,<br />
-                            Indonesia<br />
-                             <strong>Phone:</strong> +62 818 0650 8131<br />
-                            <!-- <strong>Email:</strong> <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- USA Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.514980733784!2d-74.4018099235673!3d40.55230354737614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b7f38e402311%3A0x1275f88f48ce5e43!2s342%20Michelle%20Cir%2C%20Edison%2C%20NJ%2008820!5e0!3m2!1sen!2sus!4v1722341663526!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">USA Office</h5>
-                        <p class="card-text">
-                            342 Michelle Cir,<br />
-                            Edison,<br />
-                            NJ-08820<br />
-                            <strong>Phone:</strong> +1 123-456-7890
-                        </p>
-                    </div>
-                </div>
+            <div class="col">
+                <!-- Hero Content -->
+                <h1 class="display-3 fw-bold mb-4">Meet Our Team</h1>
+                <p class="lead mb-4">Our team is the driving force behind our innovation, growth, and success. Get to know the talented individuals who make it all happen.</p>
+                
             </div>
         </div>
     </div>
 </section>
-<section >
-    <div class="container py-3  bg-white" >
-        <h1 class="text-center mb-3">Contact Us</h1>
-   <!--====== CONTACT ONE PART START ======-->
-<section class="contact-area">
-   <div class="container">
-      <div class="row">
-         <div class="col-xl-7 col-lg-8">
-            <div class="section-title mt-45">
-               <h3 class="title">Get in touch</h3>
-            </div>
-            <div class="contact-form form-style-four mt-15">
-               <form action="#">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Full Name</label>
-                           <div class="input-items default">
-                              <i class="lni lni-user"></i>
-                              <input type="text" placeholder="John Doe" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Email Address</label>
-                           <div class="input-items default">
-                              <i class="lni lni-envelope"></i>
-                              <input type="text" placeholder="admin@uideck.com" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Phone Number</label>
-                           <div class="input-items default">
-                              <i class="lni lni-phone"></i>
-                              <input type="text" placeholder="01234567890" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Subject</label>
-                           <div class="input-items default">
-                              <i class="lni lni-bubble"></i>
-                              <input type="text" placeholder="Type here" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-input mt-15">
-                           <label>Your Message</label>
-                           <div class="input-items default">
-                              <i class="lni lni-pencil-alt"></i>
-                              <textarea
-                                 placeholder="Type your message here"
-                                 ></textarea>
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="single-form mt-15">
-                           <div class="input-form rounded-buttons">
-                              <button
-                                 class="btn  btn-outline btn-amit"
-                                 type="submit"
-                                 >
-                              SUBMIT
-                              </button>
-                           </div>
-                        </div>
-                        <!-- single form -->
-                     </div>
-                  </div>
-                  <!-- row -->
-               </form>
-            </div>
-            <!-- contact form -->
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 ">
-<img src="./assets/illustration_and_gif/coworking.gif" alt="" srcset="">
 
-            <!-- contact-info -->
-         </div>
-      </div>
-      <!-- row -->
-   </div>
-   <!-- container -->
-</section>
-<!--====== CONTACT ONE PART ENDS ======-->
+        
+        <!-- Leadership Section -->
+        <div class="section mb-5">
+            <h3 class="section-title text-center mb-4 mt-4">Leadership</h3>
+            <div class="row g-4">
+                <!-- CEO -->
+                <div class="col-12">
+                    <div class="card shadow-lg border-light rounded h-100 d-flex align-items-center">
+                        <div class="d-flex align-items-center p-3">
+                            <!-- Image on the left -->
+                            <img src="/assets/images/5856.jpg" class="rounded-circle me-4" alt="Employee 1" style="width: 300px; height: 300px; object-fit: cover;">
+                            <!-- Text on the right -->
+                            <div class="card-body p-0">
+                                <h2 class="card-title text-amit mb-1">John Doe</h2>
+                                <h4 class="card-title mb-1">CEO</h4>
+                                <p class="card-text">John is the visionary behind our company. He leads with passion and a commitment to innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- CTO -->
+                <div class="col-12">
+                    <div class="card shadow-lg border-light rounded h-100 d-flex align-items-center">
+                        <div class="d-flex align-items-center p-3">
+                            <!-- Image on the left -->
+                            <img src="/assets/images/5856.jpg" class="rounded-circle me-4" alt="Employee 2" style="width: 300px; height: 300px; object-fit: cover;">
+                            <!-- Text on the right -->
+                            <div class="card-body p-0">
+                                <h2 class="card-title text-amit mb-1">Chris Lee</h2>
+                                <h5 class="ccard-title mb-1">CTO</h5>
+                                <p class="card-text">Chris oversees all our technical aspects, ensuring our systems are secure, scalable, and innovative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+        <!-- Technical Team Section -->
+        <div class="section mb-5">
+            <h3 class="section-title text-center mb-4">Technical Team</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Lead Developer -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 3" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Mike Johnson</h5>
+                            <p class="card-text text-muted">Lead Developer</p>
+                            <p class="card-text">Mike is responsible for building our core product. His expertise in software development drives the company forward.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- UI/UX Designer -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 4" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Tom Clark</h5>
+                            <p class="card-text text-muted">UI/UX Designer</p>
+                            <p class="card-text">Tom creates user interfaces that are not only functional but also beautiful and user-friendly.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Product Manager -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 5" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Sophia Turner</h5>
+                            <p class="card-text text-muted">Product Manager</p>
+                            <p class="card-text">Sophia manages the development of our products from ideation to launch, ensuring quality and relevance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- HR Team Section -->
+        <div class="section mb-5">
+            <h3 class="section-title text-center mb-4">HR Team</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Senior HR Manager -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 6" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Emily Brown</h5>
+                            <p class="card-text text-muted">Senior HR Manager</p>
+                            <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Junior HR Assistant -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 7" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Anna Harris</h5>
+                            <p class="card-text text-muted">HR Assistant</p>
+                            <p class="card-text">Anna supports the HR team by scheduling interviews and handling candidate communication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Recruiting Team Section -->
+        <div class="section mb-5">
+            <h3 class="section-title text-center mb-4">Recruiting Team</h3>
+            
+            <!-- Senior Recruiting Team -->
+            <div class="section-subtitle">
+                <h4 class="text-center">Senior Recruiting Team</h4>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <!-- Senior Recruiting Lead -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 8" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">David Wilson</h5>
+                            <p class="card-text text-muted">Senior Recruiting Lead</p>
+                            <p class="card-text">David leads our recruiting efforts, working closely with hiring managers to fill key positions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Junior Recruiting Team -->
+            <div class="section-subtitle">
+                <h4 class="text-center">Junior Recruiting Team</h4>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <!-- Junior Recruiter -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 9" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Sophia Turner</h5>
+                            <p class="card-text text-muted">Junior Recruiter</p>
+                            <p class="card-text">Sophia helps source new talent and supports the recruiting team with administrative tasks.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- HR Assistant -->
+                <div class="col">
+                    <div class="card shadow-lg border-light rounded h-100">
+                        <img src="/assets/images/5856.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Employee 10" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-amit">Olivia Scott</h5>
+                            <p class="card-text text-muted">HR Assistant</p>
+                            <p class="card-text">Olivia supports with interview scheduling, candidate follow-up, and other essential tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+
+<section class="cta-section text-center">
+    <div class="container">
+        <h2>Ready to Join Us?</h2>
+        <p>We are always looking for passionate and talented individuals to join our team. If you don't see a role that fits your skills, feel free to reach out to us with your resume and cover letter.</p>
+        <a class="btn-primary-car-outline btn-lg" href="javascript:void(0)">Contact Us</a>
     </div>
 </section>
+
 </main>
+
 
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
     <div class="container">
@@ -666,24 +714,7 @@
   </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script  src="index.js"></script>
-<script>
- document.addEventListener("DOMContentLoaded", function () {
-        if (window.innerWidth > 768) {
-          AOS.init({
-            duration: 800,
-            delay: 200,
-            offset: 100,
-          });
-        } else {
-          AOS.init({
-            duration: 400,
-            delay: 0,
-            offset: 0,
-            disable: "mobile" // Disable animations on mobile devices
-          });
-        }
-      });
-</script>
+
 
 <script>
 
