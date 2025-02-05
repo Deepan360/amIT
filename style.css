@@ -30,7 +30,7 @@
 .font-6 {
     font-family: 'Merriweather', sans-serif;
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* Import Google Fonts */
@@ -44,7 +44,7 @@
 
 /* Apply default styles to all elements */
 html, body {
-    font-family: "Outfit", sans-serif;
+font-family: 'Montserrat', sans-serif;
         font-optical-sizing: auto;
 
     margin: 0;
@@ -62,7 +62,7 @@ li{
 }
 
 li span{
-    font-family: "outfit";
+    font-family: "Montserrat";
 }
 
 h1,
@@ -71,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Outfit";
+    font-family: "Montserrat";
     font-weight: 500;
 }
 p{
@@ -80,13 +80,13 @@ p{
 
 
 a{
-    font-family: "outfit";
+    font-family: "Montserrat";
     text-decoration: none;
 }
 
 nav .sub-nav-item ul li a {
     text-decoration: none;
-    font-family: "Outfit";
+    font-family: "Montserrat";
     font-weight: 300;
     color: black;
 }
