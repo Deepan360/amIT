@@ -17,7 +17,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.lineicons.com/3.0/lineicons.css"
+/>
+<style>
+    input::placeholder ,textarea::placeholder, select::placeholder {
+  
+  opacity: 0.7 !important;
+}
+ input:focus, 
+  textarea:focus, 
+  select:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.9) !important; /* Subtle custom glow effect */
+    border-color: #ff0000ab !important;
+  } 
+</style>
     <style>
+        
         /* ===== Buttons Css ===== */
         .header-one .header-content-area .primary-btn-outline {
             border-color: var(--amit-contact);
@@ -357,103 +375,69 @@
         </div>
     </div>
 </section>
-<section >
-    <div class="container py-3  bg-white" >
-        <h1 class="text-center mb-3">Contact Us</h1>
-   <!--====== CONTACT ONE PART START ======-->
-<section class="contact-area">
-   <div class="container">
-      <div class="row">
-         <div class="col-xl-7 col-lg-8">
-            <div class="section-title mt-45">
-               <h3 class="title">Get in touch</h3>
-            </div>
-            <div class="contact-form form-style-four mt-15">
-               <form action="#">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Full Name</label>
-                           <div class="input-items default">
-                              <i class="lni lni-user"></i>
-                              <input type="text" placeholder="John Doe" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Email Address</label>
-                           <div class="input-items default">
-                              <i class="lni lni-envelope"></i>
-                              <input type="text" placeholder="admin@uideck.com" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Phone Number</label>
-                           <div class="input-items default">
-                              <i class="lni lni-phone"></i>
-                              <input type="text" placeholder="01234567890" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input mt-15">
-                           <label>Subject</label>
-                           <div class="input-items default">
-                              <i class="lni lni-bubble"></i>
-                              <input type="text" placeholder="Type here" />
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-input mt-15">
-                           <label>Your Message</label>
-                           <div class="input-items default">
-                              <i class="lni lni-pencil-alt"></i>
-                              <textarea
-                                 placeholder="Type your message here"
-                                 ></textarea>
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="single-form mt-15">
-                           <div class="input-form rounded-buttons">
-                              <button
-                                 class="btn  btn-outline btn-amit"
-                                 type="submit"
-                                 >
-                              SUBMIT
-                              </button>
-                           </div>
-                        </div>
-                        <!-- single form -->
-                     </div>
-                  </div>
-                  <!-- row -->
-               </form>
-            </div>
-            <!-- contact form -->
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 ">
-<img src="./assets/illustration_and_gif/coworking.gif" alt="" srcset="">
-
-            <!-- contact-info -->
-         </div>
-      </div>
-      <!-- row -->
-   </div>
-   <!-- container -->
-</section>
-<!--====== CONTACT ONE PART ENDS ======-->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Contact Us</h1>
+      <p class="text-muted">We'd love to hear from you! Fill out the form below to get in touch.</p>
     </div>
+
+    <div class="row align-items-center">
+      <!-- Contact Form -->
+      <div class="col-lg-7 mb-4">
+        <div class="card p-4 shadow rounded-3">
+          <h3 class="fw-bold mb-4">Get in Touch</h3>
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label">Full Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="lni lni-user"></i></span>
+                  <input type="text" class="form-control" id="fullName" placeholder="John Doe" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="emailAddress" class="form-label">Email Address</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="lni lni-envelope"></i></span>
+                  <input type="email" class="form-control" id="emailAddress" placeholder="admin@uideck.com" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="lni lni-phone"></i></span>
+                  <input type="tel" class="form-control" id="phoneNumber" placeholder="01234567890" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="lni lni-bubble"></i></span>
+                  <input type="text" class="form-control" id="subject" placeholder="Type here" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Your Message</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="lni lni-pencil-alt"></i></span>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Type your message here" required></textarea>
+                </div>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-amit px-4 py-2">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Illustration -->
+      <div class="col-lg-5 text-center">
+        <img src="./assets/illustration_and_gif/coworking.gif" alt="Coworking Illustration" class="img-fluid rounded-3 shadow-sm">
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 
