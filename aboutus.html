@@ -17,7 +17,43 @@
     <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <style>
+            /* Custom color for amit text */
+
+ .approach-item i {
+            font-size: 4rem; /* Increased icon size */
+            color: #FF5733; /* Icon color */
+            margin-bottom: 20px;
+        }
+        .approach-item {
+            background-color: #eaeaea; /* Dark background */
+            border-radius: 10px;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+   min-height: 60px;
+        }
+
+        /* Hover Effect for Each Item */
+        .approach-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .approach-item h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .approach-item p {
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            line-height: 1.6;
+        }
+
             .hero-section {
     position: relative;
     color: #000000;
@@ -273,9 +309,10 @@
                                     <li><a  href="it_services.html#content4" onclick="checkAndReload(event)">Application Maintenance & Support</a></li>
                                     <li><a  href="it_services.html#content5" onclick="checkAndReload(event)">Legacy App</a></li>
                                     <!-- <li><a  href="it_services.html#content6" onclick="checkAndReload(event)">Web Technologies</a></li> -->
-                                    <!-- <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Enterprise Content Management</a></li> -->
+                                     <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Digital Transformation Consulting</a></li>
                                     <li><a  href="it_services.html#content8" onclick="checkAndReload(event)">Cloud/Infrastructure</a></li>
                                     <li><a  href="it_services.html#content9" onclick="checkAndReload(event)">Professional Services</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -322,8 +359,8 @@
     <section class="it-hero-section header-area header-one h-100">
         <div class="header-content-area">
             <div class="container">
-                <div class="row align-items-center h-100">
-                    <div class="col-lg-6 col-12">
+                <div class="row align-items-center justify-content-center d-flex h-100">
+                    <!-- <div class="col-lg-6 col-12">
                         <div class="header-wrapper">
                             <div class="header-content">
                                 <h1 class="header-title">
@@ -339,9 +376,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
     
-                    <div class="col-lg-6 col-12">
+                    <div class="col-lg-12 col-12 justify-content-center d-flex      ">
                         <div class="header-image d-none d-lg-block">
                             <div class="image">
                                 <img
@@ -355,13 +392,55 @@
                 <!-- row -->
     
                 <!-- New content section -->
-                <div class="row mt-5">
-                    <div class="col-12">
-                        <div class="additional-content">
-                            <h2 class="section-title">Our Story</h2>
-                            <p class="text-lg">
-                                From humble beginnings to becoming an industry leader, our company has always been driven by a commitment to excellence. Founded in [Year], we began with the goal of providing innovative solutions to [industry/problem]. Over the years, we've evolved, grown, and become a trusted name for [your field].
+                <div class="container">
+                    <!-- Who We Are Section -->
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <h2 class="display-4 text-amit">Who We Are</h2>
+                            <p class="lead white-text">
+                                We are a dedicated team of technology experts, consultants, and creative professionals who focus on empowering organizations to succeed in an increasingly digital world. We do IT Solution implementation, IT Consulting and IT Services for our esteemed clients from Application Dev & Support to cloud integration, Testing and Data Management. We provide tailored services that drive measurable results and sustainable growth.
                             </p>
+                        </div>
+                    </div>
+                
+                    <!-- Our Approach Section -->
+                    <div class="row text-center ">
+                        <div class="col-12 mb-4">
+                            <h3 class="h2 text-amit">Our Approach</h3>
+                            <p class="lead white-text">Our approach is simple: we listen, innovate, implement, and support.</p>
+                        </div>
+                        
+                        <!-- Approach Items -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-person-lines-fill bi-2x"></i>
+                                <h5 class="text-amit">Consultation</h5>
+                                <p class="white-text">We take time to understand your unique business needs, challenges, and objectives to provide effective solutions.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-lightbulb"></i>
+                                <h5 class="text-amit">Innovation</h5>
+                                <p class="white-text">We craft cutting-edge digital strategies, leveraging the latest technologies to help you stay ahead of the curve.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-gear"></i>
+                                <h5 class="text-amit">Implementation</h5>
+                                <p class="white-text">We ensure seamless integration, cloud migration, and automation to maximize your operational efficiency.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-shield-lock"></i>
+                                <h5 class="text-amit">Support</h5>
+                                <p class="white-text">We offer continuous optimization, robust cybersecurity, and technical assistance to help you thrive in the digital landscape.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -380,7 +459,7 @@
                     </div>
                 </div> -->
     
-                <div class="row mt-5">
+                <!-- <div class="row mt-5">
                     <div class="col-12">
                         <div class="additional-content">
                             <h2 class="section-title">Our Approach</h2>
@@ -389,7 +468,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- New content section ends -->
     
             </div>
@@ -507,7 +586,7 @@
                     <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li>
                     <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li>
                     <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
-                    <!-- <li><a href="it_services.html#content7"class="text-white">Enterprise Content Management</a></li> -->
+                   <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li> 
                     <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
                     <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
                 </ul>
