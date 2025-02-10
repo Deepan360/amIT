@@ -214,8 +214,8 @@ li.point{
 .navbar-nav .nav-link  {
     position: relative;
     padding: 8px ;
-    font-weight: 400 !important;
-    font-size: 16px;
+    font-weight: 300 !important;
+    font-size: 18px;
     font-family: "outfit";
     transition: all 0.3s ease;
 }
@@ -325,6 +325,35 @@ padding: 5px 0px;
     /* Smooth color transition on hover */
 }
 
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+
+
+
+
 
 .text-amit{
     color: #9B0000
@@ -356,16 +385,36 @@ padding: 5px 0px;
    
 }
 
+.no-caret::after {
+    display: none !important;
+}
 
 
 /* Dropdown menu styling */
+.dropdown-menu .dropdown-item {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    position: relative;
+    padding-left: 16px; /* Add space for the visual border effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .dropdown-menu .dropdown-item:hover {
-    background-color: #9B0000
-;
-    border-left: 6px solid black;
+    background-color: #9B0000;
     color: #fff;
     text-decoration: none;
 }
+
+.dropdown-menu .dropdown-item:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: black;
+}
+
 /* Hero Section Styles */
 .hero-section {
     height: 70vh; /* Adjust height as needed */

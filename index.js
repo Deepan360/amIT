@@ -211,4 +211,11 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.reload();
       }
     }
+    document.addEventListener("DOMContentLoaded", function () {
+      var dropdownToggleElements = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggleElements.forEach(function (element) {
+          new bootstrap.Dropdown(element);
+      });
+  });
+  
 ///navbar
