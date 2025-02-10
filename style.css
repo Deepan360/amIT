@@ -1267,6 +1267,10 @@ color: #9B0000;
     /* Ensures the video is behind the content */
 }
 
+a li{
+    cursor:  pointer !important;
+}
+
 .container.mainpoints video {
     position: absolute;
     top: 0;
