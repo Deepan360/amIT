@@ -1044,13 +1044,21 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 10px rgba(197, 71, 70, 0.8) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
     /* Custom red shadow */
     outline: none !important;
     /* Remove default outline */
-    border-color: #9B0000
+    border-color: #b1b1b1
 !important;
     /* Change border color on focus */
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: white !important; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+    /* Custom red shadow */
+    outline: none !important;
+  
 }
 .accordion-button.active {
     background-color: #e9ecef !important;
