@@ -1333,9 +1333,9 @@ filter: brightness(0.7);
 }
 
  .btn-amit:hover {
-    background-color: #7a0000;
-    border-color: #7a0000;
-    color: #fff;
+    background-color: #7a0000 !important;
+    border-color: #7a0000 !important;
+    color: #fff !important;
     text-decoration: none;
 }
 h5 {
@@ -1621,7 +1621,7 @@ transition: transform 0.3s ease;
     border-radius: 30px;
 }
 
-.service-card:hover .explore-button {
+.service-card:hover .explore-button ,.explore-button:hover{
     bottom: 50%;
     background-color: #9B0000;
     border-color: #9B0000;
