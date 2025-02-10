@@ -69,21 +69,34 @@ li span{
     font-family: "Faustina", serif;
     font-weight: 400 !important;
 }
-
+.nav-link{
+    color:  #000 !important;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: #000;
     font-family: "Lora";
-    font-weight: 700 !important;
+    font-weight: 500 !important;
+}
+footer a{
+    font-weight: 300 !important;
+    text-decoration: none !important;
+}
+footer {
+    font-weight: 300 !important;
+    text-decoration: none !important;
 }
 p{
     font-family: "Faustina", serif;
-  font-weight: 400;
+  font-weight: 300;
 }
-
+li a{
+    text-decoration: none !important;
+}
 
 a{
     font-family: "Faustina", serif;
@@ -104,7 +117,7 @@ nav .sub-nav-item ul li a {
 /* Navbar styling */
 .navbar {
     font-size: 14px;
-
+color: #000 !important;
     width: 100%;
     z-index: 1000; 
 }
@@ -330,6 +343,7 @@ padding: 5px 0px;
 }
 
 .nav-item {
+    color: #000 !important;
     position: relative;
 }
 
@@ -389,12 +403,15 @@ padding: 5px 0px;
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item {
+    font-size: 18px !important;
+    line-height: 1.8;
     position: relative;
     padding-left: 16px; /* Add space for the visual border effect */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu .dropdown-item:hover {
+    
     background-color: #9B0000;
     color: #fff;
     text-decoration: none;
