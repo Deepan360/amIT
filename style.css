@@ -385,15 +385,10 @@ padding: 5px 0px;
    
 }
 
-.no-caret::after {
-    display: none !important;
-}
 
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item {
-    font-size: 18px !important;
-    font-weight: 300 !important;
     position: relative;
     padding-left: 16px; /* Add space for the visual border effect */
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -413,6 +408,54 @@ padding: 5px 0px;
     height: 100%;
     width: 6px;
     background-color: black;
+}
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+.no-caret::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Hero Section Styles */
