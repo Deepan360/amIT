@@ -2842,7 +2842,12 @@ a[href^="tel"] {
         width: 100%;
         box-shadow: none;
     }
+    .row{
+        gap: 10px !important;
+    }
 }
+
+
 .accordion-collapse .collapse .show .accordion-body p{
    
     font-weight: 300 !important;
