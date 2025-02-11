@@ -13,7 +13,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-Snh6WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -91,8 +91,8 @@
     }
 /* ===== Buttons Css ===== */
 .header-one .header-content-area .primary-btn-outline {
-  border-color: var(--amit-green);
-  color: var(--amit-green);
+  border-color: var(--amit-team);
+  color: var(--amit-team);
 }
 .header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
   background: var(--primary-dark);
@@ -117,7 +117,7 @@
 .header-one .header-content-area .primary-btn-outline {
   border-color: var(--white);
   background-color: var(--white);
-  color: var(--amit-green);
+  color: var(--amit-team);
 }
 .header-one .header-content-area .primary-btn-outline:hover {
   background-color: transparent;
@@ -169,14 +169,14 @@
   width: 100%;
 }
 .client{
-    color: var(--amit-green);
+    color: var(--amit-team);
 }
  .header-title {
-    color: var(--amit-green);
+    color: var(--amit-team);
 }
 
 .text-lg {
-    color: var(--amit-green);
+    color: var(--amit-team);
 }
 
 .job-listing {
@@ -209,7 +209,7 @@
 }
 
 .cta-section {
-    background-color: var(--amit-green);
+    background-color: var(--amit-team);
     color: white;
     padding: 40px 0;
 }
@@ -219,14 +219,14 @@
 }
 .cta-section .btn-primary-car-outline{
     background-color: white !important;
-        border-color: var(--amit-green) !important;
+        border-color: var(--amit-team) !important;
         ;
-        color: var(--amit-green) !important;
+        color: var(--amit-team) !important;
 }
 .btn-primary-car-outline {
     background-color: white !important;
-    border-color: var(--amit-green) !important;
-    color: var(--amit-green) !important;
+    border-color: var(--amit-team) !important;
+    color: var(--amit-team) !important;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 30px;
@@ -238,7 +238,7 @@
 }
 
 .btn-primary-car-outline:hover {
-    background-color: var(--amit-green) !important;
+    background-color: var(--amit-team) !important;
     color: white !important;
     border-color: #fff !important;
     border: 1px solid;
@@ -288,7 +288,50 @@
     visibility: visible;
     transform: translateY(0);
 }
+.card {
+        position: relative;
+        overflow: hidden;
+    }
 
+    .cards img {
+        transition: transform 0.3s ease;
+    }
+
+    .cards:hover img {
+        transform: scale(1.1); /* Zoom effect */
+       
+    }
+
+    .card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay h4 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+    }
     </style>
 </head>
 <body >
@@ -402,19 +445,23 @@
             <div class="row g-4">
                 <!-- CEO -->
                 <div class="col-md-6">
-                    <div class="card shadow-lg border-light rounded-3  h-100 d-flex align-items-center">
-                        <div class="d-flex align-items-center p-3">
-                            <!-- Image on the left -->
-                            <img src="/assets/team/jai.png" class=" me-4" alt="Employee 1" style="width: 300px; height: 300px; object-fit: cover;">
-                            <!-- Text on the right -->
-                            <div class="card-body p-0 text-align-left">
-                                <h2 class="card-title text-amit mb-1">Jaisankar rangachari
-                                </h2>
-                                <h4 class="card-title mb-1">Group CEO</h4>
-                                <!-- <p class="card-text">John is the visionary behind our company. He leads with passion and a commitment to innovation.</p> -->
+                    <div class="card shadow-xl border-0 rounded-3 h-100 d-flex flex-column align-items-center p-3" style="background: linear-gradient(145deg, #f3f3f3, #ffffff);">
+                        <div class="d-flex flex-md-row flex-column align-items-center p-3">
+                            <!-- Image Section -->
+                            <div class="image-container position-relative me-md-4">
+                                <img src="/assets/team/jai.png" class="" alt="Jaisankar Rangachari" style="width: 300px; height: 300px; object-fit: cover;">
+                            </div>
+                    
+                            <!-- Text Section -->
+                            <div class="card-body p-0 mt-md-0 text-md-left text-center">
+                                <h2 class="card-title fw-bold text-amit mb-1" style="font-size: 2rem; color: #2c3e50;">Jaisankar Rangachari</h2>
+                                <h5 class="card-title mb-1 text-secondary" style="font-weight: 600;">Group CEO</h5>
+                                <hr class="my-2 border-dark" style="width: 100%; margin-left: 0;">
+                                <p class="card-text text-muted fst-italic mt-2">"Leading innovation and excellence, driven by passion and strategy."</p>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
         
    
@@ -425,81 +472,96 @@
      
         <!-- HR Team Section -->
         <div class="section mb-5">
-            <!-- <h3 class="section-title text-left mb-4">HR Team</h3> -->
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <!-- Senior HR Manager -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
                         <img src="/assets/team/amiya.JPG" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Amiya</h4>
+                            <p>Client Manager overseeing strategic operations and decision-making.</p>
+                        </div>
                         <div class="card-body text-left">
                             <h3 class="card-title text-amit">Amiya</h3>
-                            <h5 class="card-title mb-1">CM</h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h6 class="card-title mb-1">CM</h6>
                         </div>
                     </div>
                 </div>
-    
+        
                 <!-- Junior HR Assistant -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
                         <img src="/assets/team/loh.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Lorend Octavian</h4>
+                            <p>Head of Sales (Indonesia), driving sales growth and market strategy.</p>
+                        </div>
                         <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Lorend Octavian
-                            </h3>
-                            <h5 class="card-title mb-1">Head of Sales (Indonesia) </h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h3 class="card-title text-amit">Lorend Octavian</h3>
+                            <h6 class="card-title mb-1">Head of Sales (Indonesia)</h6>
                         </div>
                     </div>
                 </div>
+        
+                <!-- HR Head -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100 text-align-left">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
                         <img src="/assets/team/deepa.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Deepa</h4>
+                            <p>HR Head ensuring employee engagement and policy compliance.</p>
+                        </div>
                         <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Deep
-                            </h3>
-                            <h5 class="card-title mb-1">HR Head</h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h3 class="card-title text-amit">Deepa</h3>
+                            <h6 class="card-title mb-1">HR Head</h6>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Senior Delivery and Client Manager -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/dg.JPG" class="card-img-center object-fit-contain object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
+                        <img src="/assets/team/dg.JPG" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Gnanavel Durairaj</h4>
+                            <p>Senior Delivery and Client Manager, ensuring project excellence.</p>
+                        </div>
                         <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Gnanavel Durairaj
-
-                            </h3>
-                            <h5 class="card-title mb-1">Senior Delivery And Client Manager
-                            </h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h3 class="card-title text-amit">Gnanavel Durairaj</h3>
+                            <h6 class="card-title mb-1">Senior Delivery And Client Manager</h6>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Head of System Delivery -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
                         <img src="/assets/team/amuthan.jpeg" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Amuthan</h4>
+                            <p>Head of System Delivery, managing technical operations.</p>
+                        </div>
                         <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Amuthan
-                            </h3>
-                            <h5 class="card-title mb-1">Head of System Delivery </h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h3 class="card-title text-amit">Amuthan</h3>
+                            <h6 class="card-title mb-1">Head of System Delivery</h6>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Director Sales IT Services -->
                 <div class="col">
-                    <div class="card shadow-lg border-light rounded-3 h-100">
+                    <div class="card cards shadow-lg border-light rounded-3 h-100">
                         <img src="/assets/team/goh.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="overlay">
+                            <h4>Goh Teik Beng</h4>
+                            <p>Director of Sales IT Services, leading client relationships.</p>
+                        </div>
                         <div class="card-body text-left">
-                            <h3 class="card-title text-amit">GOH TEIK BENG
-
-                            </h3>
-                            <h5 class="card-title mb-1">Director sales IT Services
-                            </h5>
-                            <!-- <p class="card-text">Emily ensures that our team is well-supported and that we maintain a positive workplace culture.</p> -->
+                            <h3 class="card-title text-amit">Goh Teik Beng</h3>
+                            <h6 class="card-title mb-1">Director Sales IT Services</h6>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     
@@ -522,7 +584,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
+                <h6 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h6>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
                     <li><a href="it_services.html#content2" class="text-white">Quality As A Service</a></li>
@@ -538,12 +600,12 @@
 
             </div>
             <div class="col-md-4">
-                <h5 class="text-white">Malaysian Status Company</h5>
+                <h6 class="text-white">Malaysian Status Company</h6>
                 <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
        
             </div> 
             <div class="col-md-4">
-                         <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
+                         <h6 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h6>
                 <div class="accordion" id="companyDetails">
                     <div class="accordion-item bg-black text-light ">
                         <h2 class="accordion-header" id="headingSingapore">
@@ -692,7 +754,7 @@
 
 <!-- Font Awesome JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        integrity="sha512-Snh6WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- AOS JS -->
