@@ -319,7 +319,7 @@ padding: 5px 0px;
     white-space: nowrap;
     transition: background-color 0.3s ease, color 0.3s ease;
     /* Smooth background-color and color transition */
-    font-size: 14px;
+    font-size: 14px !important;
     /* Adjust font size for sub-menu items */
     color: #000;
     
@@ -331,7 +331,7 @@ padding: 5px 0px;
     color: black;
     /* Default link color */
    font-weight: 300;
-   font-size: 14px;
+   font-size: 14px !important;
     display: block;
     /* Ensure link occupies full width of list item */
     transition: color 0.3s ease;
@@ -403,8 +403,8 @@ padding: 5px 0px;
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item {
-    font-size: 18px !important;
-    line-height: 1.8;
+    font-size: 16px !important;
+    
     position: relative;
     padding-left: 16px; /* Add space for the visual border effect */
     transition: background-color 0.3s ease, color 0.3s ease;
