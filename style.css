@@ -2812,7 +2812,15 @@ body {
     background-color: var(--primary);
     border-color: transparent;
 }
-/* Disable auto-linking of phone numbers by browsers */
+
+/* Reset margin and padding for body in mobile view */
+@media (max-width: 768px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+    /* Disable auto-linking of phone numbers by browsers */
 a[href^="tel"] {
     text-decoration: none;
     color: inherit;
@@ -2823,13 +2831,6 @@ a[href^="tel"] {
     -webkit-user-modify: read-only !important;
     user-modify: read-only !important;
 }
-/* Reset margin and padding for body in mobile view */
-@media (max-width: 768px) {
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow-x: hidden;
-    }
 }
 
 
