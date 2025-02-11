@@ -2812,3 +2812,33 @@ body {
     background-color: var(--primary);
     border-color: transparent;
 }
+/* Disable auto-linking of phone numbers by browsers */
+a[href^="tel"] {
+    text-decoration: none;
+    color: inherit;
+    pointer-events: none;
+}
+
+.accordion-body {
+    -webkit-user-modify: read-only !important;
+    user-modify: read-only !important;
+}
+/* Reset margin and padding for body in mobile view */
+@media (max-width: 768px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+}
+
+
+/* Ensure full width for mobile */
+@media (max-width: 768px) {
+    .navbar-collapse .dropdown-menu {
+        position: relative;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+}
