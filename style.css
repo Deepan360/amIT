@@ -2892,3 +2892,6 @@ h6 .card-title{
     color: var(--amit);
     background-color: #ddd;
   }
+  .amit{
+    background-color: #9B0000 !important;
+  }
