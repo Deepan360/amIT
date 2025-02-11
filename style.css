@@ -638,9 +638,14 @@ padding: 5px 0px;
     --amit-purple: #5406aee4;
     --amit-blue: #091f6b;
     --amit-orange: #aa7400;
-    --amit-green: #194161ed;
+  
     --amit-team: #358d70f3;
-    --amit-contact:rgba(0, 143, 179, 0.896);
+    --amit-contact: #008b8b; /* Bright Sky Blue with a vibrant touch */
+    --amit-green: #421a7ee4; /* Rich Indigo with depth */
+    
+    
+    
+    
 }
 .hero {
     position: relative;
