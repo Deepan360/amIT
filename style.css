@@ -404,7 +404,7 @@ padding: 5px 0px;
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item {
     font-size: 16px !important;
-    
+    font-family: "lota";
     position: relative;
     padding-left: 16px; /* Add space for the visual border effect */
     transition: background-color 0.3s ease, color 0.3s ease;
