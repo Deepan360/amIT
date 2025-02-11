@@ -2843,3 +2843,7 @@ a[href^="tel"] {
         box-shadow: none;
     }
 }
+.accordion-collapse .collapse .show .accordion-body p{
+   
+    font-weight: 300 !important;
+}
