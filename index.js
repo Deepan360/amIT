@@ -218,4 +218,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
   
+
+  document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        if (window.innerWidth <= 768) { // Only apply for mobile
+            event.preventDefault();
+            this.nextElementSibling.classList.toggle('show');
+        }
+    });
+});
+
 ///navbar
