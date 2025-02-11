@@ -1452,7 +1452,7 @@ filter: brightness(0.7);
 
     border-radius: 30px;
     text-decoration: none;
-    color: #ffffff;
+    color: #ffffff !important;
     /* Ensure text is white on button */
     transition: background-color 0.3s ease;
     /* Smooth transition */
