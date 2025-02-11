@@ -2857,3 +2857,13 @@ a[href^="tel"] {
    
     font-weight: 300 !important;
 }
+
+.last-part p{
+    padding: 0px !important;
+    margin: 0px!important;
+    color: #000;
+}
+.last-part{
+    padding: 0px !important;
+    margin: 0px!important;
+}
