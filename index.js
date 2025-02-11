@@ -228,4 +228,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+ // Show the button when scrolling down
+ window.onscroll = function () {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("scrollTopBtn").onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 ///navbar
