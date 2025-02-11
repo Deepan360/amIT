@@ -1447,8 +1447,8 @@ filter: brightness(0.7);
     background-color: #fff;
 }
  .btn-amit {
-    background-color: #9B0000;
-    border-color: #9B0000;
+    background-color: #9B0000 !important;
+    border-color: #9B0000 !important; 
 
     border-radius: 30px;
     text-decoration: none;
