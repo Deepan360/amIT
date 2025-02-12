@@ -399,7 +399,10 @@ padding: 5px 0px;
    
 }
 
-
+.header-one .text-lg {
+    font-size: 18px !important;
+    margin-bottom: 30px !important;
+  }
 
 /* Dropdown menu styling */
 .dropdown-menu .dropdown-item {
