@@ -238,18 +238,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 };
 
-document.querySelectorAll('.accordion-button').forEach(button => {
-  button.addEventListener('click', function () {
-      let collapseElement = this.closest('.accordion-item').querySelector('.accordion-collapse');
+// document.querySelectorAll('.accordion-button').forEach(button => {
+//   button.addEventListener('click', function () {
+//       let collapseElement = this.closest('.accordion-item').querySelector('.accordion-collapse');
 
-      if (collapseElement.classList.contains('show')) {
-          collapseElement.classList.remove('show');
-      } else {
-          document.querySelectorAll('.accordion-collapse').forEach(item => item.classList.remove('show'));
-          collapseElement.classList.add('show');
-      }
-  });
-});
+//       if (collapseElement.classList.contains('show')) {
+//           collapseElement.classList.remove('show');
+//       } else {
+//           document.querySelectorAll('.accordion-collapse').forEach(item => item.classList.remove('show'));
+//           collapseElement.classList.add('show');
+//       }
+//   });
+// });
 
 
 ///navbar
