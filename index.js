@@ -229,14 +229,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
  // Show the button when scrolling down
- window.onscroll = function () {
+ document.addEventListener("DOMContentLoaded", function () {
   const scrollTopBtn = document.getElementById("scrollTopBtn");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollTopBtn.style.display = "block";
-  } else {
-    scrollTopBtn.style.display = "none";
+
+  // Function to handle scroll event
+  function handleScroll() {
+    if (window.scrollY > 200) {
+      scrollTopBtn.style.display = "block";
+      scrollTopBtn.style.opacity = "1";
+    } else {
+      scrollTopBtn.style.opacity = "0";
+      setTimeout(() => {
+        if (window.scrollY <= 200) {
+          scrollTopBtn.style.display = "none";
+        }
+      }, 300); // Match the transition time
+    }
   }
-};
+
+  // Smooth scroll to top function
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  // Attach event listeners
+  window.addEventListener("scroll", handleScroll);
+  scrollTopBtn.addEventListener("click", scrollToTop);
+});
 
 // document.querySelectorAll('.accordion-button').forEach(button => {
 //   button.addEventListener('click', function () {
