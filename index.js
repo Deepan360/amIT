@@ -238,9 +238,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 };
 
-// Scroll to top when the button is clicked
-document.getElementById("scrollTopBtn").onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+document.querySelectorAll('.accordion-button').forEach(button => {
+  button.addEventListener('click', function () {
+      let collapseElement = this.closest('.accordion-item').querySelector('.accordion-collapse');
+
+      if (collapseElement.classList.contains('show')) {
+          collapseElement.classList.remove('show');
+      } else {
+          document.querySelectorAll('.accordion-collapse').forEach(item => item.classList.remove('show'));
+          collapseElement.classList.add('show');
+      }
+  });
+});
+
 
 ///navbar
