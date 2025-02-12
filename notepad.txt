@@ -19,3 +19,42 @@
     --amit-cyan: #008b8b; /* Deep Cyan */
     --amit-teal: #2a9d8f; /* Modern Teal */
 
+ <div class="row text-center ">
+                        <div class="col-12 mb-4">
+                            <h3 class="text-amit">Our Approach</h3>
+                            <p class="lead white-text">Our approach is simple: we listen, innovate, implement, and support.</p>
+                        </div>
+                        
+                        <!-- Approach Items -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-person-lines-fill bi-2x"></i>
+                                <h5 class="text-amit">Consultation</h5>
+                                <p class="white-text">We take time to understand your unique business needs, challenges, and objectives to provide effective solutions.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-lightbulb"></i>
+                                <h5 class="text-amit">Innovation</h5>
+                                <p class="white-text">We craft cutting-edge digital strategies, leveraging the latest technologies to help you stay ahead of the curve.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-gear"></i>
+                                <h5 class="text-amit">Implementation</h5>
+                                <p class="white-text">We ensure seamless integration, cloud migration, and automation to maximize your operational efficiency.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-shield-lock"></i>
+                                <h5 class="text-amit">Support</h5>
+                                <p class="white-text">We offer continuous optimization, robust cybersecurity, and technical assistance to help you thrive in the digital landscape.</p>
+                            </div>
+                        </div>
+                    </div>
