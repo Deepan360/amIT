@@ -20,6 +20,7 @@
     <!-- Bootstrap and Popper -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap CSS & JS -->
 
         <style>
 /* ===== Buttons Css ===== */
@@ -72,7 +73,6 @@
 .header-one .text-lg {
   color: var(--white);
   font-weight: 300;
-  
   margin-top: 16px;
 }
 .header-one .header-btn {
@@ -86,7 +86,6 @@
   border-radius: 15px !important;
   max-width: 730px;
 }
-
 .header-one .header-image .image img {
     border-radius: 15px !important;
     filter: brightness(0.7);
@@ -105,77 +104,9 @@
 .client{
     color: var(--amit-green);
 }
- .header-title {
-    color: var(--amit-green);
-}
-
-.text-lg {
-    color: var(--amit-green);
-}
-
-.job-listing {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Ensures all job cards have the same height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.job-listing p {
-    flex-grow: 1; /* Ensures the description grows to take up available space */
-    margin-bottom: 1rem; /* Add margin at the bottom for space */
-}
-
-.job-listing .btn {
-    align-self: flex-start; /* Ensures the button is aligned at the bottom */
-}
-
-.job-listing:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Adjust margin for each column and row gap */
-.job-listings-section .row > div {
-    margin-bottom: 10px;
-}
-
-.cta-section {
-    background-color: var(--amit-green);
-    color: white;
-    padding: 40px 0;
-}
-
-.cta-section h2 {
-    color: white;
-}
-.cta-section .btn-primary-car-outline{
-    background-color: white !important;
-        border-color: var(--amit-green) !important;
-        ;
-        color: var(--amit-green) !important;
-}
-.btn-primary-car-outline {
-    background-color: white !important;
+.border-client{
     border-color: var(--amit-green) !important;
-    color: var(--amit-green) !important;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-primary-car-outline:hover {
-    background-color: var(--amit-green) !important;
-    color: white !important;
-    border-color: #fff !important;
-    border: 1px solid;
+    /* border: 2px solid var(--amit-green); */
 }
 .navbar {
     background-color: #f8f9fa;
@@ -222,7 +153,19 @@
     visibility: visible;
     transform: translateY(0);
 }
-
+.career-card {
+        border-left: 5px solid var(--amit);
+    }
+    .modal-content {
+        border-radius: 12px;
+    }
+    .modal-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .form-control, .form-select {
+        border-radius: 6px;
+    }
     </style>
 </head>
 <body >
@@ -283,52 +226,50 @@
             </div>
         </div>
     </nav>
-
-
-<section class="it-hero-section header-area header-one h-70">
-   <div class="header-content-area">
-      <div class="container">
-         <div class="row align-items-start">
-            <div class="col-lg-6 col-12">
-               <div class="header-wrapper">
-                  <div class="header-content">
-                     <h1 class="header-title">
-  Join Our Team and Build Your Career                     </h1>
-                       <p class="text-lg">
- We are dedicated to fostering a dynamic and inclusive work environment where employees can thrive. Discover exciting career opportunities and be part of a team that values innovation, collaboration, and professional growth.</p>                     <div class="header-btn rounded-buttons">
-    <div class="header-btn rounded-buttons">
-        <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
-    LEARN MORE
- </a>
-</div>
-                     </div>
-                  </div>
-                  <!-- header content -->
-               </div>
-            </div>
-            <div class="col-lg-6 col-12">
-               <div class="header-image d-none d-lg-block">
-                  <div class="image">
-                     <img
-                    
-                        src="./assets/images/bigstock_Business_Teamwork_-_Business_M_1287336.jpg"
-                        alt="Header"
-                        />
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- row -->
-      </div>
-      <!-- container -->
-
-      <!-- header-shape -->
-   </div>
-   <!-- header content area -->
-</section>
-
 </header>
 <main>
+
+<section class="it-hero-section header-area header-one h-70 ">
+    <div class="header-content-area">
+       <div class="container">
+          <div class="row align-items-start">
+             <div class="col-lg-6 col-12">
+                <div class="header-wrapper">
+                   <div class="header-content">
+                      <h1 class="header-title">
+   Join Our Team and Build Your Career </h1>
+                        <p class="text-lg">
+  We are dedicated to fostering a dynamic and inclusive work environment where employees can thrive. Discover exciting career opportunities and be part of a team that values innovation, collaboration, and professional growth.</p>                     <div class="header-btn rounded-buttons">
+     <div class="header-btn rounded-buttons">
+         <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
+     LEARN MORE
+  </a>
+ </div>
+                      </div>
+                   </div>
+                   <!-- header content -->
+                </div>
+             </div>
+             <div class="col-lg-6 col-12">
+                <div class="header-image d-none d-lg-block">
+                   <div class="image">
+                      <img
+                     
+                         src="./assets/images/bigstock_Business_Teamwork_-_Business_M_1287336.jpg"
+                         alt="Header"
+                         />
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- row -->
+       </div>
+       <!-- container -->
+ 
+       <!-- header-shape -->
+    </div>
+    <!-- header content area -->
+ </section>
 <!-- <section class="job-listings-section py-5">
     <div class="container">
         <h2 class="mb-4">Current Openings</h2>
@@ -378,27 +319,201 @@
         </div>
     </div>
 </section> --> 
-<div class="container">
-    <div class="row p-5 ">
-        <div class="col-md-12">
+<div class="container p-5">
+    <div class="row ">
+        <div class="col-md-8 col-sm-6">
             <h3>This Page is Under Construction</h3>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            <div class="image-fluids d-flex m-auto justify-content-center">
-<img src="./assets/Cooperative_Business_Characters/Cooperative_Business_Characters/PNG/working.png" alt="" srcset="">
+            <div class="image-fluid d-flex m-auto justify-content-center">
+<img src="./assets/Cooperative_Business_Characters/Cooperative_Business_Characters/PNG/working.png" style="width: 90%;" alt="" srcset="">
             </div>
         </div>
     </div>
 </div>
+<!-- Careers Section -->
 
-<!-- <section class="cta-section text-center">
-    <div class="container">
-        <h2>Ready to Join Us?</h2>
-        <p>We are always looking for passionate and talented individuals to join our team. If you don't see a role that fits your skills, feel free to reach out to us with your resume and cover letter.</p>
-        <a class="btn-primary-car-outline btn-lg" href="javascript:void(0)">Contact Us</a>
+<section class=" p-1 bg-light">
+    <div class="container mb-4">
+        <h2 class=" text-dark text-center mb-4">
+            <i class="fas fa-users text-amit"></i> Join Us as <span class="text-amit">amITians</span>!
+        </h2>
+        <p class="text-black text-left ">
+            Be part of our fast-growing team! We seek passionate, driven, and talented professionals who aspire to make a real impact in the IT industry.
+            If you’re looking for a company that values <strong>innovation, growth, and excellence</strong>, we want to hear from you!
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="career-card p-4 bg-white shadow-sm rounded">
+                    <h3 class="text-dark fw-semibold">
+                        <i class="fas fa-briefcase text-amit"></i> Open Positions
+                    </h3>
+
+                    <div class="mt-4">
+                        <h5 class="fw-bold text-amit d-flex align-items-center">
+                            <i class="fas fa-laptop-code me-2"></i> IT Consultants (All Technologies & Levels)
+                        </h5>
+                        <p class="text-balck">
+                            We are looking for specialists in <strong>Software Development, Cloud Computing, Cybersecurity, AI, Data Analytics</strong>, and more.
+                            If you thrive in solving complex challenges, we welcome your expertise.
+                        </p>
+                    </div>
+
+                    <div class="mt-3">
+                        <h5 class="fw-bold text-amit d-flex align-items-center">
+                            <i class="fas fa-chart-line me-2"></i> Business Development Managers & Executives
+                        </h5>
+                        <p class="text-black">
+                            Passionate about <strong>client relationships, sales growth, and business expansion?</strong> Join us to drive top-tier IT solutions worldwide.
+                            We offer a <strong>rewarding career path</strong> where your growth is our priority.
+                        </p>
+                    </div>
+
+                    <div class="mt-3">
+                        <h5 class="fw-bold text-amit d-flex align-items-center">
+                            <i class="fas fa-user-tie me-2"></i> IT Recruiters
+                        </h5>
+                        <p class="text-black">
+                            Connect top IT talent with leading organizations. <strong>Freshers welcome!</strong> If you have an eye for talent and enjoy fast-paced recruitment, we’d love to have you on board.
+                        </p>
+                    </div>
+
+                    <p class="text-black mt-4">
+                        We foster an <strong>inclusive, collaborative, and innovative</strong> work environment where your contributions truly matter.
+                    </p>
+
+                    <!-- 📩 How to Apply Section -->
+                    <div class="apply-info bg-black text-white p-4 rounded mt-4">
+                        <h4 class="fw-bold d-flex align-items-center">
+                            <i class="fas fa-envelope me-2"></i> How to Apply?
+                        </h4>
+                        <p class="mb-2">
+                            If you’re ready to take the next step in your career, send us your <strong>resume</strong> and <strong>cover letter</strong> at:
+                        </p>
+                        <p class="fw-bold">
+                            <i class="fas fa-paper-plane me-2"></i> Email: <a href="mailto:your@email.com" class="text-white">your@email.com</a>
+                        </p>
+                        <p class="fw-bold">
+                            <i class="fas fa-phone me-2"></i> Contact: <a href="tel:+1234567890" class="text-white">+1234567890</a>
+                        </p>
+                        <p class="mt-2">
+                            Tell us about your <strong>skills, experience, and how you can add value</strong> to our team.  
+                            Alternatively, you can use our <strong>web form</strong> to submit your application:
+                        </p>
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-light btn-lg px-4 py-2" data-bs-toggle="modal" data-bs-target="#applyModal">
+                                <i class="fas fa-file-alt me-2"></i> Submit Application via Webform
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section> -->
+</section>
+
+<!-- Modal: Apply Now Form -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header amit text-white">
+                <h5 class="modal-title fw-bold" id="applyModalLabel">
+                    <i class="fas fa-file-alt me-2 text-white"></i> Submit Your Application
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form action="[your_submission_url]" method="POST" enctype="multipart/form-data">
+                    <div class="row g-3">
+                        <!-- First Name -->
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label fw-semibold text-dark">First Name</label>
+                            <input type="text" class="form-control shadow-sm" id="firstName" name="firstName" required>
+                        </div>
+                        <!-- Last Name -->
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label fw-semibold text-dark">Last Name</label>
+                            <input type="text" class="form-control shadow-sm" id="lastName" name="lastName" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <label for="email" class="form-label fw-semibold text-dark">Email</label>
+                            <input type="email" class="form-control shadow-sm" id="email" name="email" required>
+                        </div>
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label fw-semibold text-dark">Phone Number</label>
+                            <input type="tel" class="form-control shadow-sm" id="phone" name="phone" required>
+                        </div>
+                        <!-- Role -->
+                        <div class="col-md-6">
+                            <label for="position" class="form-label fw-semibold text-dark">Role Applied For</label>
+                            <select class="form-select shadow-sm" id="position" name="position" required>
+                                <option value="" disabled selected>Select a Role</option>
+                                <option value="IT Consultant">IT Consultant</option>
+                                <option value="Business Development Manager">Business Development Manager</option>
+                                <option value="IT Recruiter">IT Recruiter</option>
+                            </select>
+                        </div>
+                        <!-- City -->
+                        <div class="col-md-6">
+                            <label for="city" class="form-label fw-semibold text-dark">City</label>
+                            <input type="text" class="form-control shadow-sm" id="city" name="city" required>
+                        </div>
+                        <!-- Place -->
+                        <div class="col-md-6">
+                            <label for="place" class="form-label fw-semibold text-dark">Place</label>
+                            <input type="text" class="form-control shadow-sm" id="place" name="place" required>
+                        </div>
+                        <!-- Country -->
+                        <div class="col-md-6">
+                            <label for="country" class="form-label fw-semibold text-dark">Country</label>
+                            <select class="form-select shadow-sm" id="country" name="country" required>
+                                <option value="" disabled selected>Select Your Country</option>
+                                <option value="USA">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <!-- Address -->
+                        <div class="col-12">
+                            <label for="address" class="form-label fw-semibold text-dark">Address</label>
+                            <textarea class="form-control shadow-sm" id="address" name="address" rows="2" required></textarea>
+                        </div>
+                        <!-- Cover Letter -->
+                        <div class="col-12">
+                            <label for="coverLetter" class="form-label fw-semibold text-dark">Cover Letter</label>
+                            <textarea class="form-control shadow-sm" id="coverLetter" name="coverLetter" rows="3" required></textarea>
+                        </div>
+                        <!-- Resume Upload -->
+                        <div class="col-12">
+                            <label for="resume" class="form-label fw-semibold text-dark">Upload Resume (PDF/DOC)</label>
+                            <input type="file" class="form-control shadow-sm" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        </div>
+                    </div>
+                    <!-- Submit Buttons -->
+                    <div class="modal-footer mt-4">
+                        <button type="submit" class="btn btn-amit px-4">
+                            <i class="fas fa-paper-plane me-2 text-white"></i> Submit Application
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-2"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal: Apply Now Form -->
+
 
 </main>
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
@@ -568,6 +683,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 <!-- Bootstrap JS and Popper.js v5.3.2 -->
