@@ -1,7 +1,7 @@
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
@@ -19,11 +19,17 @@
                
 
             </div>
-            <div class="col-md-4">
-                <h5 class="text-white">Malaysian Status Company</h5>
-                <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
+<div class="col-md-4">
+    <h5 class="text-white">Malaysian Status Company</h5>
+    <img src="/assets/images/Logo_MSC.jpg" alt="Malaysian Status Company Logo" style="width: 150px;">
+    <img src="/assets/images/iso.png" alt="ISO Certification Logo" style="width: 150px; margin-left: 10px;">
+</div>
+
+                   <!-- <div class="col-md-2">
+                
+                <img src="/assets/images/iso.png" style="width: 150px;" alt="" srcset="">
        
-            </div> 
+            </div>  -->
             <div class="col-md-4">
                          <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
                 <div class="accordion" id="companyDetails">
@@ -142,26 +148,65 @@
 </footer>
 
 
-<footer class="bg-charcoal text-white py-3">
+<!-- Footer -->
+<footer class="bg-charcoal text-white py-2">
     <div class="container text-center">
-        <div>
-            <a href="index.html" class="text-white">Home</a> |
-            <a href="it_services.html" class="text-white">Services</a> |
-            <!-- <a href="professional_services.html" class="text-white">Professional Services</a> | -->
-            <a href="clients.html" class="text-white">Industries</a> |
-            <a href="product.html" class="text-white">Products</a> |
-            <a href="careers.html" class="text-white">Careers</a> |
-            <a href="contact.html" class="text-white">Contact Us</a>
-        </div>
-        <div class="mt-2">
-            <span>2025 Copyright AGS, All rights reserved.</span>
-        </div>
-        <div class="mt-2">
-            <span>Connect with us: </span>&nbsp;
-            <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
-            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
-            <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <p class="mb-0">&copy; 2025 AGS. All rights reserved.</p>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <p class="mb-1">Connect with us:</p>
+                <div class="d-flex gap-3">
+                    <a href="https://www.facebook.com" target="_blank" class="text-white" aria-label="Facebook">
+                        <i class="fab fa-facebook text-white "></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="text-white" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-white"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="text-white" aria-label="Twitter">
+                        <i class="fab fa-x-twitter text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="text-white me-2" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> |
+                <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a>
+            </div>
         </div>
     </div>
 </footer>
+
+
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your privacy is important to us. This privacy policy explains how we collect, use, and protect your information...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>By using our website, you agree to the following terms and conditions...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (Make sure to include this if not already present) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
