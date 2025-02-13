@@ -285,3 +285,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ///navbar
+document.addEventListener("DOMContentLoaded", function () {
+  function showSection(sectionId) {
+      // Hide all sections first
+      document.querySelectorAll(".content-tab").forEach(section => {
+          section.classList.remove("active");
+      });
+
+      // Show the target section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+          targetSection.classList.add("active");
+          window.scrollTo({
+              top: targetSection.offsetTop - 50, // Adjust for navbar height
+              behavior: "smooth",
+          });
+      }
+  }
+
+  // Handle navbar clicks (prevent reload)
+  document.querySelectorAll(".dropdown-item").forEach(link => {
+      link.addEventListener("click", function (event) {
+          const sectionId = this.getAttribute("href").split("#")[1];
+
+          if (window.location.pathname.includes("it_services.html")) {
+              event.preventDefault();
+              history.pushState(null, "", `#${sectionId}`); // Change URL without reloading
+              showSection(sectionId); // Show section immediately
+          }
+      });
+  });
+
+  // Detect direct URL access (e.g., it_services.html#content8)
+  if (window.location.hash) {
+      showSection(window.location.hash.substring(1));
+  }
+
+  // Listen for hash changes when clicking navbar links
+  window.addEventListener("hashchange", function () {
+      if (window.location.hash) {
+          showSection(window.location.hash.substring(1));
+      }
+  });
+});
