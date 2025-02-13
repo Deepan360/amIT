@@ -287,31 +287,36 @@ document.addEventListener("DOMContentLoaded", function () {
 ///navbar
 document.addEventListener("DOMContentLoaded", function () {
   function showSection(sectionId) {
-      // Hide all sections first
+      // Hide all content sections
       document.querySelectorAll(".content-tab").forEach(section => {
-          section.classList.remove("active");
+          section.style.display = "none";
       });
 
-      // Show the target section
-      const targetSection = document.getElementById(sectionId);
-      if (targetSection) {
-          targetSection.classList.add("active");
-          window.scrollTo({
-              top: targetSection.offsetTop - 50, // Adjust for navbar height
-              behavior: "smooth",
-          });
+      // Show the selected section
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+          activeSection.style.display = "block";
+      }
+
+      // Update the active class in the sidebar
+      document.querySelectorAll(".sidebar ul li").forEach(item => {
+          item.classList.remove("active");
+      });
+
+      const activeItem = document.querySelector(`.sidebar ul li[data-target="${sectionId}"]`);
+      if (activeItem) {
+          activeItem.classList.add("active");
       }
   }
 
-  // Handle navbar clicks (prevent reload)
-  document.querySelectorAll(".dropdown-item").forEach(link => {
-      link.addEventListener("click", function (event) {
-          const sectionId = this.getAttribute("href").split("#")[1];
+  // Handle sidebar clicks
+  document.querySelectorAll(".sidebar ul li").forEach(item => {
+      item.addEventListener("click", function () {
+          const sectionId = this.getAttribute("data-target");
 
           if (window.location.pathname.includes("it_services.html")) {
-              event.preventDefault();
-              history.pushState(null, "", `#${sectionId}`); // Change URL without reloading
-              showSection(sectionId); // Show section immediately
+              history.pushState(null, "", `#${sectionId}`); // Change URL without reload
+              showSection(sectionId); // Update content display
           }
       });
   });
@@ -321,10 +326,16 @@ document.addEventListener("DOMContentLoaded", function () {
       showSection(window.location.hash.substring(1));
   }
 
-  // Listen for hash changes when clicking navbar links
+  // Listen for hash changes (e.g., user manually types URL)
   window.addEventListener("hashchange", function () {
       if (window.location.hash) {
           showSection(window.location.hash.substring(1));
       }
   });
+
+  // Show the first content tab by default (if no hash is present)
+  if (!window.location.hash) {
+      showSection("content1"); // Change "content1" to your default tab
+  }
 });
+
