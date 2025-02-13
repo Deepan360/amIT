@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>amIT Global Solution</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/amiticon.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN (Include this in your project if not already included) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  /* ===== Buttons Css ===== */
+  .header-one .header-content-area .primary-btn-outline {
+    border-color: var(--amit-hire);
+    color: var(--amit-hire);
+  }
+  .header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
+    background: var(--primary-dark);
+    color: var(--white);
+  }
+  .header-one .header-content-area .deactive.primary-btn-outline {
+    color: var(--dark-3);
+    border-color: var(--gray-4);
+    pointer-events: none;
+  }
+  
+  /*===== HEADER ONE =====*/
+  .header-one {
+    position: relative;
+  }
+  .header-one .header-content-area {
+    background-color: var(--amit-hire);
+    position: relative;
+    padding: 130px 0;
+  }
+  
+  .header-one .header-content-area .primary-btn-outline {
+    border-color: var(--white);
+    background-color: var(--white);
+    color: var(--amit-hire);
+  }
+  .header-one .header-content-area .primary-btn-outline:hover {
+    background-color: transparent;
+    border-color: var(--white);
+    color: var(--white);
+  }
+  .header-one .header-wrapper {
+    position: relative;
+  }
+  .header-one .header-content {
+    max-width: 540px;
+    position: relative;
+    z-index: 5;
+  }
+  .header-one .header-title {
+    color: var(--white);
+    font-weight: 800;
+  }
+  .header-one .text-lg {
+    color: var(--white);
+    font-weight: 300;
+    margin-top: 16px;
+  }
+  .header-one .header-btn {
+    margin-top: 40px;
+  }
+  .header-one .header-image {
+    text-align: center;
+  }
+  .header-one .header-image .image {
+    box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px !important;
+    max-width: 730px;
+  }
+  
+  .header-one .header-image .image img {
+      border-radius: 15px !important;
+      filter: brightness(0.7);
+    width: 100%;
+  }
+  .header-one .header-shape {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .header-one .header-shape img {
+    width: 100%;
+  }
+  .client{
+      color: var(--amit-hire);
+  }
+   .header-title {
+      color: var(--amit-hire);
+  }
+  
+  .text-lg {
+      color: var(--amit-hire);
+  }
+  
+  .job-listing {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 100%; /* Ensures all job cards have the same height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .job-listing p {
+      flex-grow: 1; /* Ensures the description grows to take up available space */
+      margin-bottom: 1rem; /* Add margin at the bottom for space */
+  }
+  
+  .job-listing .btn {
+      align-self: flex-start; /* Ensures the button is aligned at the bottom */
+  }
+  
+  .job-listing:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adjust margin for each column and row gap */
+  .job-listings-section .row > div {
+      margin-bottom: 10px;
+  }
+  
+  .cta-section {
+      background-color: var(--amit-hire);
+      color: white;
+      padding: 40px 0;
+  }
+  
+  .cta-section h2 {
+      color: white;
+  }
+  .cta-section .btn-primary-car-outline{
+      background-color: white !important;
+          border-color: var(--amit-hire) !important;
+          ;
+          color: var(--amit-hire) !important;
+  }
+  .btn-primary-car-outline {
+      background-color: white !important;
+      border-color: var(--amit-hire) !important;
+      color: var(--amit-hire) !important;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: 1px solid;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-primary-car-outline:hover {
+      background-color: var(--amit-hire) !important;
+      color: white !important;
+      border-color: #fff !important;
+      border: 1px solid;
+  }
+  .navbar {
+      background-color: #f8f9fa;
+  }
+  
+  .nav-item {
+      position: relative;
+  }
+  
+  .nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+  }
+  
+  .arrow-icon {
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+  }
+  
+  .nav-item:hover .arrow-icon {
+      color: white !important;
+      transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+  }
+  
+  .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+  }
+  
+      </style>
+</head>
+<body >
+<header>
+<div id="header"></div>
+
+
+
+  
+<main>
+
+    <section class="it-hero-section header-area header-one h-70">
+        <div class="header-content-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 col-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">
+                                    Build a Skilled Workforce with AGS Hire-Train-Deploy
+                                </h1>
+                                <p class="text-lg">
+                                    Bridge the tech talent gap with our strategic HTD model—sourcing, training, 
+                                    and deploying professionals to meet your business needs.
+                                </p>
+                                <div class="header-btn rounded-buttons">
+                                    <a class="btn primary-btn-outline btn-lg" href="javascript:void(0)">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Right Image -->
+                    <div class="col-lg-6 col-12 d-none d-lg-block">
+                        <div class="header-image">
+                            <div class="image">
+                                <img src="./assets/images/bigstock_Group_Business_Team_347988.jpg" 
+                                     alt="Hire Train Deploy Model" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container py-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Hire-Train-Deploy Model at AGS</h2>
+            <p class="text-muted">Bridging the talent gap by identifying, training, and deploying skilled professionals tailored to your business needs.</p>
+        </div>
+    
+        <div class="row g-4">
+            <!-- Hire Card -->
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-check fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Hire</h5>
+                        <p class="card-text">We carefully select candidates with the right aptitude and potential.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Train Card -->
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-mortarboard fs-1 text-success"></i>
+                        <h5 class="card-title mt-3">Train</h5>
+                        <p class="card-text">Our industry-aligned training programs equip them with relevant skills and practical expertise.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Deploy Card -->
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-rocket fs-1 text-danger"></i>
+                        <h5 class="card-title mt-3">Deploy</h5>
+                        <p class="card-text">The trained professionals are seamlessly integrated into your projects, ensuring immediate productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center mt-5">
+            <h3 class="fw-bold">Why Choose Our Training Programs?</h3>
+        </div>
+    
+        <div class="row g-4 mt-3">
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-book fs-1 text-warning"></i>
+                        <h5 class="card-title mt-3">Industry-Driven Curriculum</h5>
+                        <p class="card-text">Courses tailored to align with current industry standards and trends.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-video3 fs-1 text-info"></i>
+                        <h5 class="card-title mt-3">Expert Instructors</h5>
+                        <p class="card-text">Learn from professionals with real-world expertise.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-tools fs-1 text-secondary"></i>
+                        <h5 class="card-title mt-3">Hands-On Learning</h5>
+                        <p class="card-text">Practical, project-based training for skill mastery.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-laptop fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Flexible Training Options</h5>
+                        <p class="card-text">On-site, online, and customized training solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center mt-5">
+            <h3 class="fw-bold">Benefits of HTD for Companies</h3>
+        </div>
+    
+        <div class="row g-4 mt-3">
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cash-stack fs-1 text-success"></i>
+                        <h5 class="card-title mt-3">Optimising Cost</h5>
+                        <p class="card-text">Affordable and high-quality solutions tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase fs-1 text-danger"></i>
+                        <h5 class="card-title mt-3">Lower Hiring Costs</h5>
+                        <p class="card-text">Reduce hiring expenses with skilled, ready-to-deploy professionals.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-slash-circle fs-1 text-warning"></i>
+                        <h5 class="card-title mt-3">No Overheads</h5>
+                        <p class="card-text">AGS covers all hiring and training costs, reducing project risks.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <i class="bi bi-headset fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Post Deployment Support</h5>
+                        <p class="card-text">Continuous learning, mentorship, and performance monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="text-center">
+        <h3 class="fw-bold">Get Started Today!</h3>
+        <p class="text-muted">Take the next step in your career and business growth with expert-led training.</p>
+        <p class="fw-bold fs-5">
+          Email us at: <a href="mailto:dgvel@amitglobal.com" class="text-amit">dgvel@amitglobal.com</a>
+        </p>
+      </div>
+      
+      
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+</main>
+
+<div id="footer"></div>
+
+
+<!-- Bootstrap JS and Popper.js v5.3.2 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery v3.6.0 (optional for Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script  src="index.js"></script>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth > 768) {
+          AOS.init({
+            duration: 800,
+            delay: 200,
+            offset: 100,
+          });
+        } else {
+          AOS.init({
+            duration: 400,
+            delay: 0,
+            offset: 0,
+            disable: "mobile" // Disable animations on mobile devices
+          });
+        }
+      });
+</script>
+
+<script>
+
+
+ 
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>
