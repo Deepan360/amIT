@@ -274,14 +274,68 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 // Include this in all pages
-// document.addEventListener("DOMContentLoaded", function () {
-//   fetch("header.html")
-//     .then(response => response.text())
-//     .then(data => document.getElementById("header").innerHTML = data);
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("header").innerHTML = data);
 
-//   fetch("footer.html")
-//     .then(response => response.text())
-//     .then(data => document.getElementById("footer").innerHTML = data);
-// });
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+});
 
 ///navbar
+document.addEventListener("DOMContentLoaded", function () {
+  function showSection(sectionId) {
+      // Hide all content sections
+      document.querySelectorAll(".content-tab").forEach(section => {
+          section.style.display = "none";
+      });
+
+      // Show the selected section
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+          activeSection.style.display = "block";
+      }
+
+      // Update the active class in the sidebar
+      document.querySelectorAll(".sidebar ul li").forEach(item => {
+          item.classList.remove("active");
+      });
+
+      const activeItem = document.querySelector(`.sidebar ul li[data-target="${sectionId}"]`);
+      if (activeItem) {
+          activeItem.classList.add("active");
+      }
+  }
+
+  // Handle sidebar clicks
+  document.querySelectorAll(".sidebar ul li").forEach(item => {
+      item.addEventListener("click", function () {
+          const sectionId = this.getAttribute("data-target");
+
+          if (window.location.pathname.includes("it_services.html")) {
+              history.pushState(null, "", `#${sectionId}`); // Change URL without reload
+              showSection(sectionId); // Update content display
+          }
+      });
+  });
+
+  // Detect direct URL access (e.g., it_services.html#content8)
+  if (window.location.hash) {
+      showSection(window.location.hash.substring(1));
+  }
+
+  // Listen for hash changes (e.g., user manually types URL)
+  window.addEventListener("hashchange", function () {
+      if (window.location.hash) {
+          showSection(window.location.hash.substring(1));
+      }
+  });
+
+  // Show the first content tab by default (if no hash is present)
+  if (!window.location.hash) {
+      showSection("content1"); // Change "content1" to your default tab
+  }
+});
+
