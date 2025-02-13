@@ -54,11 +54,22 @@ font-weight: 800 !important;
     padding: 0;
 color: #333;
 }
+.navbar,
+.nav-item,
+.nav-link,
+.dropdown-item {
+    font-family: 'Lato', sans-serif !important;
+}
+.font-7 {
+    font-family: 'Lato', sans-serif !important;
+}
  .custom-navbar-bg {
      background-color: #9B0000;
      color: #fff;
     }
-
+.navbar .nav-link {
+    font-family: 'Lato', sans-serif !important;
+}
 li{
     font-family: "lato" !important;
     font-weight: 400 !important;
@@ -69,6 +80,7 @@ li span{
     font-weight: 400 !important;
 }
 .nav-link{
+    font-family: "Lato" !important;
     color:  #000 !important;
 }
 h1,
@@ -232,7 +244,7 @@ li.point{
     padding: 8px ;
     font-weight: 300 !important;
     font-size: 16px;
-    font-family: "outfit";
+font-family: "Lato" !important;
     transition: all 0.3s ease;
 }
 .navbar-nav .nav-item:hover>.nav-link {
@@ -445,6 +457,7 @@ padding: 5px 0px;
 .nav-link {
     display: flex;
     align-items: center;
+    font-family: "Lato" !important;
     justify-content: space-between;
     cursor: pointer;
 }
