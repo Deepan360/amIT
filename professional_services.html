@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="style.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
         <style>
 /* ===== Buttons Css ===== */
 .header-one .header-content-area .primary-btn-outline {
@@ -125,6 +129,51 @@
 .professional, #staffing-quality-process h2, #it-staffing-solutions h2 {
     color: #48009bce; /* Heading color */
 }
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
     </style>
 </head>
@@ -132,58 +181,49 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand active image-fluid p-0" href="index.html">
+            <a class="navbar-brand p-0" href="index.html">
                 <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
                 aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-     <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="index.html">Home</a>
+                    <!-- Home Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="index.html">
+                            Home <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link font-7" href="it_services.html">Services</a>
-                            <div class="sub-nav-item">
-                                <ul>
-                                    <li><a href="it_services.html#content1" onclick="checkAndReload(event)">Application Development</a></li>
-                                    <li><a  href="it_services.html#content2" onclick="checkAndReload(event)">Quality As A Service</a></li>
-                                    <li><a  href="it_services.html#content3" onclick="checkAndReload(event)">Data Management</a></li>
-                                    <li><a  href="it_services.html#content4" onclick="checkAndReload(event)">Application Maintenance & Support</a></li>
-                                    <li><a  href="it_services.html#content5" onclick="checkAndReload(event)">Legacy App</a></li>
-                                    <!-- <li><a  href="it_services.html#content6" onclick="checkAndReload(event)">Web Technologies</a></li> -->
-                                    <!-- <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Enterprise Content Management</a></li> -->
-                                    <li><a  href="it_services.html#content8" onclick="checkAndReload(event)">Cloud/Infrastructure</a></li>
-                                    <li><a  href="it_services.html#content9" onclick="checkAndReload(event)">Professional Services</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link font-7" href="professional_services.html">Professional Services</a>
-                        <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="professional_services.html#content1" onclick="checkAndReload(event)">Complete Workforce Solutions</a></li>
-                                <li ><a href="professional_services.html#content2" onclick="checkAndReload(event)">AGS Staffing Quality Process</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
+                    <!-- Services Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="it_services.html">
+                            Services <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="it_services.html#content1">Application Development</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content8">Cloud/Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content3">Data Management</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content2">Testing As A Service</a></li>
+<!--                           
+                            <li><a class="dropdown-item" href="it_services.html#content4">Application Maintenance & Support</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content5">Legacy App</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content7">Digital Transformation Consulting</a></li> -->
+                     
+                            <li><a class="dropdown-item" href="it_services.html#content9">Professional Services</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other Sections -->
                     <li class="nav-item">
                         <a class="nav-link font-7" href="clients.html">Industries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-7" href="team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link font-7" href="product.html">Products</a>
-                        <!-- <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="product.html#content1" onclick="checkAndReload(event)">iCare Hospital Management System</a></li>
-                                <li ><a href="product.html#content2" onclick="checkAndReload(event)">Sedna Space</a></li>
-                                <li ><a href="product.html#content3" onclick="checkAndReload(event)">Fleet Tracking System (GPS)</a></li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-7" href="careers.html">Careers</a>
@@ -329,7 +369,7 @@
         </div>
     </div>
 </main>
-
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
     <div class="container">
         <div class="row">
@@ -337,47 +377,29 @@
                 <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
-                    <li><a href="it_services.html#content2" class="text-white">Quality As A Service</a></li>
-                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
-                    <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li>
-                    <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li>
-                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
-                    <!-- <li><a href="it_services.html#content7"class="text-white">Enterprise Content Management</a></li> -->
                     <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
-                    <!-- <li><a href="it_services.html#content9" class="text-white">Mobile Applications</a></li> -->
+                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
+                    <li><a href="it_services.html#content2" class="text-white">Testing As A Service</a></li>
+                    
+                    <!-- <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li> -->
+                    <!-- <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li> -->
+                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
+                   <!-- <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li>  -->
+                    
+                    <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
                 </ul>
-                <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
+               
 
             </div>
             <div class="col-md-4">
-                <h5 class="text-white "><i class="fa fa-solid fa-briefcase m-2 text-white"></i>Professional Services</h5>
-                <ul class="list-unstyled text-grey">
-                    <li><a href="professional_services.html#content1" class="text-white">Complete Workforce Solutions</a></li>
-                    <li><a href="professional_services.html#content2" class="text-white">AGS Staffing Quality Process</a></li>
-                </ul>
+                <h5 class="text-white">Malaysian Status Company</h5>
+                <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
        
-            </div>
+            </div> 
             <div class="col-md-4">
                          <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
                 <div class="accordion" id="companyDetails">
-                    <div class="accordion-item bg-secondary text-light">
-                        <h2 class="accordion-header" id="headingSingapore">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="true" aria-controls="collapseSingapore">
-                                Singapore
-                            </button>
-                        </h2>
-                        <div id="collapseSingapore" class="accordion-collapse collapse show" aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
-                            <div class="accordion-body">
-                                amIT Global Solutions (Pte.) Ltd<br />
-                                (EA Licence # 11C3599)<br />
-                                No.111 North Bridge Road,<br />
-                                #27-01 Peninsula Plaza,<br />
-                                Singapore 179098<br/>
-                                  <strong>Phone:</strong>+65 6749 1270<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingMalaysia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
                                 Malaysia
@@ -385,17 +407,35 @@
                         </h2>
                         <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions SDN BHD<br />
+                                <p> amIT Global Solutions SDN BHD<br />
                                 Company No: 953305-A<br />
                                 A-3-08, CoPlace 2<br />
                                 2260 Jalan Usahawan 1<br />
                                 63000 Cyberjaya, Selangor Darul Ehsan<br />
                                 Malaysia<br/>
-                                  <strong>Phone:</strong>+603 8325 1270<br />
+                                  <strong>Phone:</strong>+603 8325 1270</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light ">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="false" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse " aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p>amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098<br/>
+                                  <strong>Phone:</strong>+65 6749 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaChennai">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
                                 India (Chennai)
@@ -403,19 +443,19 @@
                         </h2>
                         <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions Pvt Ltd<br />
+                               <p>amIT Global Solutions Pvt Ltd<br />
                                 No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
                                 Velachery Main Road, Little Mount<br />
                                 Saidapet<br />
                                 Chennai 600 015<br />
                               
-                            <strong>Phone:</strong> + 91 44 4215 7186  <br />
+                            <strong>Phone:</strong> + 91 44 4215 7186  </p> 
                                 <!-- Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
                                 Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaTrichy">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
                                 India (Trichy)
@@ -423,17 +463,18 @@
                         </h2>
                         <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                Akilam Technology LLP<br />
-                                D25, 10th Cross West Extn.<br />
-                                Thillai Nagar,<br />
+                             <p>  Akilam Technology LLP<br />
+                                T-4,  Third Floor, 
+                                JC Tower, Karur Bypass Road,<br />
+                                 Annamalai nagar,
                                 Trichy,<br />
                                 Tamil Nadu 620018<br />
-                                    <strong>Phone:</strong> +91 78458 65524<br />
+                                    <strong>Phone:</strong> +91 78458 65524</p> 
                                 <!-- Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndonesia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
                                 Indonesia
@@ -441,17 +482,17 @@
                         </h2>
                         <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                PT. AMIT GLOBAL SOLUTIONS,<br />
+                             <p>  PT. AMIT GLOBAL SOLUTIONS,<br />
                                 Menara Karya, 28th Floor,<br />
                                 Jl. H.R. Rasuna Said Blok X-5,<br />
                                 Kav. 1-2, Jakarta 12950,<br />
                                 Indonesia<br />
-                                  <strong>Phone:</strong> +62 818 0650 8131<br />
+                                  <strong>Phone:</strong> +62 818 0650 8131</p> 
                                 <!-- <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingUSA">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
                                 USA (Partner Office)
@@ -459,9 +500,9 @@
                         </h2>
                         <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                342 Michelle Cir,<br />
+                               <p> 342 Michelle Cir,<br />
                                 Edison,<br />
-                                NJ-08820
+                                NJ-08820</p>
                             </div>
                         </div>
                     </div>
@@ -471,7 +512,6 @@
         </div>
     </div>
 </footer>
-
 
 <footer class="bg-charcoal text-white py-3">
     <div class="container text-center">
@@ -491,12 +531,11 @@
             <span>Connect with us: </span>&nbsp;
             <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a>
+            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
             <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
         </div>
     </div>
 </footer>
-
 
 <!-- Bootstrap JS and Popper.js v5.3.2 -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>

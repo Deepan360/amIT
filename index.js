@@ -211,4 +211,77 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.reload();
       }
     }
+    document.addEventListener("DOMContentLoaded", function () {
+      var dropdownToggleElements = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggleElements.forEach(function (element) {
+          new bootstrap.Dropdown(element);
+      });
+  });
+  
+
+  document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        if (window.innerWidth <= 768) { // Only apply for mobile
+            event.preventDefault();
+            this.nextElementSibling.classList.toggle('show');
+        }
+    });
+});
+
+ // Show the button when scrolling down
+ document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Function to handle scroll event
+  function handleScroll() {
+    if (window.scrollY > 200) {
+      scrollTopBtn.style.display = "block";
+      scrollTopBtn.style.opacity = "1";
+    } else {
+      scrollTopBtn.style.opacity = "0";
+      setTimeout(() => {
+        if (window.scrollY <= 200) {
+          scrollTopBtn.style.display = "none";
+        }
+      }, 300); // Match the transition time
+    }
+  }
+
+  // Smooth scroll to top function
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  // Attach event listeners
+  window.addEventListener("scroll", handleScroll);
+  scrollTopBtn.addEventListener("click", scrollToTop);
+});
+
+// document.querySelectorAll('.accordion-button').forEach(button => {
+//   button.addEventListener('click', function () {
+//       let collapseElement = this.closest('.accordion-item').querySelector('.accordion-collapse');
+
+//       if (collapseElement.classList.contains('show')) {
+//           collapseElement.classList.remove('show');
+//       } else {
+//           document.querySelectorAll('.accordion-collapse').forEach(item => item.classList.remove('show'));
+//           collapseElement.classList.add('show');
+//       }
+//   });
+// });
+
+// Include this in all pages
+// document.addEventListener("DOMContentLoaded", function () {
+//   fetch("header.html")
+//     .then(response => response.text())
+//     .then(data => document.getElementById("header").innerHTML = data);
+
+//   fetch("footer.html")
+//     .then(response => response.text())
+//     .then(data => document.getElementById("footer").innerHTML = data);
+// });
+
 ///navbar

@@ -8,27 +8,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap'); */
 /* Font families for each nav-link */
 /* .font-1 {
-    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'Roboto', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .font-2 {
-    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'Nunito', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .font-3 {
-    font-family: 'inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'inter', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .font-4 {
-    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'Montserrat', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .font-5 {
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'Poppins', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .font-6 {
-    font-family: 'Merriweather', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: 'Merriweather', "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
@@ -43,10 +43,13 @@
 ,rgb(197,71,70)--->its third color */
 
 /* Apply default styles to all elements */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
 html, body {
-font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+font-family:  "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
         font-optical-sizing: auto;
-
+font-weight: 800 !important;
     margin: 0;
     scroll-behavior: smooth;
     padding: 0;
@@ -58,35 +61,51 @@ color: #333;
     }
 
 li{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: "Faustina", serif;
+    font-weight: 400 !important;
 }
 
 li span{
-    font-family: "Montserrat";
+    font-family: "Faustina", serif;
+    font-weight: 400 !important;
 }
-
+.nav-link{
+    color:  #000 !important;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat";
-    font-weight: 500;
+    color: #000;
+    font-family: "Lato";
+    font-weight: 500 !important;
+}
+footer a{
+    font-weight: 300 !important;
+    text-decoration: none !important;
+}
+footer {
+    font-weight: 300 !important;
+    text-decoration: none !important;
 }
 p{
-  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  !important;
+    font-family: "Faustina", serif;
+  font-weight: 300;
+}
+li a{
+    text-decoration: none !important;
 }
 
-
 a{
-    font-family: "Montserrat";
+    font-family: "Faustina", serif;
     text-decoration: none;
 }
 
 nav .sub-nav-item ul li a {
     text-decoration: none;
-    font-family: "Montserrat";
+    font-family: "Lato";
     font-weight: 300;
     color: black;
 }
@@ -98,7 +117,7 @@ nav .sub-nav-item ul li a {
 /* Navbar styling */
 .navbar {
     font-size: 14px;
-
+color: #000 !important;
     width: 100%;
     z-index: 1000; 
 }
@@ -208,7 +227,7 @@ li.point{
 .navbar-nav .nav-link  {
     position: relative;
     padding: 8px ;
-    font-weight: 600 !important;
+    font-weight: 300 !important;
     font-size: 16px;
     font-family: "outfit";
     transition: all 0.3s ease;
@@ -300,7 +319,7 @@ padding: 5px 0px;
     white-space: nowrap;
     transition: background-color 0.3s ease, color 0.3s ease;
     /* Smooth background-color and color transition */
-    font-size: 14px;
+    font-size: 14px !important;
     /* Adjust font size for sub-menu items */
     color: #000;
     
@@ -312,12 +331,42 @@ padding: 5px 0px;
     color: black;
     /* Default link color */
    font-weight: 300;
-   font-size: 14px;
+   font-size: 14px !important;
     display: block;
     /* Ensure link occupies full width of list item */
     transition: color 0.3s ease;
     /* Smooth color transition on hover */
 }
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    color: #000 !important;
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+
+
+
 
 
 .text-amit{
@@ -350,16 +399,85 @@ padding: 5px 0px;
    
 }
 
-
+.header-one .text-lg {
+    font-size: 18px !important;
+    margin-bottom: 30px !important;
+  }
 
 /* Dropdown menu styling */
+.dropdown-menu .dropdown-item {
+    font-size: 16px !important;
+    font-family: "lota";
+    position: relative;
+    padding-left: 16px; /* Add space for the visual border effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .dropdown-menu .dropdown-item:hover {
-    background-color: #9B0000
-;
-    border-left: 6px solid black;
+    
+    background-color: #9B0000;
     color: #fff;
     text-decoration: none;
 }
+
+.dropdown-menu .dropdown-item:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: black;
+}
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+.no-caret::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /* Hero Section Styles */
 .hero-section {
     height: 70vh; /* Adjust height as needed */
@@ -520,12 +638,17 @@ padding: 5px 0px;
 :root {
     --color: #9B0000;
     --amit:#9b0000;
-    --amit-purple: #5101ad;
+    --amit-purple: #5406aee4;
     --amit-blue: #091f6b;
     --amit-orange: #aa7400;
-    --amit-green: #183c5a;
-    --amit-team: #358d70;
-    --amit-contact:rgb(0, 179, 179);
+  
+    --amit-team: #358d70f3;
+    --amit-contact: #008b8b; /* Bright Sky Blue with a vibrant touch */
+    --amit-green: #421a7ee4; /* Rich Indigo with depth */
+    
+    
+    
+    
 }
 .hero {
     position: relative;
@@ -1038,13 +1161,21 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 10px rgba(197, 71, 70, 0.8) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
     /* Custom red shadow */
     outline: none !important;
     /* Remove default outline */
-    border-color: #9B0000
+    border-color: #b1b1b1
 !important;
     /* Change border color on focus */
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: white !important; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+    /* Custom red shadow */
+    outline: none !important;
+  
 }
 .accordion-button.active {
     background-color: #e9ecef !important;
@@ -1261,6 +1392,10 @@ color: #9B0000;
     /* Ensures the video is behind the content */
 }
 
+a li{
+    cursor:  pointer !important;
+}
+
 .container.mainpoints video {
     position: absolute;
     top: 0;
@@ -1315,21 +1450,21 @@ filter: brightness(0.7);
     background-color: #fff;
 }
  .btn-amit {
-    background-color: #9B0000;
-    border-color: #9B0000;
+    background-color: #9B0000 !important;
+    border-color: #9B0000 !important; 
 
     border-radius: 30px;
     text-decoration: none;
-    color: #ffffff;
+    color: #ffffff !important;
     /* Ensure text is white on button */
     transition: background-color 0.3s ease;
     /* Smooth transition */
 }
 
  .btn-amit:hover {
-    background-color: #7a0000;
-    border-color: #7a0000;
-    color: #fff;
+    background-color: #7a0000 !important;
+    border-color: #7a0000 !important;
+    color: #fff !important;
     text-decoration: none;
 }
 h5 {
@@ -1615,7 +1750,7 @@ transition: transform 0.3s ease;
     border-radius: 30px;
 }
 
-.service-card:hover .explore-button {
+.service-card:hover .explore-button ,.explore-button:hover{
     bottom: 50%;
     background-color: #9B0000;
     border-color: #9B0000;
@@ -2685,3 +2820,81 @@ body {
     background-color: var(--primary);
     border-color: transparent;
 }
+
+/* Reset margin and padding for body in mobile view */
+@media (max-width: 768px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+    /* Disable auto-linking of phone numbers by browsers */
+a[href^="tel"] {
+    text-decoration: none;
+    color: inherit;
+    pointer-events: none;
+}
+
+.accordion-body {
+    -webkit-user-modify: read-only !important;
+  
+}
+}
+
+
+/* Ensure full width for mobile */
+@media (max-width: 768px) {
+    .navbar-collapse .dropdown-menu {
+        position: relative;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+    .row{
+        gap: 10px !important;
+    }
+}
+
+
+.accordion-collapse .collapse .show .accordion-body p{
+   
+    font-weight: 300 !important;
+}
+
+.last-part p{
+    padding: 0px !important;
+    margin: 0px!important;
+    color: #000;
+}
+.last-part{
+    padding: 0px !important;
+    margin: 0px!important;
+}
+h6 .card-title{
+    font-size: 14px !important;
+    line-height: 1.5px;
+}
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:var(--amit);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  #scrollTopBtn:hover {
+    color: var(--amit);
+    background-color: #ddd;
+  }
+  .amit{
+    background-color: #9B0000 !important;
+  }

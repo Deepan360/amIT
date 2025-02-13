@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>amIT Global Solution</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/amiticon.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AoPnp/J5f5cNB3H+9G6Pgq5jrM8kG09gLk1Asg8Qg0q2wF81DeqD4jkdYHfR7TKthl1tZ6QGrd6EXJaCjvHg1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            /* Custom color for amit text */
+
+ .approach-item i {
+            font-size: 4rem; /* Increased icon size */
+            color: #FF5733; /* Icon color */
+            margin-bottom: 20px;
+        }
+        .approach-item {
+            background-color: #eaeaea; /* Dark background */
+            border-radius: 10px;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+   min-height: 60px;
+        }
+
+        /* Hover Effect for Each Item */
+        .approach-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .approach-item h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .approach-item p {
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            line-height: 1.6;
+        }
+
+            .hero-section {
+    position: relative;
+    color: #000000;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p {
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+}
+
+.hero-section .btn {
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+    background-color: #ff7f50; /* Color change on hover */
+    transform: translateY(-5px);
+}
+
+.section-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .section-subtitle {
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .card {
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    .card-body p {
+        color: #666;
+    }
+
+    .card-img-top {
+        transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+        transform: translate3d(30);
+    }
+
+    .text-muted {
+        font-size: 0.875rem;
+        color: #999;
+    }
+/* ===== Buttons Css ===== */
+.header-one .header-content-area .primary-btn-outline {
+  border-color: var(--amit);
+  color: var(--amit);
+}
+.header-one .header-content-area .active.primary-btn-outline, .header-one .header-content-area .primary-btn-outline:hover, .header-one .header-content-area .primary-btn-outline:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+.header-one .header-content-area .deactive.primary-btn-outline {
+  color: var(--dark-3);
+  border-color: var(--gray-4);
+  pointer-events: none;
+}
+
+/*===== HEADER ONE =====*/
+.header-one {
+  position: relative;
+}
+.header-one .header-content-area {
+  background-color: #ddd;
+  position: relative;
+  padding: 130px 0;
+}
+
+.header-one .header-content-area .primary-btn-outline {
+  border-color: var(--white);
+  background-color: var(--white);
+  color: var(--amit-green);
+}
+.header-one .header-content-area .primary-btn-outline:hover {
+  background-color: transparent;
+  border-color: var(--white);
+  color: black;
+}
+.header-one .header-wrapper {
+  position: relative;
+}
+.header-one .header-content {
+  max-width: 540px;
+  position: relative;
+  z-index: 5;
+}
+.header-one .header-title {
+  color: black;
+  font-weight: 800;
+}
+.header-one .text-lg {
+  color: black;
+  font-weight: 300;
+  margin-top: 16px;
+}
+.header-one .header-btn {
+  margin-top: 40px;
+}
+.header-one .header-image {
+  text-align: center;
+}
+.header-one .header-image .image {
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px !important;
+  max-width: 730px;
+}
+
+.header-one .header-image .image img {
+    border-radius: 15px !important;
+    filter: brightness(0.7);
+  width: 100%;
+}
+.header-one .header-shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.header-one .header-shape img {
+  width: 100%;
+}
+.client{
+    color: var(--amit-green);
+}
+ .header-title {
+    color: var(--amit-green);
+}
+
+.text-lg {
+    color: var(--amit-green);
+}
+
+.job-listing {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensures all job cards have the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-listing p {
+    flex-grow: 1; /* Ensures the description grows to take up available space */
+    margin-bottom: 1rem; /* Add margin at the bottom for space */
+}
+
+.job-listing .btn {
+    align-self: flex-start; /* Ensures the button is aligned at the bottom */
+}
+
+.job-listing:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust margin for each column and row gap */
+.job-listings-section .row > div {
+    margin-bottom: 10px;
+}
+
+.cta-section {
+    background-color: var(--amit-green);
+    color: white;
+    padding: 40px 0;
+}
+
+.cta-section h2 {
+    color: white;
+}
+.cta-section .btn-primary-car-outline{
+    background-color: white !important;
+        border-color: var(--amit-green) !important;
+        ;
+        color: var(--amit-green) !important;
+}
+.btn-primary-car-outline {
+    background-color: white !important;
+    border-color: var(--amit-green) !important;
+    color: var(--amit-green) !important;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary-car-outline:hover {
+    background-color: var(--amit-green) !important;
+    color: white !important;
+    border-color: #fff !important;
+    border: 1px solid;
+}
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+    </style>
+</head>
+<body >
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                    <!-- Home Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="index.html">
+                            Home <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <!-- Services Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="it_services.html">
+                            Services <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="it_services.html#content1">Application Development</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content8">Cloud/Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content3">Data Management</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content2">Testing As A Service</a></li>
+<!--                           
+                            <li><a class="dropdown-item" href="it_services.html#content4">Application Maintenance & Support</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content5">Legacy App</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content7">Digital Transformation Consulting</a></li> -->
+                     
+                            <li><a class="dropdown-item" href="it_services.html#content9">Professional Services</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other Sections -->
+                    <li class="nav-item">
+                        <a class="nav-link font-7" href="clients.html">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-7" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-7" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-7" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+<main>
+    <button id="scrollTopBtn" title="Go to Top">↑</button>
+    <section class="it-hero-section header-area header-one h-100">
+        <div class="header-content-area">
+            <div class="container">
+                <div class="row align-items-start justify-content-center d-flex h-100">
+                    <!-- <div class="col-lg-6 col-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">
+                                    About Us
+                                </h1>
+                                <p class="text-lg">
+                                    We are a passionate team dedicated to driving innovation, excellence, and sustainability in every project. Our mission is to provide exceptional solutions that create a lasting impact. Learn more about our journey, values, and what sets us apart in the industry.
+                                </p>
+                                <div class="header-btn rounded-buttons">
+                                    <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
+                                        LEARN MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                   
+                    <div class="col-lg-12 col-12 justify-content-center d-flex      ">
+                        
+                        <div class="header-image d-none d-lg-block" >
+                            <div class="img-fluid-container ">
+                                <img style="width: 100% !important;height: auto !important;"
+                                    src="./assets/images/amIT.png"
+                                    alt="About Us"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+    
+                <!-- New content section -->
+                <div class="container">
+                    <!-- Who We Are Section -->
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <h3 class=" text-amit">Who We Are</h3>
+                            <p class="lead white-text">
+                                We are a dedicated team of technology experts, consultants, and creative professionals who focus on empowering organizations to succeed in an increasingly digital world. We do IT Solution implementation, IT Consulting and IT Services for our esteemed clients from Application Dev & Support to cloud integration, Testing and Data Management. We provide tailored services that drive measurable results and sustainable growth.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Our Approach Section -->
+                    <div class="row text-center ">
+                        <div class="col-12 mb-4">
+                            <h3 class="text-amit">Our Approach</h3>
+                            <p class="lead white-text">Our approach is simple: we listen, innovate, implement, and support.</p>
+                        </div>
+                        
+                        <!-- Approach Items -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-chat-dots bi-2x"></i> <!-- Changed Icon -->
+                                <h5 class="text-amit">Consultation</h5>
+                                <p class="white-text">We take time to understand your unique business needs, challenges, and objectives to provide effective solutions.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-lightning-charge bi-2x"></i> <!-- Changed Icon -->
+                                <h5 class="text-amit">Innovation</h5>
+                                <p class="white-text">We craft cutting-edge digital strategies, leveraging the latest technologies to help you stay ahead of the curve.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-tools bi-2x"></i> <!-- Changed Icon -->
+                                <h5 class="text-amit">Implementation</h5>
+                                <p class="white-text">We ensure seamless integration, cloud migration, and automation to maximize your operational efficiency.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="approach-item">
+                                <i class="bi bi-headset bi-2x"></i> <!-- Changed Icon -->
+                                <h5 class="text-amit">Support</h5>
+                                <p class="white-text">We offer continuous optimization, robust cybersecurity, and technical assistance to help you thrive in the digital landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <!-- <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="additional-content">
+                            <h2 class="section-title">Key Achievements</h2>
+                            <ul class="text-lg">
+                                <li><strong>Innovative Solutions:</strong> Successfully implemented over 100 innovative solutions for clients globally.</li>
+                                <li><strong>Industry Recognition:</strong> Awarded [Award Name] for excellence in [industry/field] in [Year].</li>
+                                <li><strong>Global Reach:</strong> Expanded our services to [#] countries, providing expertise and support worldwide.</li>
+                                <li><strong>Community Impact:</strong> Contributed [Amount] to charity programs and community-building initiatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <!-- <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="additional-content">
+                            <h2 class="section-title">Our Approach</h2>
+                            <p class="text-lg">
+                                We believe in a customer-first approach, ensuring that each project is tailored to meet the unique needs of our clients. By collaborating with our partners and focusing on sustainable practices, we aim to drive innovation and deliver measurable results.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- New content section ends -->
+    
+            </div>
+            <!-- container -->
+        </div>
+        <!-- header content area -->
+    </section>
+    
+    
+        
+ <section id="about"  >
+    <div class="video-background video-filter-half bg-black">
+      <video id="myVideo" autoplay muted loop playsinline class="position-fixed">
+        <source src="./assets/videos/globespining.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container mt-5 about-content">
+      <div class="container-fluid text-white position-relative bg-transparent h-50">
+        <div class="container about rounded-5 shadow-5 position-relative">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-white text-center animate__animated animate__fadeInDown">About Us</h2>
+              <hr class="my-4 animate__animated animate__fadeInLeft">
+              <p class="mb-4 animate__animated animate__fadeInUp ">
+                amIT Global Solutions (AGS) is an Information Technology Solution and Services Company providing a wide range of services including Professional Services, Managed Services, and Business Process Outsourcing. Our highly qualified team of vibrant experts in various technologies and solutions across all verticals is dedicated to helping our customers succeed.
+              </p>
+              <p class="mb-4 txt_content animate__animated animate__fadeInUp ">
+                During the turbulent global market, we help our customers with cost-effective, high-quality solutions, especially to Small and Medium Enterprises. Our IT Consulting Division practices a proven approach that helps our customers acquire the best talents and assists the IT Staffs to deliver high-quality services.
+              </p>
+              <p class="mb-4 txt_content animate__animated animate__fadeInUp ">
+                AGS pioneers in Quality to visualize and establish standards in improving Software Quality and promoting the concept Quality As A Service (QAAS) which helps to reduce higher costs in maintenance of mission-critical applications.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container country-clients">
+          <h2 class="text-center text-white mb-5">Our Global Presence</h2>
+          <div class="clients-grid row text-center">
+            <div class="col-md-3">
+              <div class="client-widget">
+                <div class="icon"><i class="fas fa-globe"></i></div>
+                <p><span class="count" data-count="4">0</span>+ Countries Served</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="client-widget">
+                <div class="icon"><i class="fas fa-user-tie"></i></div>
+                <p><span class="count" data-count="100">0</span>+ clients</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="client-widget">
+                <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                <p><span class="count" data-count="20">0</span>+ Years in Business</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container py-5 gap-5 position-relative text-white justify-content-center">
+          <div class="row">
+            <h2 class="text-center mb-5">The 5 P's of <span style="color:#ffffff;font-style: italic;">amIT</span></h2>
+            <div class="d-flex flex-wrap justify-content-center step-container">
+              <div class="step-card rounded-3" >
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <h5 class="text-white">Potential</h5>
+                <p>We identify the potential for our client needs!</p>
+              </div>
+              <div class="step-card rounded-3">
+                <div class="icon"><i class="fas fa-coins"></i></div>
+                <h5 class="text-white">Proficiency</h5>
+                <p>We are proficient enough to serve!</p>
+              </div>
+              <div class="step-card rounded-3" >
+                <div class="icon"><i class="fas fa-user-check"></i></div>
+                <h5 class="text-white">Professional</h5>
+                <p>We provide professional support at every step!</p>
+              </div>
+              <div class="step-card rounded-3" >
+                <div class="icon"><i class="fas fa-people-arrows"></i></div>
+                <h5 class="text-white">Personnel</h5>
+                <p>Our team consists of skilled personnel!</p>
+              </div>
+              <div class="step-card rounded-3" >
+                <div class="icon"><i class="fas fa-briefcase"></i></div>
+                <h5 class="text-white">Presence</h5>
+                <p>We are always there when you need us!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
+
+<!-- <section class="cta-section text-center">
+    <div class="container">
+        <h2>Ready to Join Us?</h2>
+        <p>We are always looking for passionate and talented individuals to join our team. If you don't see a role that fits your skills, feel free to reach out to us with your resume and cover letter.</p>
+        <a class="btn-primary-car-outline btn-lg" href="javascript:void(0)">Contact Us</a>
+    </div>
+</section> -->
+
+</main>
+<footer class="bg-secondary py-4 footer-background font-weight-600" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
+                <ul class="list-unstyled ">
+                    <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
+                    <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
+                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
+                    <li><a href="it_services.html#content2" class="text-white">Testing As A Service</a></li>
+                    
+                    <!-- <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li> -->
+                    <!-- <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li> -->
+                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
+                   <!-- <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li>  -->
+                    
+                    <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
+                </ul>
+               
+
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-white">Malaysian Status Company</h5>
+                <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
+       
+            </div> 
+            <div class="col-md-4">
+                         <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
+                <div class="accordion" id="companyDetails">
+                    <div class="accordion-item amit text-light">
+                        <h2 class="accordion-header" id="headingMalaysia">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
+                                Malaysia
+                            </button>
+                        </h2>
+                        <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p> amIT Global Solutions SDN BHD<br />
+                                Company No: 953305-A<br />
+                                A-3-08, CoPlace 2<br />
+                                2260 Jalan Usahawan 1<br />
+                                63000 Cyberjaya, Selangor Darul Ehsan<br />
+                                Malaysia<br/>
+                                  <strong>Phone:</strong>+603 8325 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item amit text-light ">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="false" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse " aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p>amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098<br/>
+                                  <strong>Phone:</strong>+65 6749 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item amit text-light">
+                        <h2 class="accordion-header" id="headingIndiaChennai">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
+                                India (Chennai)
+                            </button>
+                        </h2>
+                        <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                               <p>amIT Global Solutions Pvt Ltd<br />
+                                No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
+                                Velachery Main Road, Little Mount<br />
+                                Saidapet<br />
+                                Chennai 600 015<br />
+                              
+                            <strong>Phone:</strong> + 91 44 4215 7186  </p> 
+                                <!-- Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
+                                Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item amit text-light">
+                        <h2 class="accordion-header" id="headingIndiaTrichy">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
+                                India (Trichy)
+                            </button>
+                        </h2>
+                        <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                             <p>  Akilam Technology LLP<br />
+                                T-4,  Third Floor, 
+                                JC Tower, Karur Bypass Road,<br />
+                                 Annamalai nagar,
+                                Trichy,<br />
+                                Tamil Nadu 620018<br />
+                                    <strong>Phone:</strong> +91 78458 65524</p> 
+                                <!-- Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item amit text-light">
+                        <h2 class="accordion-header" id="headingIndonesia">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
+                                Indonesia
+                            </button>
+                        </h2>
+                        <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                             <p>  PT. AMIT GLOBAL SOLUTIONS,<br />
+                                Menara Karya, 28th Floor,<br />
+                                Jl. H.R. Rasuna Said Blok X-5,<br />
+                                Kav. 1-2, Jakarta 12950,<br />
+                                Indonesia<br />
+                                  <strong>Phone:</strong> +62 818 0650 8131</p> 
+                                <!-- <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item amit text-light">
+                        <h2 class="accordion-header" id="headingUSA">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
+                                USA (Partner Office)
+                            </button>
+                        </h2>
+                        <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                               <p> 342 Michelle Cir,<br />
+                                Edison,<br />
+                                NJ-08820</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</footer>
+
+<footer class="bg-charcoal text-white py-3">
+    <div class="container text-center">
+        <div>
+            <a href="index.html" class="text-white">Home</a> |
+            <a href="it_services.html" class="text-white">Services</a> |
+            <a href="professional_services.html" class="text-white">Professional Services</a> |
+            <a href="clients.html" class="text-white">Industries</a> |
+            <a href="product.html" class="text-white">Products</a> |
+            <a href="careers.html" class="text-white">Careers</a> |
+            <a href="contact.html" class="text-white">Contact Us</a>
+        </div>
+        <div class="mt-2">
+            <span>2024 Copyright AGS, All rights reserved.</span>
+        </div>
+        <div class="mt-2">
+            <span>Connect with us: </span>&nbsp;
+            <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
+            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
+            <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS and Popper.js v5.3.2 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery v3.6.0 (optional for Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- AOS JS -->
+  <script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script></script>
+
+  <script>
+    //======== tiny slider for testimonial-one
+    tns({
+      autoplay: true,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      gutter: 0,
+      container: ".testimonial-one-active",
+      center: true,
+      nav: true,
+      controls: false,
+      speed: 400,
+      controlsText: [
+        '<i class="lni lni-arrow-left-circle"></i>',
+        '<i class="lni lni-arrow-right-circle"></i>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+
+        992: {
+          items: 2,
+        },
+        1200: {
+          items: 3,
+        },
+      },
+    });
+  </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script  src="index.js"></script>
+
+
+<script>
+
+
+ 
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>

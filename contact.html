@@ -21,6 +21,10 @@
   rel="stylesheet"
   href="https://cdn.lineicons.com/3.0/lineicons.css"
 />
+<!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 <style>
     input::placeholder ,textarea::placeholder, select::placeholder {
   
@@ -30,8 +34,8 @@
   textarea:focus, 
   select:focus {
     outline: none !important;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.9) !important; /* Subtle custom glow effect */
-    border-color: #ff0000ab !important;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9) !important; /* Subtle custom glow effect */
+    border-color: #5a5a5aab !important;
   } 
 </style>
     <style>
@@ -141,64 +145,101 @@
     height: 100%;
     border: none;
 }
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
     </style>
 </head>
-<body >
+<body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand active image-fluid p-0" href="index.html">
+            <a class="navbar-brand p-0" href="index.html">
                 <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
                 aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-     <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="index.html">Home</a>
+                    <!-- Home Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="index.html">
+                            Home <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link font-7" href="it_services.html">Services</a>
-                            <div class="sub-nav-item">
-                                <ul>
-                                    <li><a href="it_services.html#content1" onclick="checkAndReload(event)">Application Development</a></li>
-                                    <li><a  href="it_services.html#content2" onclick="checkAndReload(event)">Quality As A Service</a></li>
-                                    <li><a  href="it_services.html#content3" onclick="checkAndReload(event)">Data Management</a></li>
-                                    <li><a  href="it_services.html#content4" onclick="checkAndReload(event)">Application Maintenance & Support</a></li>
-                                    <li><a  href="it_services.html#content5" onclick="checkAndReload(event)">Legacy App</a></li>
-                                    <!-- <li><a  href="it_services.html#content6" onclick="checkAndReload(event)">Web Technologies</a></li> -->
-                                    <!-- <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Enterprise Content Management</a></li> -->
-                                    <li><a  href="it_services.html#content8" onclick="checkAndReload(event)">Cloud/Infrastructure</a></li>
-                                    <li><a  href="it_services.html#content9" onclick="checkAndReload(event)">Professional Services</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link font-7" href="professional_services.html">Professional Services</a>
-                        <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="professional_services.html#content1" onclick="checkAndReload(event)">Complete Workforce Solutions</a></li>
-                                <li ><a href="professional_services.html#content2" onclick="checkAndReload(event)">AGS Staffing Quality Process</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
+                    <!-- Services Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="it_services.html">
+                            Services <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="it_services.html#content1">Application Development</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content8">Cloud/Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content3">Data Management</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content2">Testing As A Service</a></li>
+<!--                           
+                            <li><a class="dropdown-item" href="it_services.html#content4">Application Maintenance & Support</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content5">Legacy App</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content7">Digital Transformation Consulting</a></li> -->
+                     
+                            <li><a class="dropdown-item" href="it_services.html#content9">Professional Services</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other Sections -->
                     <li class="nav-item">
                         <a class="nav-link font-7" href="clients.html">Industries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-7" href="team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link font-7" href="product.html">Products</a>
-                        <!-- <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="product.html#content1" onclick="checkAndReload(event)">iCare Hospital Management System</a></li>
-                                <li ><a href="product.html#content2" onclick="checkAndReload(event)">Sedna Space</a></li>
-                                <li ><a href="product.html#content3" onclick="checkAndReload(event)">Fleet Tracking System (GPS)</a></li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-7" href="careers.html">Careers</a>
@@ -210,14 +251,13 @@
             </div>
         </div>
     </nav>
-
 </header>
 <main>
 
 <section class="contact-hero-section header-area header-one h-70">
    <div class="header-content-area">
       <div class="container">
-         <div class="row align-items-center">
+         <div class="row align-items-start">
             <div class="col-lg-6 col-12">
                <div class="header-wrapper">
                   <div class="header-content">
@@ -255,45 +295,46 @@
    </div>
    <!-- header content area -->
 </section>
-
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <section class="contact-section py-5">
     <div class="container">
         <div class="row">
+                  <!-- Malaysia Office -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="iframe-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.616562310905!2d101.66076357570942!3d2.926060754481972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb65827955555%3A0x3eb28337cdfb205c!2samIT%20Global%20Solutions%20Sdn%20Bhd!5e0!3m2!1sen!2sin!4v1722341449490!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Malaysia</h5>
+                            <p class="card-text">
+                                amIT Global Solutions SDN BHD<br />
+                                Company No: 953305-A<br />
+                                A-3-08, CoPlace 2
+                                ,2260 Jalan Usahawan 1<br />
+                                63000 Cyberjaya, Selangor Darul Ehsan<br />
+                                Malaysia
+                                <div class="last-part " ><p>Phone:+603 8325 1270</p></div>
+                                <!-- <strong>Email:</strong> <a href="mailto:malaysia@amitglobal.com" class="text-dark">malaysia@amitglobal.com</a> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
             <!-- Singapore Office -->
             <div class="col-md-4 mb-4">
                 <div class="card border-0 shadow-sm">
                     <div class="iframe-container">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.200860262271!2d103.8502495696094!3d1.292342040682304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a1348881bd%3A0xf9b403a3d2a9c140!2samIT%20Global%20Solutions%20Pte%20Ltd!5e0!3m2!1sen!2sin!4v1722339740892!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Singapore Office</h5>
+                        <h5 class="card-title">Singapore </h5>
                         <p class="card-text">
                             amIT Global Solutions (Pte.) Ltd<br />
                             (EA Licence # 11C3599)<br />
                             No.111 North Bridge Road,<br />
                             #27-01 Peninsula Plaza,<br />
                             Singapore 179098<br />
-                            <strong>Phone:</strong>+65 6749 1270<br />
+                            <div class="last-part" ><p>Phone:+65 6749 1270</p></div>
+                            
                             <!-- <strong>Email:</strong> <a href="mailto:singapore@amitglobal.com" class="text-dark">singapore@amitglobal.com</a> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Malaysia Office -->
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="iframe-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.616562310905!2d101.66076357570942!3d2.926060754481972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb65827955555%3A0x3eb28337cdfb205c!2samIT%20Global%20Solutions%20Sdn%20Bhd!5e0!3m2!1sen!2sin!4v1722341449490!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Malaysia Office</h5>
-                        <p class="card-text">
-                            amIT Global Solutions SDN BHD<br />
-                            Company No: 953305-A<br />
-                            A-3-08, CoPlace 2<br />
-                            2260 Jalan Usahawan 1<br />
-                            63000 Cyberjaya, Selangor Darul Ehsan<br />
-                            Malaysia<br />
-                            <strong>Phone:</strong> +603 8325 1270<br />
-                            <!-- <strong>Email:</strong> <a href="mailto:malaysia@amitglobal.com" class="text-dark">malaysia@amitglobal.com</a> -->
                         </p>
                     </div>
                 </div>
@@ -304,14 +345,14 @@
                     <div class="iframe-container">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3544549187877!2d80.22163747575607!3d13.013085513965969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670790a107af%3A0x4d13a3696902c031!2samIT%20Global%20Solutions%20Pvt.%20Ltd.%2C%20Chennai!5e0!3m2!1sen!2sus!4v1722341500938!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">India (Chennai) Office</h5>
+                        <h5 class="card-title">India (Chennai) </h5>
                         <p class="card-text">
                             amIT Global Solutions Pvt Ltd<br />
                             No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
                             Velachery Main Road, Little Mount<br />
                             Saidapet<br />
                             Chennai 600 015<br />
-                            <strong>Phone:</strong> + 91 44 4215 7186<br />
+                            <div class="last-part" ><p>Phone:+91 44 4215 7186</p></div>
                             <!-- <strong>Jobs:</strong> <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
                             <strong>Sales:</strong> <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
                         </p>
@@ -324,14 +365,15 @@
                     <div class="iframe-container">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8677094872714!2d78.67835077573633!3d10.821434458360502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5a3d31f6c45%3A0x90bbab8e3d738ed2!2sAkilam%20Technology%20LLP!5e0!3m2!1sen!2sus!4v1722341536520!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">India (Trichy) Office</h5>
+                        <h5 class="card-title">India (Trichy) </h5>
                         <p class="card-text">
                             Akilam Technology LLP<br />
                             D25, 10th Cross West Extn.<br />
                             Thillai Nagar,<br />
                             Trichy,<br />
                             Tamil Nadu 620018<br />
-                             <strong>Phone:</strong> +91 78458 65524<br />
+                            <div class="last-part" ><p>Phone:+91 78458 65524</p></div>
+                             
                             <!-- <strong>Mail:</strong> <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
                         </p>
                     </div>
@@ -343,14 +385,15 @@
                     <div class="iframe-container">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2395164637796!2d106.82688658406055!3d-6.232123744914129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8cbb9e497%3A0xc9b90fc0ac3963bc!2sMenara%20Kadin%20Indonesia%2C%20Jl.%20H.%20R.%20Rasuna%20Said%20Blok%20X-5%20No.Kav.%202-3%2C%20RT.1%2FRW.2%2C%20Kuningan%2C%20Kuningan%20Tim.%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012950%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1722341601112!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Indonesia Office</h5>
+                        <h5 class="card-title">Indonesia </h5>
                         <p class="card-text">
                             PT. AMIT GLOBAL SOLUTIONS,<br />
                             Menara Karya, 28th Floor,<br />
                             Jl. H.R. Rasuna Said Blok X-5,<br />
                             Kav. 1-2, Jakarta 12950,<br />
                             Indonesia<br />
-                             <strong>Phone:</strong> +62 818 0650 8131<br />
+                            <div class="last-part" ><p>Phone:+62 818 0650 8131</p></div>
+
                             <!-- <strong>Email:</strong> <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
                         </p>
                     </div>
@@ -362,12 +405,13 @@
                     <div class="iframe-container">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.514980733784!2d-74.4018099235673!3d40.55230354737614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b7f38e402311%3A0x1275f88f48ce5e43!2s342%20Michelle%20Cir%2C%20Edison%2C%20NJ%2008820!5e0!3m2!1sen!2sus!4v1722341663526!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">USA Office</h5>
+                        <h5 class="card-title">USA </h5>
                         <p class="card-text">
                             342 Michelle Cir,<br />
                             Edison,<br />
                             NJ-08820<br />
-                            <strong>Phone:</strong> +1 123-456-7890
+                            <!-- <div class="last-part" ><p>Phone: +1 123-456-7890</p></div> -->
+                            
                         </p>
                     </div>
                 </div>
@@ -376,69 +420,121 @@
     </div>
 </section>
 <section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h1 class="display-5 fw-bold">Contact Us</h1>
-      <p class="text-muted">We'd love to hear from you! Fill out the form below to get in touch.</p>
-    </div>
-
-    <div class="row align-items-center">
-      <!-- Contact Form -->
-      <div class="col-lg-7 mb-4">
-        <div class="card p-4 shadow rounded-3">
-          <h3 class="fw-bold mb-4">Get in Touch</h3>
-          <form action="#">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="fullName" class="form-label">Full Name</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="lni lni-user"></i></span>
-                  <input type="text" class="form-control" id="fullName" placeholder="John Doe" required />
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Contact Us</h1>
+        <p class="text-muted">We'd love to hear from you! Fill out the form below to get in touch.</p>
+      </div>
+  
+      <div class="row align-items-center">
+        <!-- Contact Form -->
+        <div class="col-lg-7 mb-4">
+          <div class="card p-4 shadow rounded-3">
+            <h3 class="fw-bold mb-4">Get in Touch</h3>
+            <form action="#">
+              <div class="row g-3">
+                <!-- First Name -->
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-user"></i></span>
+                    <input type="text" class="form-control" id="firstName" placeholder="John" required />
+                  </div>
+                </div>
+                <!-- Last Name -->
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-user"></i></span>
+                    <input type="text" class="form-control" id="lastName" placeholder="Doe" required />
+                  </div>
+                </div>
+                <!-- Email Address -->
+                <div class="col-md-6">
+                  <label for="emailAddress" class="form-label">Email Address</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-envelope"></i></span>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="example@email.com" required />
+                  </div>
+                </div>
+                <!-- Phone Number -->
+                <div class="col-md-6">
+                  <label for="phoneNumber" class="form-label">Phone Number</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-phone"></i></span>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="01234567890" required />
+                  </div>
+                </div>
+                <!-- Gender -->
+                <div class="col-md-6">
+                  <label for="gender" class="form-label">Gender</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-users"></i></span>
+                    <select class="form-control" id="gender" required>
+                      <option value="" selected disabled>Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Address -->
+                <div class="col-md-6">
+                  <label for="address" class="form-label">Address</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-map-marker"></i></span>
+                    <input type="text" class="form-control" id="address" placeholder="123 Main Street" required />
+                  </div>
+                </div>
+                <!-- City -->
+                <div class="col-md-6">
+                  <label for="city" class="form-label">City</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-home"></i></span>
+                    <input type="text" class="form-control" id="city" placeholder="New York" required />
+                  </div>
+                </div>
+                <!-- Country -->
+                <div class="col-md-6">
+                  <label for="country" class="form-label">Country</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-world"></i></span>
+                    <input type="text" class="form-control" id="country" placeholder="United States" required />
+                  </div>
+                </div>
+                <!-- Subject -->
+                <div class="col-md-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-bubble"></i></span>
+                    <input type="text" class="form-control" id="subject" placeholder="Type here" required />
+                  </div>
+                </div>
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="message" class="form-label">Your Message</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="lni lni-pencil-alt"></i></span>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Type your message here" required></textarea>
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-amit px-4 py-2">Submit</button>
                 </div>
               </div>
-              <div class="col-md-6">
-                <label for="emailAddress" class="form-label">Email Address</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="lni lni-envelope"></i></span>
-                  <input type="email" class="form-control" id="emailAddress" placeholder="admin@uideck.com" required />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label for="phoneNumber" class="form-label">Phone Number</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="lni lni-phone"></i></span>
-                  <input type="tel" class="form-control" id="phoneNumber" placeholder="01234567890" required />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label for="subject" class="form-label">Subject</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="lni lni-bubble"></i></span>
-                  <input type="text" class="form-control" id="subject" placeholder="Type here" required />
-                </div>
-              </div>
-              <div class="col-12">
-                <label for="message" class="form-label">Your Message</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="lni lni-pencil-alt"></i></span>
-                  <textarea class="form-control" id="message" rows="4" placeholder="Type your message here" required></textarea>
-                </div>
-              </div>
-              <div class="col-12 text-end">
-                <button type="submit" class="btn btn-amit px-4 py-2">Submit</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
+        </div>
+  
+        <!-- Illustration -->
+        <div class="col-lg-5 text-center">
+          <img src="./assets/illustration_and_gif/coworking.gif" alt="Coworking Illustration" class="img-fluid rounded-3 shadow-sm">
         </div>
       </div>
-
-      <!-- Illustration -->
-      <div class="col-lg-5 text-center">
-        <img src="./assets/illustration_and_gif/coworking.gif" alt="Coworking Illustration" class="img-fluid rounded-3 shadow-sm">
-      </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 </main>
 
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
@@ -448,44 +544,29 @@
                 <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
-                    <li><a href="it_services.html#content2" class="text-white">Quality As A Service</a></li>
-                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
-                    <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li>
-                    <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li>
-                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
-                    <!-- <li><a href="it_services.html#content7"class="text-white">Enterprise Content Management</a></li> -->
                     <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
+                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
+                    <li><a href="it_services.html#content2" class="text-white">Testing As A Service</a></li>
+                    
+                    <!-- <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li> -->
+                    <!-- <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li> -->
+                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
+                   <!-- <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li>  -->
+                    
                     <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
                 </ul>
                
 
             </div>
             <div class="col-md-4">
-                <h5 class="text-white">Associated With</h5>
+                <h5 class="text-white">Malaysian Status Company</h5>
                 <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
        
             </div> 
             <div class="col-md-4">
                          <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
                 <div class="accordion" id="companyDetails">
-                    <div class="accordion-item bg-secondary text-light">
-                        <h2 class="accordion-header" id="headingSingapore">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="true" aria-controls="collapseSingapore">
-                                Singapore
-                            </button>
-                        </h2>
-                        <div id="collapseSingapore" class="accordion-collapse collapse show" aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
-                            <div class="accordion-body">
-                                amIT Global Solutions (Pte.) Ltd<br />
-                                (EA Licence # 11C3599)<br />
-                                No.111 North Bridge Road,<br />
-                                #27-01 Peninsula Plaza,<br />
-                                Singapore 179098<br/>
-                                  <strong>Phone:</strong>+65 6749 1270<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingMalaysia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
                                 Malaysia
@@ -493,17 +574,35 @@
                         </h2>
                         <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions SDN BHD<br />
+                                <p> amIT Global Solutions SDN BHD<br />
                                 Company No: 953305-A<br />
                                 A-3-08, CoPlace 2<br />
                                 2260 Jalan Usahawan 1<br />
                                 63000 Cyberjaya, Selangor Darul Ehsan<br />
                                 Malaysia<br/>
-                                  <strong>Phone:</strong>+603 8325 1270<br />
+                                  <strong>Phone:</strong>+603 8325 1270</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light ">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="false" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse " aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p>amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098<br/>
+                                  <strong>Phone:</strong>+65 6749 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaChennai">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
                                 India (Chennai)
@@ -511,19 +610,19 @@
                         </h2>
                         <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions Pvt Ltd<br />
+                               <p>amIT Global Solutions Pvt Ltd<br />
                                 No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
                                 Velachery Main Road, Little Mount<br />
                                 Saidapet<br />
                                 Chennai 600 015<br />
                               
-                            <strong>Phone:</strong> + 91 44 4215 7186  <br />
+                            <strong>Phone:</strong> + 91 44 4215 7186  </p> 
                                 <!-- Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
                                 Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaTrichy">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
                                 India (Trichy)
@@ -531,17 +630,18 @@
                         </h2>
                         <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                Akilam Technology LLP<br />
-                                D25, 10th Cross West Extn.<br />
-                                Thillai Nagar,<br />
+                             <p>  Akilam Technology LLP<br />
+                                T-4,  Third Floor, 
+                                JC Tower, Karur Bypass Road,<br />
+                                 Annamalai nagar,
                                 Trichy,<br />
                                 Tamil Nadu 620018<br />
-                                    <strong>Phone:</strong> +91 78458 65524<br />
+                                    <strong>Phone:</strong> +91 78458 65524</p> 
                                 <!-- Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndonesia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
                                 Indonesia
@@ -549,17 +649,17 @@
                         </h2>
                         <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                PT. AMIT GLOBAL SOLUTIONS,<br />
+                             <p>  PT. AMIT GLOBAL SOLUTIONS,<br />
                                 Menara Karya, 28th Floor,<br />
                                 Jl. H.R. Rasuna Said Blok X-5,<br />
                                 Kav. 1-2, Jakarta 12950,<br />
                                 Indonesia<br />
-                                  <strong>Phone:</strong> +62 818 0650 8131<br />
+                                  <strong>Phone:</strong> +62 818 0650 8131</p> 
                                 <!-- <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingUSA">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
                                 USA (Partner Office)
@@ -567,9 +667,9 @@
                         </h2>
                         <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                342 Michelle Cir,<br />
+                               <p> 342 Michelle Cir,<br />
                                 Edison,<br />
-                                NJ-08820
+                                NJ-08820</p>
                             </div>
                         </div>
                     </div>
@@ -579,7 +679,6 @@
         </div>
     </div>
 </footer>
-
 
 
 <footer class="bg-charcoal text-white py-3">
@@ -600,7 +699,7 @@
             <span>Connect with us: </span>&nbsp;
             <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a>
+            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
             <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
         </div>
     </div>

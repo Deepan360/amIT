@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="style.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <style>
 /* ===== Buttons Css ===== */
 .header-one .header-content-area .primary-btn-outline {
@@ -97,64 +102,101 @@
 .header-one .header-shape img {
   width: 100%;
 }
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
     </style>
 </head>
 <body >
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand active image-fluid p-0" href="index.html">
+            <a class="navbar-brand p-0" href="index.html">
                 <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
                 aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-     <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="index.html">Home</a>
+                    <!-- Home Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="index.html">
+                            Home <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link font-7" href="it_services.html">Services</a>
-                            <div class="sub-nav-item">
-                                <ul>
-                                    <li><a href="it_services.html#content1" onclick="checkAndReload(event)">Application Development</a></li>
-                                    <li><a  href="it_services.html#content2" onclick="checkAndReload(event)">Quality As A Service</a></li>
-                                    <li><a  href="it_services.html#content3" onclick="checkAndReload(event)">Data Management</a></li>
-                                    <li><a  href="it_services.html#content4" onclick="checkAndReload(event)">Application Maintenance & Support</a></li>
-                                    <li><a  href="it_services.html#content5" onclick="checkAndReload(event)">Legacy App</a></li>
-                                    <!-- <li><a  href="it_services.html#content6" onclick="checkAndReload(event)">Web Technologies</a></li> -->
-                                    <!-- <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Enterprise Content Management</a></li> -->
-                                    <li><a  href="it_services.html#content8" onclick="checkAndReload(event)">Cloud/Infrastructure</a></li>
-                                    <li><a  href="it_services.html#content9" onclick="checkAndReload(event)">Professional Services</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link font-7" href="professional_services.html">Professional Services</a>
-                        <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="professional_services.html#content1" onclick="checkAndReload(event)">Complete Workforce Solutions</a></li>
-                                <li ><a href="professional_services.html#content2" onclick="checkAndReload(event)">AGS Staffing Quality Process</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
+                    <!-- Services Section -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-7 dropdown-toggle no-caret" href="it_services.html">
+                            Services <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="it_services.html#content1">Application Development</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content8">Cloud/Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content3">Data Management</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content2">Testing As A Service</a></li>
+<!--                           
+                            <li><a class="dropdown-item" href="it_services.html#content4">Application Maintenance & Support</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content5">Legacy App</a></li>
+                            <li><a class="dropdown-item" href="it_services.html#content7">Digital Transformation Consulting</a></li> -->
+                     
+                            <li><a class="dropdown-item" href="it_services.html#content9">Professional Services</a></li>
+                        </ul>
+                    </li>
+                    <!-- Other Sections -->
                     <li class="nav-item">
                         <a class="nav-link font-7" href="clients.html">Industries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-7" href="team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link font-7" href="product.html">Products</a>
-                        <!-- <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="product.html#content1" onclick="checkAndReload(event)">iCare Hospital Management System</a></li>
-                                <li ><a href="product.html#content2" onclick="checkAndReload(event)">Sedna Space</a></li>
-                                <li ><a href="product.html#content3" onclick="checkAndReload(event)">Fleet Tracking System (GPS)</a></li>
-                            </ul>
-                        </div> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-7" href="careers.html">Careers</a>
@@ -170,7 +212,7 @@
 <section class="it-hero-section header-area header-one h-70">
    <div class="header-content-area">
       <div class="container">
-         <div class="row align-items-center">
+         <div class="row align-items-start">
             <div class="col-lg-6 col-12">
                <div class="header-wrapper">
                   <div class="header-content">
@@ -216,17 +258,21 @@
         <div class="row ">
             <div class="col-md-3 sidebar bg-white position-sticky top-0">
                 <ul>
-                    <li data-target="content1" class="active "><i class="fas fa-cogs "></i> Application Development</li>
-                    <li data-target="content2"><i class="fas fa-star"></i> Quality As A Service</li>
-                    <li data-target="content3"><i class="fas fa-tachometer-alt"></i> Data Management</li>
-                    <li data-target="content4"><i class="fas  fa-rocket"></i> Application Maintenance & Support</li>
-                    <li data-target="content5"><i class="fas fa-briefcase"></i> Legacy App</li>
-                    <!-- <li data-target="content6"><i class="fas fa-laptop-code"></i> Web Technologies</li> -->
-                    <!-- <li data-target="content7"><i class="fas fa-archive"></i> Enterprise Content Mgmt</li> -->
-                    <li data-target="content8"><i class="fas fa-cloud-arrow-up"></i> Cloud/Infrastructure</li>
-                    <li data-target="content9"><i class="fas fa-users "></i>Professional Services</li> 
-                    <!-- <li data-target="content10"><i class="fas fa-book"></i> e-Publishing</li> -->
+                    <li data-target="content1" class="active"><i class="bi bi-braces"></i> Application Development</li>
+                    <li data-target="content8"><i class="bi bi-cloud-upload"></i> Cloud/Infrastructure</li>
+                    <li data-target="content3"><i class="bi bi-speedometer2"></i> Data Management</li>
+                    <li data-target="content2"><i class="bi bi-patch-check"></i> Testing As A Service</li>
+                    
+                    <!-- Uncomment if needed -->
+                    <!-- <li data-target="content4"><i class="bi bi-rocket"></i> Application Maintenance & Support</li> -->
+                    <!-- <li data-target="content5"><i class="bi bi-briefcase"></i> Legacy App</li> -->
+                    <!-- <li data-target="content6"><i class="bi bi-laptop"></i> Web Technologies</li> -->
+                    <!-- <li data-target="content7"><i class="bi bi-tv"></i> Digital Transformation Consulting</li> -->
+                    
+                    <li data-target="content9"><i class="bi bi-people"></i> Professional Services</li>
+                    <!-- <li data-target="content10"><i class="bi bi-book"></i> e-Publishing</li> -->
                 </ul>
+                
             </div>
             <div class="col-md-9  sidebar-content  p-3 bg-white ">
         <div id="content1" class="content-tab active" data-aos="fade-up">
@@ -297,6 +343,53 @@
                     </p>
                 </div>
             </div>
+        </section>
+        <section class="mt-5">
+            <h2>Application Maintenance & Support</h2>
+            <p>
+               amIT Global provides Managed Service for managing application maintenance and support, ensuring applications are reliable, relevant, and meet user expectations. With our team of Support Analysts, Incident Managers, and Service Delivery Managers, we optimize application performance with user satisfaction.
+           </p>
+           <h4>We help our clients with:</h4>
+           <ul>
+               <li><strong>Incident Management:</strong> Responding and resolving issues as per priority standards</li>
+               <li><strong>Identifying and fixing issues:</strong> Finding and fixing bugs, defects, and other technical issues</li>
+               <li><strong>Change Request/Enhancements:</strong> Adding new functionalities based on user needs and feedback</li>
+               <li><strong>Applying updates:</strong> Applying software updates, patches, or new releases to fix flaws</li>
+               <li><strong>Improving performance:</strong> Enhancing the application's performance, interface, and experience</li>
+               <li><strong>Optimizing for new devices:</strong> Optimizing the applications</li>
+           </ul>
+        </section>
+        <section class="mt-5">
+            <p>
+                Many companies rely on legacy systems due to their robustness and large-scale processing capacity. With our team of experts in AS400, Smart 400, and Mainframe, we can help develop and enhance these applications and maintain them with testing, bug fixing, minor changes, and deployment.
+            </p>
+            <h4>Solutions include:</h4>
+            <ul>
+                <li>ERP</li>
+                <li>BPM</li>
+                <li>CRM</li>
+            </ul>
+        </section>
+        <section class="mt-5">
+            <h2>Digital Transformation Consulting</h2>
+            <p>
+                Transform the way your business operates with a holistic approach to digitalization. We guide your company in adopting the latest tools and technologies, ensuring a smooth transition and long-term success. Whether you're rethinking your business model, optimizing workflows, or automating processes, our consultants are here to lead the change.
+            </p>
+            <p>
+                Strategy Development: We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.
+            </p>
+            <p>
+                Change Management: Ensuring your organization is ready to embrace change through training and leadership support.
+            </p>
+            <p>
+                Innovation & Automation: Revolutionize your operations by introducing AI, machine learning, and business process automation.
+            </p>
+            <!-- List of Key Services -->
+            <ul>
+                <li><strong>Strategy Development:</strong> We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.</li>
+                <li><strong>Change Management:</strong> Ensuring your organization is ready to embrace change through training and leadership support.</li>
+                <li><strong>Innovation & Automation:</strong> Revolutionize your operations by introducing AI, machine learning, and business process automation.</li>
+            </ul>
         </section>
       </div>
 
@@ -417,18 +510,28 @@ Our team of experienced engineers excels in developing scalable technology solut
     web technology.
   </p>
 </div> -->
-<!-- <div id="content7" class="content-tab" data-aos="fade-up">
-  <h2>ECM Enterprise Content Management</h2>
-  <p>
-    AGS provides the content management solutions to help customers create, organize, and publish the contents 
-    of any sort of media. The ECM solutions have been used in the media and entertainment departments to facilitate 
-    collaborative efforts by different teams.
-  </p>
-  <p>
-    Call us today to find out impressive and cost-effective ECM Solutions to increase your productivity and reduce 
-    the dependency between different systems.
-  </p>
-</div> -->
+<div id="content7" class="content-tab" data-aos="fade-up">
+    <h2>Digital Transformation Consulting</h2>
+    <p>
+        Transform the way your business operates with a holistic approach to digitalization. We guide your company in adopting the latest tools and technologies, ensuring a smooth transition and long-term success. Whether you're rethinking your business model, optimizing workflows, or automating processes, our consultants are here to lead the change.
+    </p>
+    <p>
+        Strategy Development: We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.
+    </p>
+    <p>
+        Change Management: Ensuring your organization is ready to embrace change through training and leadership support.
+    </p>
+    <p>
+        Innovation & Automation: Revolutionize your operations by introducing AI, machine learning, and business process automation.
+    </p>
+    <!-- List of Key Services -->
+    <ul>
+        <li><strong>Strategy Development:</strong> We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.</li>
+        <li><strong>Change Management:</strong> Ensuring your organization is ready to embrace change through training and leadership support.</li>
+        <li><strong>Innovation & Automation:</strong> Revolutionize your operations by introducing AI, machine learning, and business process automation.</li>
+    </ul>
+</div>
+
 <div id="content8" class="content-tab" data-aos="fade-up">
  <section class="container ">
     <h2 class="text-center ">Cloud Services</h2>
@@ -554,6 +657,7 @@ Our team of experienced engineers excels in developing scalable technology solut
         </div>
     </div>
 </main>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <footer class="bg-secondary py-4 footer-background font-weight-600" >
     <div class="container">
         <div class="row">
@@ -561,44 +665,29 @@ Our team of experienced engineers excels in developing scalable technology solut
                 <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
-                    <li><a href="it_services.html#content2" class="text-white">Quality As A Service</a></li>
-                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
-                    <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li>
-                    <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li>
-                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
-                    <!-- <li><a href="it_services.html#content7"class="text-white">Enterprise Content Management</a></li> -->
                     <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
+                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
+                    <li><a href="it_services.html#content2" class="text-white">Testing As A Service</a></li>
+                    
+                    <!-- <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li> -->
+                    <!-- <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li> -->
+                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
+                   <!-- <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li>  -->
+                    
                     <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
                 </ul>
                
 
             </div>
             <div class="col-md-4">
-                <h5 class="text-white">Associated With</h5>
+                <h5 class="text-white">Malaysian Status Company</h5>
                 <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
        
             </div> 
             <div class="col-md-4">
                          <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
                 <div class="accordion" id="companyDetails">
-                    <div class="accordion-item bg-secondary text-light">
-                        <h2 class="accordion-header" id="headingSingapore">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="true" aria-controls="collapseSingapore">
-                                Singapore
-                            </button>
-                        </h2>
-                        <div id="collapseSingapore" class="accordion-collapse collapse show" aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
-                            <div class="accordion-body">
-                                amIT Global Solutions (Pte.) Ltd<br />
-                                (EA Licence # 11C3599)<br />
-                                No.111 North Bridge Road,<br />
-                                #27-01 Peninsula Plaza,<br />
-                                Singapore 179098<br/>
-                                  <strong>Phone:</strong>+65 6749 1270<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingMalaysia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
                                 Malaysia
@@ -606,17 +695,35 @@ Our team of experienced engineers excels in developing scalable technology solut
                         </h2>
                         <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions SDN BHD<br />
+                                <p> amIT Global Solutions SDN BHD<br />
                                 Company No: 953305-A<br />
                                 A-3-08, CoPlace 2<br />
                                 2260 Jalan Usahawan 1<br />
                                 63000 Cyberjaya, Selangor Darul Ehsan<br />
                                 Malaysia<br/>
-                                  <strong>Phone:</strong>+603 8325 1270<br />
+                                  <strong>Phone:</strong>+603 8325 1270</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light ">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="false" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse " aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p>amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098<br/>
+                                  <strong>Phone:</strong>+65 6749 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaChennai">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
                                 India (Chennai)
@@ -624,19 +731,19 @@ Our team of experienced engineers excels in developing scalable technology solut
                         </h2>
                         <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions Pvt Ltd<br />
+                               <p>amIT Global Solutions Pvt Ltd<br />
                                 No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
                                 Velachery Main Road, Little Mount<br />
                                 Saidapet<br />
                                 Chennai 600 015<br />
                               
-                            <strong>Phone:</strong> + 91 44 4215 7186  <br />
+                            <strong>Phone:</strong> + 91 44 4215 7186  </p> 
                                 <!-- Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
                                 Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaTrichy">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
                                 India (Trichy)
@@ -644,17 +751,18 @@ Our team of experienced engineers excels in developing scalable technology solut
                         </h2>
                         <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                Akilam Technology LLP<br />
-                                D25, 10th Cross West Extn.<br />
-                                Thillai Nagar,<br />
+                             <p>  Akilam Technology LLP<br />
+                                T-4,  Third Floor, 
+                                JC Tower, Karur Bypass Road,<br />
+                                 Annamalai nagar,
                                 Trichy,<br />
                                 Tamil Nadu 620018<br />
-                                    <strong>Phone:</strong> +91 78458 65524<br />
+                                    <strong>Phone:</strong> +91 78458 65524</p> 
                                 <!-- Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndonesia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
                                 Indonesia
@@ -662,17 +770,17 @@ Our team of experienced engineers excels in developing scalable technology solut
                         </h2>
                         <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                PT. AMIT GLOBAL SOLUTIONS,<br />
+                             <p>  PT. AMIT GLOBAL SOLUTIONS,<br />
                                 Menara Karya, 28th Floor,<br />
                                 Jl. H.R. Rasuna Said Blok X-5,<br />
                                 Kav. 1-2, Jakarta 12950,<br />
                                 Indonesia<br />
-                                  <strong>Phone:</strong> +62 818 0650 8131<br />
+                                  <strong>Phone:</strong> +62 818 0650 8131</p> 
                                 <!-- <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingUSA">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
                                 USA (Partner Office)
@@ -680,9 +788,9 @@ Our team of experienced engineers excels in developing scalable technology solut
                         </h2>
                         <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                342 Michelle Cir,<br />
+                               <p> 342 Michelle Cir,<br />
                                 Edison,<br />
-                                NJ-08820
+                                NJ-08820</p>
                             </div>
                         </div>
                     </div>
@@ -692,8 +800,6 @@ Our team of experienced engineers excels in developing scalable technology solut
         </div>
     </div>
 </footer>
-
-
 <footer class="bg-charcoal text-white py-3">
     <div class="container text-center">
         <div>
@@ -712,7 +818,7 @@ Our team of experienced engineers excels in developing scalable technology solut
             <span>Connect with us: </span>&nbsp;
             <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a>
+            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
             <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
         </div>
     </div>

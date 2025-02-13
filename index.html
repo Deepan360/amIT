@@ -5,7 +5,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="keywords" content="IT Managed Services, IT Consulting and Outsourcing, in Singapore and Malaysia, Executive placements in Singapore and Malaysia, IT Services, Application Development, Quality As a Service, Application maintenance, Quality Analysis and Software Testing, Enterprise Applications, Cloud Computing, Web Applications, Web development using J2EE, .NET, PHP, HTML">
+    <meta name="description" content="amIT Global Solutions (AGS) is a highly promising provider of world-class IT Solutions, Technology Consulting, Business Process Outsourcing company. AGS is steering  strategic solutions coupled with latest technology by their strong domain experience, indepth technical knowledge, experience in project management aimed at delivering solutions with best cost effectiveness.">
+    <meta name="created by" content="amIT Global Solutions, http://www.amitglobal.com">
+    <meta name="copyright" content="amIT Global Solutions, 2013">
+    <meta name="robots" content="all">
+    <meta name="robots" content="index, follow">
+    <title>amIT Global Solutions : AGS : Applying Minds In Technologies</title>
+    <LINK REL="SHORTCUT ICON" HREF="images/amiticonnew.png">
+        <meta name="norton-safeweb-site-verification" content="uoaci94j5bvdqi8bx3szwbl57r0wc2ft38acm19vg7ckq91j8qd7k7of579rh9arbkqxhr1-vhbcw4h2-z-g5966jdgmsv0vpdjxo-t755kyv44r9dnih95ri-z2kova" />
+        <META name="y_key" content="f71ce49baf7e2aa0" />
     <link rel="shortcut icon" href="assets/images/amiticon.png" type="image/x-icon">
     
     <!-- Bootstrap CSS v5.3.2 -->
@@ -19,58 +28,136 @@
     <link rel="stylesheet" href="style.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap and Popper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
     <style>
+ /* Custom color for amit text */
+
+ .approach-item i {
+            font-size: 4rem; /* Increased icon size */
+            color: #FF5733; /* Icon color */
+            margin-bottom: 20px;
+        }
+        .approach-item {
+            background-color: #eaeaea; /* Dark background */
+            border-radius: 10px;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+   min-height: 60px;
+        }
+
+        /* Hover Effect for Each Item */
+        .approach-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .approach-item h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .approach-item p {
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            line-height: 1.6;
+        }
+
+  
         .wrapper {
   display: flex;
   justify-content: center;
 }
 
-.cta {
-    display: flex;
-    padding: 5px ;
-    text-decoration: none;
-font-size: 20px;
-    color: white;
-    align-items: center !important;
-    justify-content: space-evenly !important;
-    background: var(--amit);
-    transition: 1s;
-    box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
-}
 
-.cta:focus {
-   outline: none; 
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: var(--amit);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 #474747;
 }
 
 .cta:hover {
-    transition: 0.5s;
+    background-color: var(--amit); /* Keeps the theme color */
     box-shadow: 10px 10px 0 #474747;
+    transition: 0.5s;
+}
+
+/* Button Animation Effect */
+.cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease-in-out;
+}
+
+.cta:hover::before {
+    left: 100%;
+}
+
+/* Click Effect */
+.cta:active {
+    transform: scale(0.96);
+    box-shadow: 3px 3px 0 #474747;
+}
+
+.cta:focus {
+    outline: none;
+}
+
+/* Arrow Movement Animation */
+.cta span {
+    transform: skewX(0deg);
+    display: inline-block;
 }
 
 .cta span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 0px;
-}
-
-.cta:hover  span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 45px;
-}
-
-  span {
-    transform: skewX(15deg) 
-  }
-
-  span:nth-child(2) {
     width: 20px;
-    margin-left: 30px;
-    position: relative;
-    top: 12%;
-  }
-  
-/**************SVG****************/
+    margin-left: 20px;
+    transition: margin-left 0.5s ease-in-out;
+}
 
+.cta:hover span:nth-child(2) {
+    margin-left: 45px;
+}
+
+/********** SVG Animations **********/
+.cta svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: transform 0.4s ease-in-out;
+}
+
+.cta:hover svg {
+    transform: translateX(8px);
+}
+
+/* Path Animations */
 path.one {
     transition: 0.4s;
     transform: translateX(-60%);
@@ -95,8 +182,7 @@ path.two {
     animation: color_anim 1s infinite 0.4s;
 }
 
-/* SVG animations */
-
+/* SVG Color Animation */
 @keyframes color_anim {
     0% {
         fill: white;
@@ -108,77 +194,121 @@ path.two {
         fill: rgb(0, 0, 0);
     }
 }
+
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .arrow-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
     </style>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
-        <div class="container">
-            <a class="navbar-brand active image-fluid p-0" href="index.html">
-                <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
-                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-     <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link font-7" href="it_services.html">Services</a>
-                            <div class="sub-nav-item">
-                                <ul>
-                                    <li><a href="it_services.html#content1" onclick="checkAndReload(event)">Application Development</a></li>
-                                    <li><a  href="it_services.html#content2" onclick="checkAndReload(event)">Quality As A Service</a></li>
-                                    <li><a  href="it_services.html#content3" onclick="checkAndReload(event)">Data Management</a></li>
-                                    <li><a  href="it_services.html#content4" onclick="checkAndReload(event)">Application Maintenance & Support</a></li>
-                                    <li><a  href="it_services.html#content5" onclick="checkAndReload(event)">Legacy App</a></li>
-                                    <!-- <li><a  href="it_services.html#content6" onclick="checkAndReload(event)">Web Technologies</a></li> -->
-                                    <!-- <li><a  href="it_services.html#content7"onclick="checkAndReload(event)">Enterprise Content Management</a></li> -->
-                                    <li><a  href="it_services.html#content8" onclick="checkAndReload(event)">Cloud/Infrastructure</a></li>
-                                    <li><a  href="it_services.html#content9" onclick="checkAndReload(event)">Professional Services</a></li>
-                                </ul>
-                            </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand p-0" href="index.html">
+                    <img src="./assets/images/amITcut.png" style="width: 150px;" alt="AMIT Icon">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <!-- Home Section -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link font-7 dropdown-toggle no-caret" href="index.html">
+                                Home <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                            </ul>
                         </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link font-7" href="professional_services.html">Professional Services</a>
-                        <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="professional_services.html#content1" onclick="checkAndReload(event)">Complete Workforce Solutions</a></li>
-                                <li ><a href="professional_services.html#content2" onclick="checkAndReload(event)">AGS Staffing Quality Process</a></li>
+                        <!-- Services Section -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link font-7 dropdown-toggle no-caret" href="it_services.html">
+                                Services <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="it_services.html#content1">Application Development</a></li>
+                                <li><a class="dropdown-item" href="it_services.html#content8">Cloud/Infrastructure</a></li>
+                                <li><a class="dropdown-item" href="it_services.html#content3">Data Management</a></li>
+                                <li><a class="dropdown-item" href="it_services.html#content2">Testing As A Service</a></li>
+    <!--                           
+                                <li><a class="dropdown-item" href="it_services.html#content4">Application Maintenance & Support</a></li>
+                                <li><a class="dropdown-item" href="it_services.html#content5">Legacy App</a></li>
+                                <li><a class="dropdown-item" href="it_services.html#content7">Digital Transformation Consulting</a></li> -->
+                         
+                                <li><a class="dropdown-item" href="it_services.html#content9">Professional Services</a></li>
                             </ul>
-                        </div>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="clients.html">Industries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="product.html">Products</a>
-                        <!-- <div class="sub-nav-item">
-                            <ul>
-                                <li ><a href="product.html#content1" onclick="checkAndReload(event)">iCare Hospital Management System</a></li>
-                                <li ><a href="product.html#content2" onclick="checkAndReload(event)">Sedna Space</a></li>
-                                <li ><a href="product.html#content3" onclick="checkAndReload(event)">Fleet Tracking System (GPS)</a></li>
-                            </ul>
-                        </div> -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="careers.html">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-7" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
+                        </li>
+                        <!-- Other Sections -->
+                        <li class="nav-item">
+                            <a class="nav-link font-7" href="clients.html">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-7" href="product.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-7" href="careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-7" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-</header>
+    </header>
+    
+    
 
 <main >
     <section><div class="hero ">
@@ -187,7 +317,7 @@ path.two {
        
     </video>
     <div class="hero-content " >
-        <h2 class="animate__animated animate__fadeInUp font-7" data-aos="fade-up" data-aos-delay="500">Transforming Ideas into Solutions with <span style="font-style: italic; ">amIT</span></h2>
+        <h2 class="animate__animated animate__fadeInUp font-7" data-aos="fade-up" data-aos-delay="500">Transforming Ideas into Solutions with <span style="font-style: italic; ">amIT</span>&nbsp;Global Solutions</h2>
         <p class="animate__animated animate__fadeInUp font-7" data-aos="fade-up" data-aos-delay="1000">Harnessing Cutting-Edge Technology for Your Business Needs.</p>
         <a href="#services" class="btn btn-primary animate__animated animate__fadeInUp font-7" onclick="scrollNearBottom()" data-aos="fade-up" data-aos-delay="1500">Discover More</a>
     </div>
@@ -216,7 +346,7 @@ path.two {
     </div>
 </div>-->
 </section> 
-<section id="about"  >
+<!-- <section id="about"  >
   <div class="video-background video-filter-half bg-black">
     <video id="myVideo" autoplay muted loop playsinline class="position-fixed">
       <source src="./assets/videos/globespining.mp4" type="video/mp4">
@@ -298,7 +428,7 @@ path.two {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- <section>
   <div class="container-fluid position-relative mainpoints">
     <video autoplay muted loop playsinline class="w-100 position-absolute bottom-0 start-0 h-100 bg-black" style="height: 100%; object-fit: cover; z-index: -1;">
@@ -356,7 +486,9 @@ path.two {
               <div class="card-body rounded-3">
                 <h2 class="card-title text-amit">Our Vision</h2>
                 <ul class="vision-list">
-                  <li>Transforming IT industry using cost-effective and state-of-the-art technology to provide quality solutions, services and products.</li>
+                  <li>"To be a globally recognized and admired information technology organization that provides best-in-class business solutions using cutting-edge technologies, creates cost-effective and efficient processes, and delivers them through our expert team."
+
+                  </li>
                 </ul>
               </div>
             </div>
@@ -370,13 +502,9 @@ path.two {
           <div class="mission-text">
             <div class="card mission-card rounded-3" data-aos="fade-up" data-aos-duration="1000">
               <div class="card-body rounded-3">
-                <h2 class="card-title text-amit">Our Mission is to</h2>
+                <h2 class="card-title text-amit">Our Mission</h2>
                 <ul class="mission-list">
-                  <li>Understand our client's business requirements.</li>
-                  <li>Proposing a wide range of innovative solutions.</li>
-                  <li>Delivering high-quality, reliable, and secure solutions to our clients.</li>
-                  <li>Establish a long-term relationship by providing QoS (Quality of Service).</li>
-                  <li>Ensuring our business solutions add significant value to our clients and their businesses.</li>
+                  <li>"At amIT Global Solutions, we strive to bring values to our clients with passion, commitment, fairness and dedication, driving digital transformation that accelerates growth and fosters innovation by combining cutting edge technologies and domain specific strategies."</li>
                 </ul>
               </div>
             </div>
@@ -390,6 +518,9 @@ path.two {
       </div>
     </div>
   </div>
+  
+
+
 </section>
 
 <section>
@@ -398,7 +529,7 @@ path.two {
             <div class="d-flex justify-content-between align-items-center mb-5">
                 <h2 class="text-amit mb-0">Services</h2>
                 <div class="wrapper">
-  <a class="cta" href="/it_services.html">
+  <a class="cta btn btn-amit" href="/it_services.html">
     <span>Learn More</span>
     <span>
       <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -433,77 +564,57 @@ path.two {
                 <!-- Small Service Cards -->
                 <div class="col-md-6 mt-4">
                     <div class="row">
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="150">
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="150">
                             <div class="small-service-card card shadow h-100">
                                 <div class="card-body text-center">
-                                    <i class="fas fa-code mb-2"></i>
+                                    <i class="bi bi-braces mb-2" style="font-size: 2rem; color: #007bff;"></i>
                                     <h5 class="card-title">Application Development</h5>
                                     <a href="it_services.html#content1" class="btn btn-amit explore-button mt-2">Explore</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
                             <div class="small-service-card card shadow h-100">
                                 <div class="card-body text-center">
-                                    <i class="fas fa-star mb-2"></i>
-                                    <h5 class="card-title">Quality As A Service</h5>
+                                    <i class="bi bi-patch-check mb-2" style="font-size: 2rem; color: #ff9800;"></i>
+                                    <h5 class="card-title">Testing As A Service</h5>
                                     <a href="it_services.html#content2" class="btn btn-amit explore-button mt-2">Explore</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="250">
+                    
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="450">
                             <div class="small-service-card card shadow h-100">
                                 <div class="card-body text-center">
-                                    <i class="fas fa-tasks mb-2"></i>
-                                    <h5 class="card-title">Application Maintenance</h5>
-                                    <a href="it_services.html#content4" class="btn btn-amit explore-button mt-2">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="450">
-                            <div class="small-service-card card shadow h-100">
-                                <div class="card-body text-center">
-                                    <i class="fas fa-file-alt mb-2"></i>
+                                    <i class="bi bi-database mb-2" style="font-size: 2rem; color: #28a745;"></i>
                                     <h5 class="card-title">Data Management</h5>
                                     <a href="it_services.html#content3" class="btn btn-amit explore-button mt-2">Explore</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="500">
+                    
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="550">
                             <div class="small-service-card card shadow h-100">
                                 <div class="card-body text-center">
-                                    <i class="fas fa-handshake mb-2"></i>
-                                    <h5 class="card-title">Legacy App</h5>
-                                    <a href="it_services.html#content5" class="btn btn-amit explore-button mt-2">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="550">
-                            <div class="small-service-card card shadow h-100">
-                                <div class="card-body text-center">
-                                    <i class="fas fa-mobile-alt mb-2"></i>
-                                    <h5 class="card-title">Cloud/Infrastructure</h5>
+                                    <i class="bi bi-cloud mb-2" style="font-size: 2rem; color: #17a2b8;"></i>
+                                    <h5 class="card-title">Cloud & Infrastructure</h5>
                                     <a href="it_services.html#content8" class="btn btn-amit explore-button mt-2">Explore</a>
                                 </div>
                             </div>
                         </div>
-      <div class="col-md-12 mb-3" data-aos="fade-up" data-aos-delay="600">
+                    
+                        <div class="col-md-12 mb-3" data-aos="fade-up" data-aos-delay="600">
                             <div class="small-service-card card shadow h-100">
                                 <div class="card-body text-center">
-                                     <i class="fas fa-users mb-2"></i>
-                                 <h5 class="card-title">Professional Services</h5>
-                                    <p class="text">Complete Workforce Solutions</p>
+                                    <i class="bi bi-people mb-2" style="font-size: 2rem; color: #6f42c1;"></i>
+                                    <h5 class="card-title">Professional Services / On-Demand IT Resourcing</h5>
                                     <a href="it_services.html#content9" class="btn btn-amit explore-button mt-2">Explore</a>
                                 </div>
                             </div>
                         </div>
-        
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -573,7 +684,7 @@ path.two {
                         </div>
                         <div class="items-content">
                             <h4 class="items-title">Digital Marketing</h4>
-                            <p class="text">Short description for the ones who look for something new</p>
+                            <p class="text">"Leverage innovative strategies to boost your online presence and engage your target audience effectively."</p>
                         </div>
                     </div>
                 </div>
@@ -584,7 +695,7 @@ path.two {
                         </div>
                         <div class="items-content">
                             <h4 class="items-title">Consulting Services</h4>
-                            <p class="text">Short description for the ones who look for something new</p>
+                            <p class="text">"Expert guidance to help you navigate complex business challenges and optimize your operations."</p>
                         </div>
                     </div>
                 </div>
@@ -595,7 +706,7 @@ path.two {
                         </div>
                         <div class="items-content">
                             <h4 class="items-title">Business Solutions</h4>
-                            <p class="text">Short description for the ones who look for something new</p>
+                            <p class="text">"Tailored strategies to streamline processes and drive growth, ensuring long-term success."</p>
                         </div>
                     </div>
                 </div>
@@ -604,22 +715,44 @@ path.two {
     </section>
 <!--====== ABOUT ONE PART ENDS ======-->
 
-<section class=" p-5 bg-cool-white">
+<!-- <section class=" p-5 bg-cool-white">
     <div class="container-fluid">
         <h2 class="mb-5 text-center text-amit">Our Trusted Clients</h2>
   <div class="position-relative">
             <div class="client-logos-wrapper overflow-hidden position-relative">
                <div class="client-logos d-flex flex-nowrap">
-                  <!-- Add your client logos here -->
+                  
                   <div class="client-logo">
                      <img src="./assets/clients/Logos/Logos/accenture.png" alt="Client 1">
                   </div>
                   <div class="client-logo">
-                     <img src="./assets/clients/Logos/Logos/cimb.png" alt="Client 2">
-                  </div>
+                     <img src="./assets/clients/Logos/Logos/newcl.png" alt="Client 2">
+                  </div> 
+                  <div class="client-logo">
+                     <img src="./assets/clients/Logos/Logos/newcl2.png" alt="Client 2">
+                  </div> 
+                  <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl3.png" alt="Client 2">
+                 </div> 
+                 <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl4.png" alt="Client 2">
+                 </div> 
+                 <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl5.png" alt="Client 2">
+                 </div> 
+                 <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl6.png" alt="Client 2">
+                 </div> 
+                 <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl7.png" alt="Client 2">
+                 </div> 
+                 <div class="client-logo">
+                    <img src="./assets/clients/Logos/Logos/newcl8.png" alt="Client 2">
+                 </div> 
                   <div class="client-logo">
                      <img src="./assets/clients/Logos/Logos/delaware.png" alt="Client 3">
                   </div>
+<<<<<<< HEAD
                   <!-- <div class="client-logo">
                      <img src="./assets/clients/Logos/Logos/ElegantWorld.png" alt="Client 4">
                   </div> -->
@@ -660,11 +793,22 @@ path.two {
                   <div class="client-logo">
                      <img src="./assets/clients/Logos/Logos/FWD_takaful.png" alt="Client 5">
                   </div>
+=======
+
+                  <div class="client-logo">
+                     <img src="./assets/clients/Logos/Logos/RakutenTrade.png" alt="Client 1">
+                  </div>
+          
+                              <div class="client-logo">
+                     <img src="./assets/clients/Logos/Logos/accenture.png" alt="Client 1">
+                  </div>
+ 
+>>>>>>> 6e2751db7f52b6c6e2304beaf0fb3c89ec988aad
                   </div>
                </div>
             </div>
     </div>
-</section>
+</section> -->
 
 <section>
     <div class="container-fluid bg-white  py-5 position-relative z-index-1">
@@ -761,6 +905,8 @@ path.two {
         </div>
     </div>
 </section>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
 
 </main>
 
@@ -771,44 +917,29 @@ path.two {
                 <h5 class="text-white"><i class="fa fa-solid fa-desktop m-2 text-white"></i>Services</h5>
                 <ul class="list-unstyled ">
                     <li><a href="it_services.html#content1" class="text-white">Application Development</a></li>
-                    <li><a href="it_services.html#content2" class="text-white">Quality As A Service</a></li>
-                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
-                    <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li>
-                    <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li>
-                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
-                    <!-- <li><a href="it_services.html#content7"class="text-white">Enterprise Content Management</a></li> -->
                     <li><a href="it_services.html#content8" class="text-white">Cloud/Infrastructure</a></li>
+                    <li><a href="it_services.html#content3" class="text-white">Data Management</a></li>
+                    <li><a href="it_services.html#content2" class="text-white">Testing As A Service</a></li>
+                    
+                    <!-- <li><a href="it_services.html#content4" class="text-white">Application Maintenance & Support</a></li> -->
+                    <!-- <li><a href="it_services.html#content5" class="text-white">Legacy App</a></li> -->
+                    <!-- <li><a href="it_services.html#content6" class="text-white">Web Technologies</a></li> -->
+                   <!-- <li><a href="it_services.html#content7"class="text-white">Digital Transformation Consulting</a></li>  -->
+                    
                     <li><a href="it_services.html#content9" class="text-white">Professional Services</a></li> 
                 </ul>
                
 
             </div>
             <div class="col-md-4">
-                <h5 class="text-white">Associated With</h5>
+                <h5 class="text-white">Malaysian Status Company</h5>
                 <img src="/assets/images/Logo_MSC.jpg" style="width: 150px;" alt="" srcset="">
        
             </div> 
             <div class="col-md-4">
                          <h5 class="text-white"><i class="fa fa-solid fa-earth text-white"></i> World Wide</h5>
                 <div class="accordion" id="companyDetails">
-                    <div class="accordion-item bg-secondary text-light">
-                        <h2 class="accordion-header" id="headingSingapore">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="true" aria-controls="collapseSingapore">
-                                Singapore
-                            </button>
-                        </h2>
-                        <div id="collapseSingapore" class="accordion-collapse collapse show" aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
-                            <div class="accordion-body">
-                                amIT Global Solutions (Pte.) Ltd<br />
-                                (EA Licence # 11C3599)<br />
-                                No.111 North Bridge Road,<br />
-                                #27-01 Peninsula Plaza,<br />
-                                Singapore 179098<br/>
-                                  <strong>Phone:</strong>+65 6749 1270<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingMalaysia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalaysia" aria-expanded="false" aria-controls="collapseMalaysia">
                                 Malaysia
@@ -816,17 +947,35 @@ path.two {
                         </h2>
                         <div id="collapseMalaysia" class="accordion-collapse collapse " aria-labelledby="headingMalaysia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions SDN BHD<br />
+                                <p> amIT Global Solutions SDN BHD<br />
                                 Company No: 953305-A<br />
                                 A-3-08, CoPlace 2<br />
                                 2260 Jalan Usahawan 1<br />
                                 63000 Cyberjaya, Selangor Darul Ehsan<br />
                                 Malaysia<br/>
-                                  <strong>Phone:</strong>+603 8325 1270<br />
+                                  <strong>Phone:</strong>+603 8325 1270</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light ">
+                        <h2 class="accordion-header" id="headingSingapore">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSingapore" aria-expanded="false" aria-controls="collapseSingapore">
+                                Singapore
+                            </button>
+                        </h2>
+                        <div id="collapseSingapore" class="accordion-collapse collapse " aria-labelledby="headingSingapore" data-bs-parent="#companyDetails">
+                            <div class="accordion-body">
+                                <p>amIT Global Solutions (Pte.) Ltd<br />
+                                (EA Licence # 11C3599)<br />
+                                No.111 North Bridge Road,<br />
+                                #27-01 Peninsula Plaza,<br />
+                                Singapore 179098<br/>
+                                  <strong>Phone:</strong>+65 6749 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaChennai">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaChennai" aria-expanded="false" aria-controls="collapseIndiaChennai">
                                 India (Chennai)
@@ -834,19 +983,19 @@ path.two {
                         </h2>
                         <div id="collapseIndiaChennai" class="accordion-collapse collapse" aria-labelledby="headingIndiaChennai" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                amIT Global Solutions Pvt Ltd<br />
+                               <p>amIT Global Solutions Pvt Ltd<br />
                                 No. 18/5, New No. 61, L.A.S. Towers, 2nd Floor<br />
                                 Velachery Main Road, Little Mount<br />
                                 Saidapet<br />
                                 Chennai 600 015<br />
                               
-                            <strong>Phone:</strong> + 91 44 4215 7186  <br />
+                            <strong>Phone:</strong> + 91 44 4215 7186  </p> 
                                 <!-- Jobs: <a href="mailto:jobs@amitglobal.com" class="text-dark">jobs@amitglobal.com</a><br />
                                 Sales: <a href="mailto:sales@amitglobal.com" class="text-dark">sales@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndiaTrichy">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndiaTrichy" aria-expanded="false" aria-controls="collapseIndiaTrichy">
                                 India (Trichy)
@@ -854,17 +1003,18 @@ path.two {
                         </h2>
                         <div id="collapseIndiaTrichy" class="accordion-collapse collapse" aria-labelledby="headingIndiaTrichy" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                Akilam Technology LLP<br />
-                                D25, 10th Cross West Extn.<br />
-                                Thillai Nagar,<br />
+                             <p>  Akilam Technology LLP<br />
+                                T-4,  Third Floor, 
+                                JC Tower, Karur Bypass Road,<br />
+                                 Annamalai nagar,
                                 Trichy,<br />
                                 Tamil Nadu 620018<br />
-                                    <strong>Phone:</strong> +91 78458 65524<br />
+                                    <strong>Phone:</strong> +91 78458 65524</p> 
                                 <!-- Mail: <a href="mailto:info@akilamtechnology.com" class="text-dark">info@akilamtechnology.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingIndonesia">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndonesia" aria-expanded="false" aria-controls="collapseIndonesia">
                                 Indonesia
@@ -872,17 +1022,17 @@ path.two {
                         </h2>
                         <div id="collapseIndonesia" class="accordion-collapse collapse" aria-labelledby="headingIndonesia" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                PT. AMIT GLOBAL SOLUTIONS,<br />
+                             <p>  PT. AMIT GLOBAL SOLUTIONS,<br />
                                 Menara Karya, 28th Floor,<br />
                                 Jl. H.R. Rasuna Said Blok X-5,<br />
                                 Kav. 1-2, Jakarta 12950,<br />
                                 Indonesia<br />
-                                  <strong>Phone:</strong> +62 818 0650 8131<br />
+                                  <strong>Phone:</strong> +62 818 0650 8131</p> 
                                 <!-- <a href="mailto:indonesia@amitglobal.com" class="text-dark">indonesia@amitglobal.com</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-secondary text-light">
+                    <div class="accordion-item amit text-light">
                         <h2 class="accordion-header" id="headingUSA">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSA" aria-expanded="false" aria-controls="collapseUSA">
                                 USA (Partner Office)
@@ -890,9 +1040,9 @@ path.two {
                         </h2>
                         <div id="collapseUSA" class="accordion-collapse collapse" aria-labelledby="headingUSA" data-bs-parent="#companyDetails">
                             <div class="accordion-body">
-                                342 Michelle Cir,<br />
+                               <p> 342 Michelle Cir,<br />
                                 Edison,<br />
-                                NJ-08820
+                                NJ-08820</p>
                             </div>
                         </div>
                     </div>
@@ -902,8 +1052,6 @@ path.two {
         </div>
     </div>
 </footer>
-
-
 
 <footer class="bg-charcoal text-white py-3">
     <div class="container text-center">
@@ -923,12 +1071,12 @@ path.two {
             <span>Connect with us: </span>&nbsp;
             <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a>
+            <!-- <a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-instagram"></i></a> -->
             <a href="https://www.twitter.com" target="_blank" class="text-white me-3"><i class="text-white fab fa-brands fa-x-twitter"></i></a>
         </div>
     </div>
 </footer>
-
+<script type="text/javascript" src="index.js"></script>
 <!-- Bootstrap JS and Popper.js v5.3.2 -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
@@ -936,7 +1084,7 @@ path.two {
 <!-- jQuery v3.6.0 (optional for Bootstrap 5) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script type="text/javascript" src="index.js"></script>
+
 
 <!-- Font Awesome JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -984,6 +1132,21 @@ window.addEventListener('scroll', function() {
 });
 
 </script>
+<script type="text/javascript">
+    var gaq = gaq || [];
+    _gaq.push(['_setAccount', 'UA-18926173-4']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
 
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+ 
 </body>
 </html>
