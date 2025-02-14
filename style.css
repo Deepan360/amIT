@@ -100,6 +100,7 @@ footer {
 p{
     font-family: "Faustina", serif;
   font-weight: 300;
+  padding: 0px !important;
 }
 li a{
     font-family: "Faustina", serif;
@@ -665,6 +666,9 @@ padding: 5px 0px;
     
     
 }
+.lato{
+    font-family: "Lato", sans-serif !important;
+}
 
 .privacy{
     background-color:var(--amit-blue) ;
@@ -1171,7 +1175,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     .accordion-body {
-        padding: 10px;
+        padding: 5px;
         /* Reduce padding for smaller screens */
     }
 }
@@ -2881,7 +2885,8 @@ a[href^="tel"] {
 
 
 .accordion-collapse .collapse .show .accordion-body p{
-   
+   margin: 0px !important;
+   padding: 0px !important;
     font-weight: 300 !important;
 }
 
