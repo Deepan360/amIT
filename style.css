@@ -44,7 +44,7 @@
 
 /* Apply default styles to all elements */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html, body {
         font-optical-sizing: auto;
 font-weight: 800 !important;
@@ -67,7 +67,7 @@ color: #333;
     font-family: 'Lato', sans-serif !important;
 }
 li{
-    font-family: "lato" !important;
+font-family: "Faustina", serif;
     font-weight: 400 !important;
 }
 
@@ -102,7 +102,7 @@ p{
   font-weight: 300;
 }
 li a{
-    font-family: "lato", serif !important;
+    font-family: "Faustina", serif;
     text-decoration: none !important;
 }
 
