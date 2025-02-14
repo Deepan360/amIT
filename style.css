@@ -811,10 +811,10 @@ padding: 5px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
    height: 90%;
     text-align: center;
-   margin-top: 20px !important;
+   
     /* Added padding for responsiveness */
     z-index: 1;
     /* Ensure content is above overlay */
@@ -822,20 +822,19 @@ padding: 5px 0px;
 
 .hero-content img {
     max-width: 200px;
-
+    margin-bottom: 20px;
 }
 
 .hero-content h3 {
- 
-    font-size: 2.5rem;
-    
+    font-size: 3rem;
+    margin-bottom: 30px;
     font-weight: 700;
 }
 
 .hero-content p {
     font-size: 1.5rem;
-    font-weight: 300;
-  
+    font-weight: 400;
+    margin-bottom: 40px;
 }
 
 .hero-content .btn-primary {
