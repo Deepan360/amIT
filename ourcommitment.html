@@ -411,6 +411,27 @@
             top: 0;
             opacity: 1;
         }
+        
+
+    /* Glassmorphism Effect */
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Enhanced Shadows */
+    .custom-card {
+        transition: 0.3s;
+    }
+    
+    .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
     </style>
 </head>
 <body >
@@ -420,63 +441,104 @@
 
 </header>
 <main><button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
-<section class="mt-50" style="margin-top: 120px;">
-    <div class="container-fluid">
-        <div class="card border-0 shadow-lg p-4">
-            <h2 class="text-center mb-3 text-primary fw-bold">Our Commitment to amITians</h2>
+    <section class="it-hero-section header-area header-one h-70">
+    <div class="header-content-area">
+       <div class="container">
+          <div class="row align-items-start">
+             <div class="col-lg-6 col-12">
+                <div class="header-wrapper">
+                   <div class="header-content">
+                       <h1 class="header-title">
+                        Our Commitment to amITians
+                      </h1>
+                        <p class="text-lg">
+                            At AGS, we believe You are our greatest strength. We are committed to fostering a supportive, transparent, and growth-oriented environment for every team member across the globe. Our people-first approach is built on
+                        </p> <div class="header-btn rounded-3-buttons align-items-end">
+                                <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
+                            LEARN MORE
+                         </a>
+                      </div>
+                   </div>
+                   <!-- header content -->
+                </div>
+             </div>
+             <div class="col-lg-6 col-12">
+                <div class="header-image d-none d-lg-block">
+                   <div class="image">
+                      <img
+                     
+                         src="./assets/images/silhouette-confident-businesspeople.jpg"
+                         alt="Header"
+                         />
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- row -->
+       </div>
+       <!-- container -->
+ 
+       <!-- header-shape -->
+    </div>
+    <!-- header content area -->
+ </section>
+<section class="mt-5 mb-5">
+    <div class="container ">
+        <div class="  ">
+            <h2 class="text-center mb-3 text-amit fw-bold">Our Commitment to amITians</h2>
             <h5 class="text-center text-muted">A Culture of Trust, Growth, and Excellence</h5>
-            <hr class="border-primary border-2 w-25 mx-auto mb-4">
+            <hr class="border-amit border-2 w-25 mx-auto mb-4">
 
             <div class="row g-4 justify-content-center mt-3">
-                <!-- Card 1 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="card custom-card border-0 shadow-sm text-center">
+                <!-- Card 1 - Transparent HR Policies -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-lg text-center glass-effect">
                         <div class="card-body position-relative">
-                            <i class="bi bi-shield-lock text-primary fs-1"></i>
+                            <i class="bi bi-search text-primary fs-1"></i>
                             <h5 class="mt-3 fw-semibold">Transparent HR Policies</h5>
-                            <p class="card-text">We maintain open, straightforward HR policies that empower our employees with clarity and confidence.</p>
+                            <p class="card-text">We maintain open, clear HR policies that empower our employees with confidence.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="card custom-card border-0 shadow-sm text-center">
+                <!-- Card 2 - Efficient HR Processes -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-lg text-center">
                         <div class="card-body position-relative">
-                            <i class="bi bi-gear-wide-connected text-success fs-1"></i>
+                            <i class="bi bi-clipboard-check-fill text-success fs-1"></i>
                             <h5 class="mt-3 fw-semibold">Efficient HR Processes</h5>
-                            <p class="card-text">Our well-defined HR processes ensure efficiency, consistency, and fairness in all interactions.</p>
+                            <p class="card-text">Our well-defined HR processes ensure efficiency, consistency, and fairness.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="card custom-card border-0 shadow-sm text-center">
+                <!-- Card 3 - Global Compliance -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-lg text-center">
                         <div class="card-body position-relative">
-                            <i class="bi bi-globe text-danger fs-1"></i>
+                            <i class="bi bi-globe2 text-danger fs-1"></i>
                             <h5 class="mt-3 fw-semibold">Global Compliance</h5>
                             <p class="card-text">We strictly adhere to regulations while respecting local employment practices.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="card custom-card border-0 shadow-sm text-center">
+                <!-- Card 4 - Continuous Engagement -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-lg text-center">
                         <div class="card-body position-relative">
-                            <i class="bi bi-people text-warning fs-1"></i>
+                            <i class="bi bi-chat-dots-fill text-warning fs-1"></i>
                             <h5 class="mt-3 fw-semibold">Continuous Engagement</h5>
                             <p class="card-text">We stay connected with our teams through regular communication, ensuring every voice is heard.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="card custom-card border-0 shadow-sm text-center">
+                <!-- Card 5 - Growth and Development -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-lg text-center">
                         <div class="card-body position-relative">
-                            <i class="bi bi-bar-chart-line text-info fs-1"></i>
+                            <i class="bi bi-bar-chart-fill text-info fs-1"></i>
                             <h5 class="mt-3 fw-semibold">Growth and Development</h5>
                             <p class="card-text">We invest in learning, development, and opportunities to build a thriving future together.</p>
                         </div>
@@ -485,9 +547,10 @@
             </div>
         </div>
     </div>
-
-    
 </section>
+
+
+
 
 
 
