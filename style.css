@@ -665,6 +665,15 @@ padding: 5px 0px;
     
     
 }
+
+.privacy{
+    background-color:var(--amit-blue) ;
+
+}
+.green{
+    background-color: var(--amit-team);
+
+}
 .hero {
     position: relative;
     height: 100vh;
