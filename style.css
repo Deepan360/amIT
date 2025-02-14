@@ -44,8 +44,7 @@
 
 /* Apply default styles to all elements */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
+
 html, body {
         font-optical-sizing: auto;
 font-weight: 800 !important;
@@ -54,10 +53,7 @@ font-weight: 800 !important;
     padding: 0;
 color: #333;
 }
-.navbar,
-.nav-item,
-.nav-link,
-.dropdown-item {
+.dropdown-item li a.font-7 {
     font-family: 'Lato', sans-serif !important;
 }
 .font-7 {
@@ -2915,4 +2911,8 @@ h6 .card-title{
   }
   .amit{
     background-color: #9B0000 !important;
+  }
+  .fs2 {
+      
+      font-size: 14px !important;
   }
