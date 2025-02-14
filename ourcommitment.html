@@ -341,6 +341,77 @@
         margin: 5px 0 0;
     }
     </style>
+<style>
+  /* Page transition effect */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .hover-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hover-card .card-text {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            transition: bottom 0.3s ease-in-out;
+        }
+
+        .hover-card:hover .card-text {
+            bottom: 0;
+        }
+</style>
+<style>
+        .custom-card {
+            overflow: hidden;
+            border-radius: 12px;
+            background: #ffffff;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .custom-card .card-text {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 1rem;
+            opacity: 0;
+            transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        }
+
+        .custom-card:hover .card-text {
+            top: 0;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body >
 <header>
@@ -349,194 +420,77 @@
 
 </header>
 <main><button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+<section class="mt-50" style="margin-top: 120px;">
+    <div class="container-fluid">
+        <div class="card border-0 shadow-lg p-4">
+            <h2 class="text-center mb-3 text-primary fw-bold">Our Commitment to amITians</h2>
+            <h5 class="text-center text-muted">A Culture of Trust, Growth, and Excellence</h5>
+            <hr class="border-primary border-2 w-25 mx-auto mb-4">
 
-<section class="it-hero-section header-area header-one h-70">
-    <div class="header-content-area">
-       <div class="container">
-          <div class="row align-items-start">
-             <div class="col-lg-6 col-12">
-                <div class="header-wrapper">
-                   <div class="header-content">
-                       <h1 class="header-title">
-                        Meet Our Team
-                      </h1>
-                        <p class="text-lg">
-                            Our team is the driving force behind our innovation, growth, and success. Get to know the talented individuals who make it all happen.
-                      <div class="header-btn rounded-3-buttons align-items-end">
-                                <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
-                            LEARN MORE
-                         </a>
-                      </div>
-                   </div>
-                   <!-- header content -->
-                </div>
-             </div>
-             <div class="col-lg-6 col-12">
-                <div class="header-image d-none d-lg-block">
-                   <div class="image">
-                      <img
-                     
-                         src="./assets/images/silhouette-confident-businesspeople.jpg"
-                         alt="Header"
-                         />
-                   </div>
-                </div>
-             </div>
-          </div>
-          <!-- row -->
-       </div>
-       <!-- container -->
- 
-       <!-- header-shape -->
-    </div>
-    <!-- header content area -->
- </section>
-        
-    <div class="container my-5 py-5">
-    <!-- Hero Section -->
-
-        <!-- Leadership Section -->
-        <div class="section mb-5">
-            <h2 class=" text-left mb-4 mt-4">Leadership Team</h2>
-            <div class="row g-4">
-                <!-- CEO -->
-                <div class="col-md-6">
-                    <div class="card shadow-xl border-0 rounded-3 h-100 d-flex flex-column align-items-center p-3" style="background: linear-gradient(145deg, #f3f3f3, #ffffff);">
-                        <div class="d-flex flex-md-row flex-column align-items-center p-3">
-                            <!-- Image Section -->
-                            <div class="image-container position-relative me-md-4">
-                                <img src="/assets/team/jai.png" class="" alt="Jaisankar Rangachari" style="width: 300px; height: 300px; object-fit: cover;">
-                            </div>
-                    
-                            <!-- Text Section -->
-                            <div class="card-body p-0 mt-md-0 text-md-left text-center">
-                                <h2 class="card-title fw-bold text-amit mb-1" style="font-size: 2rem; color: #2c3e50;">Jaisankar Rangachari</h2>
-                                <h5 class="card-title mb-1 text-secondary" style="font-weight: 600;">Group CEO</h5>
-                                <hr class="my-2 border-dark" style="width: 100%; margin-left: 0;">
-                                <p class="card-text text-muted fst-italic mt-2">"Leading innovation and excellence, driven by passion and strategy."</p>
-                            </div>
+            <div class="row g-4 justify-content-center mt-3">
+                <!-- Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-sm text-center">
+                        <div class="card-body position-relative">
+                            <i class="bi bi-shield-lock text-primary fs-1"></i>
+                            <h5 class="mt-3 fw-semibold">Transparent HR Policies</h5>
+                            <p class="card-text">We maintain open, straightforward HR policies that empower our employees with clarity and confidence.</p>
                         </div>
                     </div>
-                    
                 </div>
-        
-   
+
+                <!-- Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-sm text-center">
+                        <div class="card-body position-relative">
+                            <i class="bi bi-gear-wide-connected text-success fs-1"></i>
+                            <h5 class="mt-3 fw-semibold">Efficient HR Processes</h5>
+                            <p class="card-text">Our well-defined HR processes ensure efficiency, consistency, and fairness in all interactions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-sm text-center">
+                        <div class="card-body position-relative">
+                            <i class="bi bi-globe text-danger fs-1"></i>
+                            <h5 class="mt-3 fw-semibold">Global Compliance</h5>
+                            <p class="card-text">We strictly adhere to regulations while respecting local employment practices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-sm text-center">
+                        <div class="card-body position-relative">
+                            <i class="bi bi-people text-warning fs-1"></i>
+                            <h5 class="mt-3 fw-semibold">Continuous Engagement</h5>
+                            <p class="card-text">We stay connected with our teams through regular communication, ensuring every voice is heard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="card custom-card border-0 shadow-sm text-center">
+                        <div class="card-body position-relative">
+                            <i class="bi bi-bar-chart-line text-info fs-1"></i>
+                            <h5 class="mt-3 fw-semibold">Growth and Development</h5>
+                            <p class="card-text">We invest in learning, development, and opportunities to build a thriving future together.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-    
-     
-        <!-- HR Team Section -->
-        <div class="section mb-5">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                <!-- Senior HR Manager -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/amiya.JPG" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Amiya</h4>
-                            <p>Country Manager overseeing strategic operations and decision-making.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Amiya</h3>
-                            <h6 class="card-title mb-1">Country Manager,Malaysia</h6>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Director Sales IT Services -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/goh.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Goh Teik Beng</h4>
-                            <p>Director of Sales IT Services, leading client relationships.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Goh Teik Beng</h3>
-                            <h6 class="card-title mb-1">Director Sales IT Services,Malaysia</h6>
-                        </div>
-                    </div>
-                </div>
-                                <!-- HR Head -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/deepa.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Deepa</h4>
-                            <p>HR Head ensuring employee engagement and policy compliance.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Deepa</h3>
-                            <h6 class="card-title mb-1">HR Head,Malaysia</h6>
-                        </div>
-                    </div>
-                </div>
-                      
-                <!-- Head of System Delivery -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/amuthan.jpeg" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Amuthan</h4>
-                            <p>Head of System Delivery, managing technical operations.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Amuthan</h3>
-                            <h6 class="card-title mb-1">Head of Delivery,Malaysia</h6>
-                        </div>
-                    </div>
-                </div>
-                                <!-- Senior Delivery and Client Manager -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/dg.JPG" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Gnanavel Durairaj</h4>
-                            <p>Senior Delivery and Client Manager, ensuring project excellence.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Gnanavel Durairaj</h3>
-                            <h6 class="card-title mb-1">Senior Delivery Manager,India</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Junior HR Assistant -->
-                <div class="col">
-                    <div class="card cards shadow-lg border-light rounded-3 h-100">
-                        <img src="/assets/team/loh.png" class="card-img-center object-fit-contain e mx-auto mt-3" alt="Employee 6" style="width: 200px; height: 200px; object-fit: cover;">
-                        <div class="overlay">
-                            <h4>Lorend Octavian</h4>
-                            <p>Head of Sales (Indonesia), driving sales growth and market strategy.</p>
-                        </div>
-                        <div class="card-body text-left">
-                            <h3 class="card-title text-amit">Lorend Octavian</h3>
-                            <h6 class="card-title mb-1">Head of Sales,Indonesia</h6>
-                        </div>
-                    </div>
-                </div>
-        
-
-        
-
-  
-
-            </div>
-        </div>
-    
-
-
     </div>
-    
 
-<!-- 
-<section class="cta-section text-left">
-    <div class="container">
-        <h2>Ready to Join Us?</h2>
-        <p>We are always looking for passionate and talented individuals to join our team. If you don't see a role that fits your skills, feel free to reach out to us with your resume and cover letter.</p>
-        <a class="btn-primary-car-outline btn-lg" href="javascript:void(0)">Contact Us</a>
-    </div>
-</section> -->
+    
+</section>
+
+
+
 
 </main>
 <div id="footer">
@@ -592,10 +546,24 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script  src="index.js"></script>
 
-
+  
 <script>
 
+ // Fade-in effect on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.opacity = "1";
+    });
 
+    // Smooth transition when navigating between pages
+    document.addEventListener("click", function (e) {
+        if (e.target.tagName === "A" && e.target.href) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+                window.location.href = e.target.href;
+            }, 500);
+        }
+    });
  
 
 window.addEventListener('scroll', function() {
