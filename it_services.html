@@ -151,6 +151,82 @@
 }
 
     </style>
+    <!-- Inline Styles -->
+<style>
+    .main-title {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #004d99;
+        font-weight: 600;
+    }
+
+    .section-card {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color:var(--amit);
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .subsection-card {
+        background: #f7f7f7;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .subsection-title {
+        font-size: 1.6rem;
+        color:var(--amit);
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .solutions-list, .key-services-list, .maintenance-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .solutions-list li, .key-services-list li, .maintenance-list li {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: #666;
+    }
+
+    .solutions-list li:before, .key-services-list li:before, .maintenance-list li:before {
+        content: "• ";
+        color:var(--amit);
+        font-weight: bold;
+    }
+
+    .section-title i, .subsection-title i {
+        margin-right: 10px;
+        font-size: 1.3rem;
+        color:var(--amit);
+    }
+
+    @media (max-width: 767px) {
+        .row {
+            flex-direction: column;
+        }
+    }
+</style>
 </head>
 <body >
 <header>
@@ -285,181 +361,203 @@
                 
             </div>
             <div class="col-md-9  sidebar-content  p-3 bg-white ">
-        <div id="content1" class="content-tab active" data-aos="fade-up">
-  <h2>Application Development</h2>
- <section>
-            <h2 class="mb-4">Overview</h2>
-            <p>
-                amIT Global helps businesses fast-track go-to-market by using its SMEs, trained workforce, and the right
-                methodologies across all stages of the application development lifecycle using automation, open source, and
-                licensed third-party tools. By partnering with amIT Global, enterprises can benefit from smooth execution
-                of development lifecycles and faster project completion.
-            </p>
-            <p>
-                Further, amIT Global’s in-house Off-Shore and On-Site team provides continuous support throughout the
-                project with continuous enhancements and milestone measurement, thereby improving business performance.
-            </p>
-        </section>
+     <!-- Content Section with Icons -->
+<div id="content1" class="content-tab active" data-aos="fade-up">
+    <!-- Main Title -->
+    <h2 class="main-title">Application Development</h2>
 
-        <section class="mt-5">
-            <h2>Custom Application Development</h2>
-            <p>
-                Our team can help build custom-made apps based on client’s specific needs, requirements, and preferences.
-                Apps are typically built from scratch using programming languages such as Java, C#, Python and frameworks
-                like React, Angular, Vue.js, and .Net Core.
+    <!-- Overview Section -->
+    <section class="section-overview">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-info-circle"></i> Overview</h3>
+            <p class="section-text">
+                amIT Global helps businesses fast-track go-to-market by using its SMEs, trained workforce, and the right methodologies across all stages of the application development lifecycle. We leverage automation, open-source, and licensed third-party tools, ensuring smooth execution of development lifecycles and faster project completion.
             </p>
-        </section>
-
-        <section class="mt-5">
-            <h2>Full Stack App Development</h2>
-            <p>
-                Full stack development can significantly reduce project time and costs while boosting productivity. Instead
-                of engaging separate teams for front-end and back-end development, amIT Global can do full stack development
-                using Agile methodology for the clients.
+            <p class="section-text">
+                With in-house Off-Shore and On-Site teams, we provide continuous support throughout the project, offering enhancements and milestone measurement to improve business performance.
             </p>
-        </section>
+        </div>
+    </section>
 
-        <section class="mt-5">
-            <h2>Web Application Development</h2>
-            <p>
-                With our Web Application development services, our team of Business Analysts, Technical Architects, Project
-                Managers, and Senior Developers can create perfect, user-centric solutions tailored to your unique needs.
-                Ensuring all types of API/3rd Party integrations with respect to the business scope/functionalities, amIT
-                Global can bring your ideas to reality and propel your business into the digital forefront.
+    <!-- Custom Application Development Section -->
+    <section class="section-custom-app">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-laptop"></i> Custom Application Development</h3>
+            <p class="section-text">
+                Our team builds custom-made applications based on client-specific needs, preferences, and requirements. We use languages such as Java, C#, Python, and frameworks like React, Angular, Vue.js, and .Net Core to create robust, scalable applications.
             </p>
-        </section>
+        </div>
+    </section>
 
-        <section class="mt-5">
-            <h2>Mobile App Development</h2>
-            <p>
-                We offer Mobile App Development for both Android, iOS, and Hybrid platforms. We help clients build intuitive
-                Mobile Apps that exhibit great user experience.
+    <!-- Full Stack App Development Section -->
+    <section class="section-full-stack">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-stack"></i> Full Stack App Development</h3>
+            <p class="section-text">
+                Full stack development minimizes project time and costs while boosting productivity. We use Agile methodologies to combine front-end and back-end development into a unified process, delivering high-quality apps quickly and efficiently.
+            </p>
+        </div>
+    </section>
+
+    <!-- Web Application Development Section -->
+    <section class="section-web-app">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-globe"></i> Web Application Development</h3>
+            <p class="section-text">
+                Our web application development services provide end-to-end solutions, ensuring user-centric designs and seamless API/3rd-party integrations. With a team of Business Analysts, Technical Architects, Project Managers, and Developers, amIT Global brings your ideas to life, positioning your business at the digital forefront.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mobile App Development Section -->
+    <section class="section-mobile-app">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-phone"></i> Mobile App Development</h3>
+            <p class="section-text">
+                We offer development services for Android, iOS, and Hybrid mobile platforms, creating intuitive and high-performance apps with exceptional user experiences.
             </p>
 
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Native App</h3>
-                    <p>
-                        A native app is an app that's developed for a specific operating system, like iOS or Android. Our
-                        developers can help businesses with cutting-edge Native mobile app development with great precision.
-                    </p>
+                    <div class="subsection-card">
+                        <h4 class="subsection-title"><i class="bi bi-phone-landscape"></i> Native App</h4>
+                        <p>
+                            A native app is designed for specific operating systems like iOS or Android. We specialize in cutting-edge native app development, ensuring seamless performance and user satisfaction.
+                        </p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>Hybrid App</h3>
-                    <p>
-                        A hybrid app is a mobile app that combines elements of native and web apps, allowing it to be
-                        installed and run on multiple platforms. Our team can help build Hybrid Apps using React Native
-                        and Flutter.
-                    </p>
+                    <div class="subsection-card">
+                        <h4 class="subsection-title"><i class="bi bi-code-slash"></i> Hybrid App</h4>
+                        <p>
+                            Hybrid apps combine the benefits of both native and web applications, allowing cross-platform compatibility. Our team uses React Native and Flutter to develop versatile hybrid applications.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
-            <section class="mt-5">
-            <p>
-                Many companies rely on legacy systems due to their robustness and large-scale processing capacity. With our team of experts in AS400, Smart 400, and Mainframe, we can help develop and enhance these applications and maintain them with testing, bug fixing, minor changes, and deployment.
+        </div>
+    </section>
+
+    <!-- Legacy Systems Support Section -->
+    <section class="section-legacy-systems">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-archive"></i> Legacy Systems Support</h3>
+            <p class="section-text">
+                We also specialize in developing and enhancing legacy systems. With expertise in AS400, Smart 400, and Mainframe, we provide ongoing maintenance, bug fixes, and feature updates for these robust applications.
             </p>
-            <h4>Solutions include:</h4>
-            <ul>
+            <h4 class="subsection-title"><i class="bi bi-list-ul"></i> Solutions include:</h4>
+            <ul class="solutions-list">
                 <li>ERP</li>
                 <li>BPM</li>
                 <li>CRM</li>
             </ul>
-        </section>
-        <section class="mt-5">
-            <h2>Digital Transformation Consulting</h2>
-            <p>
-                Transform the way your business operates with a holistic approach to digitalization. We guide your company in adopting the latest tools and technologies, ensuring a smooth transition and long-term success. Whether you're rethinking your business model, optimizing workflows, or automating processes, our consultants are here to lead the change.
+        </div>
+    </section>
+
+    <!-- Digital Transformation Consulting Section -->
+    <section class="section-digital-transformation">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-arrow-repeat"></i> Digital Transformation Consulting</h3>
+            <p class="section-text">
+                We help businesses undergo a seamless digital transformation by adopting cutting-edge tools and technologies. Our holistic approach ensures your company successfully transitions to modern operational models, boosting efficiency and long-term growth.
             </p>
-            <p>
-                Strategy Development: We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.
-            </p>
-            <p>
-                Change Management: Ensuring your organization is ready to embrace change through training and leadership support.
-            </p>
-            <p>
-                Innovation & Automation: Revolutionize your operations by introducing AI, machine learning, and business process automation.
-            </p>
-            <!-- List of Key Services -->
-            <ul>
-                <li><strong>Strategy Development:</strong> We create a roadmap tailored to your business’s needs, focusing on key objectives and value drivers.</li>
-                <li><strong>Change Management:</strong> Ensuring your organization is ready to embrace change through training and leadership support.</li>
-                <li><strong>Innovation & Automation:</strong> Revolutionize your operations by introducing AI, machine learning, and business process automation.</li>
+
+            <ul class="key-services-list">
+                <li><strong>Strategy Development:</strong> We craft a customized roadmap focused on your business’s objectives and drivers.</li>
+                <li><strong>Change Management:</strong> We ensure your organization is ready for change through leadership support and training.</li>
+                <li><strong>Innovation & Automation:</strong> We help modernize operations through AI, machine learning, and business process automation.</li>
             </ul>
-        </section>
-        <section class="mt-5">
-            <h2>Application Maintenance & Support</h2>
-            <p>
-               amIT Global provides Managed Service for managing application maintenance and support, ensuring applications are reliable, relevant, and meet user expectations. With our team of Support Analysts, Incident Managers, and Service Delivery Managers, we optimize application performance with user satisfaction.
-           </p>
-           <h4>We help our clients with:</h4>
-           <ul>
-               <li><strong>Incident Management:</strong> Responding and resolving issues as per priority standards</li>
-               <li><strong>Identifying and fixing issues:</strong> Finding and fixing bugs, defects, and other technical issues</li>
-               <li><strong>Change Request/Enhancements:</strong> Adding new functionalities based on user needs and feedback</li>
-               <li><strong>Applying updates:</strong> Applying software updates, patches, or new releases to fix flaws</li>
-               <li><strong>Improving performance:</strong> Enhancing the application's performance, interface, and experience</li>
-               <li><strong>Optimizing for new devices:</strong> Optimizing the applications</li>
-           </ul>
-        </section>
-    
-      </div>
+        </div>
+    </section>
+
+    <!-- Application Maintenance & Support Section -->
+    <section class="section-maintenance-support">
+        <div class="section-card">
+            <h3 class="section-title"><i class="bi bi-tools"></i> Application Maintenance & Support</h3>
+            <p class="section-text">
+                Our managed services ensure that your applications remain reliable and user-centric. We offer ongoing support with incident management, performance optimization, bug fixes, and feature enhancements.
+            </p>
+            <h4 class="subsection-title"><i class="bi bi-check-circle"></i> We help clients with:</h4>
+            <ul class="maintenance-list">
+                <li><strong>Incident Management:</strong> Resolving issues based on priority standards</li>
+                <li><strong>Identifying and Fixing Issues:</strong> Debugging, defect resolution, and system enhancements</li>
+                <li><strong>Change Requests/Enhancements:</strong> Adding new functionalities based on feedback</li>
+                <li><strong>Software Updates:</strong> Applying patches, updates, or new releases</li>
+                <li><strong>Performance Improvement:</strong> Enhancing performance, interfaces, and user experiences</li>
+                <li><strong>Device Optimization:</strong> Ensuring apps are compatible with new devices</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
 
 <div id="content2" class="content-tab" data-aos="fade-up">
 
-        <section >
-            <h2>Quality Assurance (QA) Services</h2>
-            <p>
-                amIT Global QA team helps clients in testing applications/systems to ensure they are stable, meet specifications, and provide a great user experience. We can perform both Functional and Non-Functional Testing for our clients.
+    <!-- Main Title -->
+    <section>
+        <h2 class="main-title">Quality Assurance (QA) Services</h2>
+        <p class="section-text">
+            amIT Global QA team helps clients in testing applications/systems to ensure they are stable, meet specifications, and provide a great user experience. We can perform both Functional and Non-Functional Testing for our clients.
+        </p>
+
+        <!-- Functional Testing Section -->
+        <div class="mt-4">
+            <h3 class="section-title"><i class="bi bi-check-circle"></i> Functional Testing</h3>
+            <p class="section-text">
+                Our QA team, with domain expertise, can perform Functional Testing for applications as per the User Requirement Specifications. We conduct SIT & UAT to ensure applications run with the desired results. Depending on the project, we plan and execute Hybrid Testing, combining Manual and Test Automation using tools like Selenium, Cucumber, Tosca, Appium, and Katalon.
             </p>
+            <h4 class="subsection-title"><i class="bi bi-list-ul"></i> Types of Functional Testing:</h4>
+            <ul class="solutions-list">
+                <li>Integration Testing: Evaluates how software modules work together</li>
+                <li>Interface Testing</li>
+                <li>System Testing</li>
+                <li>Regression Testing</li>
+                <li>Smoke Testing</li>
+                <li>Sanity Testing</li>
+                <li>Acceptance Testing</li>
+            </ul>
+        </div>
 
-            <div class="mt-4">
-                <h3>Functional Testing</h3>
-                <p>
-                    Our QA team, with domain expertise, can perform Functional Testing for applications as per the User Requirement Specifications. We conduct SIT & UAT to ensure applications run with the desired results. Depending on the project, we plan and execute Hybrid Testing, combining Manual and Test Automation using tools like Selenium, Cucumber, Tosca, Appium, and Katalon.
-                </p>
-                <h4>Types of Functional Testing:</h4>
-                <ul>
-                    <li>Integration Testing: Evaluates how software modules work together</li>
-                    <li>Interface Testing</li>
-                    <li>System Testing</li>
-                    <li>Regression Testing</li>
-                    <li>Smoke Testing</li>
-                    <li>Sanity Testing</li>
-                    <li>Acceptance Testing</li>
-                </ul>
-            </div>
+        <!-- Non-Functional Testing Section -->
+        <div class="mt-4">
+            <h3 class="section-title"><i class="bi bi-bar-chart"></i> Non-Functional Testing</h3>
+            <p class="section-text">
+                With our Non-Functional Testing capabilities, we evaluate a product's non-functional characteristics such as performance, usability, and stability. Non-Functional Testing ensures that the software works as expected under certain conditions.
+            </p>
+            <h4 class="subsection-title"><i class="bi bi-list-ul"></i> Types of Non-Functional Tests:</h4>
+            <ul class="solutions-list">
+                <li>Performance Testing: Measures how well the software performs</li>
+                <li>Load Testing: Simulates high user loads to measure system performance under heavy traffic</li>
+            </ul>
+        </div>
 
-            <div class="mt-4">
-                <h3>Non-Functional Testing</h3>
-                <p>
-                    With our Non-Functional Testing capabilities, we evaluate a product's non-functional characteristics such as performance, usability, and stability. Non-Functional Testing ensures that the software works as expected under certain conditions.
-                </p>
-                <h4>Types of Non-Functional Tests:</h4>
-                <ul>
-                    <li>Performance Testing: Measures how well the software performs</li>
-                    <li>Load Testing: Simulates high user loads to measure system performance under heavy traffic</li>
-                </ul>
-            </div>
-
-            <div class="mt-4">
-                <h4>Other Testing Services</h4>
-                <ul>
-                    <li>UI Testing</li>
-                    <li>ETL Testing</li>
-                </ul>
-            </div>
-        </section>
+        <!-- Other Testing Services Section -->
+        <div class="mt-4">
+            <h4 class="section-title"><i class="bi bi-box"></i> Other Testing Services</h4>
+            <ul class="solutions-list">
+                <li>UI Testing</li>
+                <li>ETL Testing</li>
+            </ul>
+        </div>
+    </section>
 </div>
+
+
 <div id="content3" class="content-tab" data-aos="fade-up">
-  <h2>Data Management</h2>
-  <p>
-Our team of experienced engineers excels in developing scalable technology solutions, driving digital transformation, and delivering data warehousing, data engineering, data visualization, data analytics, data science, AI services, cloud data migrations.
-  </p>
-  <p>
- We are experienced in ETL processes using Informatica, Talend, IICS, ADF, and AWS Glue and programming languages like SQL/PLSQL, TSQL, and Python. 
-  </p>
-  <p>For reporting and data visualization, we utilize Tableau and Power BI. </p>
-  <p>We also have extensive experience with data warehousing solutions like Snowflake and Redshift, as well as databases including Oracle, SQL Server, MySQL, and PostgreSQL. </p>
+    <!-- Main Title -->
+    <h2 class="main-title">Data Management</h2>
+    <p class="section-text">
+        Our team of experienced engineers excels in developing scalable technology solutions, driving digital transformation, and delivering data warehousing, data engineering, data visualization, data analytics, data science, AI services, and cloud data migrations.
+    </p>
+    <p class="section-text">
+        We are experienced in ETL processes using Informatica, Talend, IICS, ADF, and AWS Glue, and programming languages like SQL/PLSQL, TSQL, and Python.
+    </p>
+    <p class="section-text">
+        For reporting and data visualization, we utilize Tableau and Power BI.
+    </p>
+    <p class="section-text">
+        We also have extensive experience with data warehousing solutions like Snowflake and Redshift, as well as databases including Oracle, SQL Server, MySQL, and PostgreSQL.
+    </p>
 </div>
 
 <div id="content4" class="content-tab" data-aos="fade-up">
@@ -544,122 +642,115 @@ Our team of experienced engineers excels in developing scalable technology solut
 </div>
 
 <div id="content8" class="content-tab" data-aos="fade-up">
- <section class="container ">
-    <h2 class="text-center ">Cloud Services</h2>
-    <p class="text-center">
-        amIT Global can help your organization transition to the cloud from traditional on-premises environments, 
-        making your organization faster, more reliable, and sustainable.
-    </p>
-    <div class="row mt-4">
-        <div class="col-md-3 text-center">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Cloud Migration</h5>
+    <section class="container">
+        <!-- Main Title -->
+        <h2 class="text-center main-title">Cloud Services</h2>
+        <p class="text-center section-description">
+            amIT Global can help your organization transition to the cloud from traditional on-premises environments, making your organization faster, more reliable, and sustainable.
+        </p>
+        <div class="row mt-4">
+            <!-- Cloud Migration Card -->
+            <div class="col-md-3 text-center">
+                <div class="card shadow-sm service-card">
+                    <div class="card-body">
+                        <i class="bi bi-cloud-upload-fill service-icon fa-2x"></i>
+                        <h5 class="card-title">Cloud Migration</h5>
+                        <!-- <p class="card-text">Seamless transition from on-premises to cloud for improved performance and scalability.</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Cloud Security Card -->
+            <div class="col-md-3 text-center">
+                <div class="card shadow-sm service-card">
+                    <div class="card-body">
+                        <i class="bi bi-shield-lock-fill service-icon fa-2x"></i>
+                        <h5 class="card-title">Cloud Security</h5>
+                        <!-- <p class="card-text">Robust security measures to protect your cloud infrastructure and data.</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Cloud Support Card -->
+            <div class="col-md-3 text-center">
+                <div class="card shadow-sm service-card">
+                    <div class="card-body">
+                        <i class="bi bi-headset service-icon fa-2x"></i>
+                        <h5 class="card-title">Cloud Support</h5>
+                        <!-- <p class="card-text">24/7 support to ensure your cloud environment runs smoothly and securely.</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Infrastructure Management Card -->
+            <div class="col-md-3 text-center">
+                <div class="card shadow-sm service-card">
+                    <div class="card-body">
+                        <i class="bi bi-hdd-stack service-icon fa-2x"></i>
+                        <h5 class="card-title">Infrastructure Management</h5>
+                        <!-- <p class="card-text">Manage and optimize your cloud infrastructure to enhance efficiency and reduce costs.</p> -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Cloud Security</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 text-center">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Cloud Support</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 text-center">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Infrastructure Management</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </section>
 </div>
+
 
 <div id="content9" class="content-tab" data-aos="fade-up">
     <div id="content1s" class="content-tabs actives" data-aos="fade-up">
-        <h2 >Complete Workforce Solutions (CWS)</h2>
+        <h2 class="mb-4 d-flex align-items-center justify-content-center"><i class="fas fa-briefcase  me-3 "></i> Complete Workforce Solutions (CWS)</h2>
         <p>
-          AGS aims to enable you to achieve your business targets faster, cheaper, and more accurately. While we are recognized as the best IT staffing providers worldwide, we provide a full range of workforce solutions and Service Delivery Models to equip you with the people, skills, and competencies required to get IT done.
+            AGS aims to enable you to achieve your business targets faster, cheaper, and more accurately. As one of the best IT staffing providers worldwide, we offer a full range of workforce solutions and Service Delivery Models to equip you with the people, skills, and competencies required to get IT done.
         </p>
-        <ul>
-          <li><strong>Contract Staffing:</strong> High caliber teams or individual IT professionals for temporary support</li>
-          <li><strong>Permanent Placements:</strong> Contract-to-hire and direct hires for longer-term needs</li>
-          <li><strong>Flexible Resource Management:</strong> Teams that can seamlessly ramp up or down while maintaining consistent service delivery and predictable costs</li>
-          <li><strong>Managed IT Services:</strong> Managed teams to define and mature IT workflows, centrally manage institutional knowledge, optimize resource utilization, and deliver measurable outcomes</li>
-          <li><strong>Training and Education:</strong> Custom training development, IT and business education, and managed training solutions to maximize your team’s potential</li>
-          <li><strong>Project-Based Services:</strong> Management of discrete IT projects and programs</li>
-          <li><strong>Outsourced Services:</strong> Ownership and optimization of defined IT work functions</li>
+        <ul class="list-unstyled mt-4">
+            <li class="mb-3"><i class="fas fa-users fa-lg me-3 s"></i><strong>Contract Staffing:</strong> High-caliber teams or individual IT professionals for temporary support.</li>
+            <li class="mb-3"><i class="fas fa-user-tie fa-lg me-3 "></i><strong>Permanent Placements:</strong> Contract-to-hire and direct hires for longer-term needs.</li>
+            <li class="mb-3"><i class="fas fa-exchange-alt fa-lg me-3 "></i><strong>Flexible Resource Management:</strong> Teams that can seamlessly ramp up or down while maintaining consistent service delivery and predictable costs.</li>
+            <li class="mb-3"><i class="fas fa-cogs fa-lg me-3 "></i><strong>Managed IT Services:</strong> Managed teams to define and mature IT workflows, centrally manage institutional knowledge, optimize resource utilization, and deliver measurable outcomes.</li>
+            <li class="mb-3"><i class="fas fa-chalkboard-teacher fa-lg me-3 "></i><strong>Training and Education:</strong> Custom training development, IT and business education, and managed training solutions to maximize your team’s potential.</li>
+            <li class="mb-3"><i class="fas fa-project-diagram fa-lg me-3 "></i><strong>Project-Based Services:</strong> Management of discrete IT projects and programs.</li>
+            <li class="mb-3"><i class="fas fa-handshake fa-lg me-3 "></i><strong>Outsourced Services:</strong> Ownership and optimization of defined IT work functions.</li>
         </ul>
-            </div>
-      
-      <div id="content2s" class="content-tabs" data-aos="fade-up">
-         <section id="staffing-quality-process">
-              <h2>AGS Staffing Quality Process</h2>
-              <p>
-                  Quality talent is essential to ensuring your projects are successful. Through our five-step Staffing Quality Process, we consistently deliver quality technical professionals that meet your technical skill requirements and are a solid match with your IT culture.
-              </p>
-              <ol>
-                  <li>
-                      <strong>Providing Local Workforce Market Expertise:</strong> With high demand for IT talent, there is a lot of competition and many customers find it difficult to attract and retain the top technical professionals.
-                      <p><strong>How AGS Staffing Quality Process Can Help:</strong> We are experts in your local labor market. Our Account Managers and Recruiters know where the best IT talent can be found, what they earn, and when they’re available. We also understand their priorities and what it takes to attract and retain them.</p>
-                  </li>
-                  <li>
-                      <strong>Understanding Your Business:</strong> IT recruiters often look to fill positions quickly before understanding their customer’s business and culture.
-                      <p><strong>How AGS Staffing Quality Process Can Help:</strong> We take the time to understand your business, IT initiatives, and work environment. Knowing this information enables us to develop an Employee Value Proposition (EVP) that attracts the best IT talent in a highly-competitive IT market.</p>
-                  </li>
-                  <li>
-                      <strong>Searching for Your Ideal Candidate:</strong> Many staffing providers source candidate resumes from job boards, which often results in the submittal of unqualified candidates and lengthens the time to fill a position.
-                      <p><strong>How AGS Staffing Quality Process Can Help:</strong> We know that the best candidates are often not on the job boards. That’s why we leverage our referral network to recruit – a strategy that is more likely to result in a successful placement. With more than 95,000 technical professionals in our database, we have the reach to recruit the people who fit your cultural and technical environment.</p>
-                  </li>
-                  <li>
-                      <strong>Screening and Selecting Candidates to Match You With the Right Talent:</strong> Customers frequently waste their time reviewing resumes and interviewing candidates that are not thoroughly screened to ensure they are a quality fit.
-                      <p><strong>How AGS Staffing Quality Process Can Help:</strong> Our screening and selection stage is one of the most thorough in the industry. We screen every resume, host face-to-face interviews, conduct technical assessments, and perform detailed reference checks prior to presenting candidates to you.</p>
-                  </li>
-                  <li>
-                      <strong>Retaining Talent:</strong> Retaining good talent is critical to managing successful IT projects. This is no easy task considering the average IT professional receives three calls per day from recruiters trying to lure them to new opportunities.
-                      <p><strong>How AGS Staffing Quality Process Can Help:</strong> We have a formal process to consistently communicate with our customers and technical professionals throughout their engagements. This enables us to keep our technical professionals focused on customer projects rather than looking for their next assignment. To learn more about how we can help meet your IT Staffing Services needs, call +60163331640 to speak directly with an account manager in an AGS location near you. Do you have upcoming staffing needs? As your IT staffing partner, we want to understand your current and future IT initiatives. This insight, along with our industry and technical expertise, will enable us to help you proactively plan for your future IT needs. Contact us today to speak with an account manager who can help you achieve your future IT initiatives.</p>
-                  </li>
-              </ol>
-          </section>
-      
-          <section id="it-staffing-solutions">
-              <h2>AGS IT Staffing Solutions</h2>
-              <p>
-                  Businesses are challenged to stay ahead of the latest trends and competitive developments while building a responsive and agile IT capability to support growth. Great people are essential to achieving and sustaining great outcomes.
-                  We believe that the most important and variable component to your success involves the people working for you. In an increasingly competitive and ever-evolving market, your competitive advantage hinges on your ability to quickly assemble high-performance teams who can perform at the pace of change.
-                  Our IT staffing solutions help you secure and optimize the most strategic and variable component to success – your people. We begin our partnership by seeking to understand your business targets and the gaps between your current and future state. We then build a workforce staffing strategy to close those gaps with the right people, skills, and competencies, when and where you need them.
-              </p>
-              <h5>The Right People, Skills and Competencies – How We Do It</h5>
-              <ul>
-                  <li>
-                      <strong>Market Analytics:</strong> We know who the top technical professionals are, what they earn, where you can find them and when they’re available. We also understand their priorities and what it takes to recruit and retain them.
-                  </li>
-                  <li>
-                      <strong>Customer Knowledge:</strong> We take the time to understand your business and IT culture. Doing so enables us to consultatively assess your service requirements and collaboratively develop an Employee Value Proposition (EVP) to attract top talent.
-                  </li>
-                  <li>
-                      <strong>Sourcing Strategy:</strong> By leveraging our massive network of IT professionals and utilizing a referral-based sourcing strategy, we increase our selectivity, speed, and effectiveness in finding top talent to meet your specific needs.
-                  </li>
-                  <li>
-                      <strong>Screening & Selection:</strong> We personally present you with a fully-vetted shortlist of top professionals who match your requirements. All of our candidates are screened through a robust qualification process - and we can prove it.
-                  </li>
-                  <li>
-                      <strong>Relationship Management:</strong> Our commitment to ongoing contact drives consultant performance and retention through project completion. It also allows us to proactively plan for your upcoming workforce needs.
-                  </li>
-              </ul>
-          </section>
-      
-      </div>
-</div> 
+    </div>
+
+    <div id="content2s" class="content-tabs" data-aos="fade-up">
+        <h2 class="mb-4 d-flex align-items-center justify-content-center"><i class="fas fa-check-circle  me-3 "></i> AGS Staffing Quality Process</h2>
+        <p>
+            Quality talent is essential to ensuring your projects are successful. Through our five-step Staffing Quality Process, we consistently deliver quality technical professionals who meet your technical skill requirements and are a solid match with your IT culture.
+        </p>
+        <ol class="mt-4">
+            <li class="mb-3">
+                <i class="fas fa-map-marker-alt fa-lg me-3 "></i><strong>Providing Local Workforce Market Expertise:</strong> We understand where the best IT talent can be found, what they earn, and when they’re available.
+                <p><strong>How We Can Help:</strong> Our Account Managers and Recruiters know how to attract and retain the top technical professionals in a competitive market.</p>
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-building fa-lg me-3 "></i><strong>Understanding Your Business:</strong> We take the time to understand your business, IT initiatives, and work environment.
+                <p><strong>How We Can Help:</strong> This insight helps us develop an Employee Value Proposition (EVP) to attract the best IT talent.</p>
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-search fa-lg me-3 "></i><strong>Searching for Your Ideal Candidate:</strong> We leverage our referral network and database of 95,000+ technical professionals.
+                <p><strong>How We Can Help:</strong> We find candidates who fit your cultural and technical environment, not just resumes from job boards.</p>
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-user-check fa-lg me-3 "></i><strong>Screening and Selecting Candidates:</strong> We perform thorough screening processes, including resume checks, face-to-face interviews, technical assessments, and reference checks.
+                <p><strong>How We Can Help:</strong> Only qualified candidates are presented to you, saving your time and resources.</p>
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-users-cog fa-lg me-3 "></i><strong>Retaining Talent:</strong> Retaining good talent is critical to managing successful IT projects.
+                <p><strong>How We Can Help:</strong> We maintain communication with our technical professionals throughout their engagements to keep them focused on your projects. For more information, call +60163331640 to speak with an account manager.</p>
+            </li>
+        </ol>
+
+        <h2 class="mb-4 d-flex align-items-center justify-content-center"><i class="fas fa-laptop-code  me-3 "></i> AGS IT Staffing Solutions</h2>
+        <ul class="list-unstyled">
+            <li class="mb-3"><i class="fas fa-chart-pie fa-lg me-3 "></i><strong>Market Analytics:</strong> We know who the top technical professionals are, what they earn, and how to attract and retain them.</li>
+            <li class="mb-3"><i class="fas fa-user-circle fa-lg me-3 "></i><strong>Customer Knowledge:</strong> We understand your business and IT culture, helping us craft an EVP that attracts top talent.</li>
+            <li class="mb-3"><i class="fas fa-lightbulb fa-lg me-3 "></i><strong>Sourcing Strategy:</strong> Using our referral-based sourcing strategy, we find top talent faster and more effectively.</li>
+            <li class="mb-3"><i class="fas fa-tasks fa-lg me-3 "></i><strong>Screening & Selection:</strong> We present fully-vetted professionals who match your requirements.</li>
+            <li class="mb-3"><i class="fas fa-comments fa-lg me-3 "></i><strong>Relationship Management:</strong> Ongoing communication ensures consultant performance and retention through project completion.</li>
+        </ul>
+    </div>
+</div>
+
+
                 <!-- <div id="content10" class="content-tab" data-aos="fade-up">
                     <h2>e-Publishing</h2>
                     <p>This is the content for e-Publishing.</p>
