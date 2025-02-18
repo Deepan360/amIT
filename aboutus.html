@@ -25,43 +25,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        <style>
-            /* Custom color for amit text */
-
- .approach-item i {
-            font-size: 4rem; /* Increased icon size */
-            color: #FF5733; /* Icon color */
-            margin-bottom: 20px;
-        }
-        .approach-item {
-            background-color: #eaeaea; /* Dark background */
-            border-radius: 10px;
-            padding: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-   min-height: 60px;
-        }
-
-        /* Hover Effect for Each Item */
-        .approach-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .approach-item h5 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .approach-item p {
-            font-size: 1rem;
-            color: rgb(0, 0, 0);
-            line-height: 1.6;
-        }
-
+      <style>
             .hero-section {
     position: relative;
-    color: #000000;
+    color: #fff;
     text-align: center;
 }
 
@@ -114,11 +81,11 @@
         color: #666;
     }
 
-    .card-img-top {
+    .card-img-center object-fit-contain {
         transition: transform 0.3s ease;
     }
 
-    .card-img-top:hover {
+    .card-img-center object-fit-contain:hover {
         transform: translate3d(30);
     }
 
@@ -146,7 +113,7 @@
   position: relative;
 }
 .header-one .header-content-area {
-  background-color: #ddd;
+  background-color: var(--amit);
   position: relative;
   padding: 130px 0;
 }
@@ -154,12 +121,12 @@
 .header-one .header-content-area .primary-btn-outline {
   border-color: var(--white);
   background-color: var(--white);
-  color: var(--amit-green);
+  color: var(--amit);
 }
 .header-one .header-content-area .primary-btn-outline:hover {
   background-color: transparent;
   border-color: var(--white);
-  color: black;
+  color: var(--white);
 }
 .header-one .header-wrapper {
   position: relative;
@@ -170,11 +137,11 @@
   z-index: 5;
 }
 .header-one .header-title {
-  color: black;
+  color: var(--white);
   font-weight: 800;
 }
 .header-one .text-lg {
-  color: black;
+  color: var(--white);
   font-weight: 300;
   margin-top: 16px;
 }
@@ -206,14 +173,14 @@
   width: 100%;
 }
 .client{
-    color: var(--amit-green);
+    color: var(--amit);
 }
  .header-title {
-    color: var(--amit-green);
+    color: var(--amit);
 }
 
 .text-lg {
-    color: var(--amit-green);
+    color: var(--amit);
 }
 
 .job-listing {
@@ -246,7 +213,7 @@
 }
 
 .cta-section {
-    background-color: var(--amit-green);
+    background-color: var(--amit);
     color: white;
     padding: 40px 0;
 }
@@ -256,14 +223,14 @@
 }
 .cta-section .btn-primary-car-outline{
     background-color: white !important;
-        border-color: var(--amit-green) !important;
+        border-color: var(--amit) !important;
         ;
-        color: var(--amit-green) !important;
+        color: var(--amit) !important;
 }
 .btn-primary-car-outline {
     background-color: white !important;
-    border-color: var(--amit-green) !important;
-    color: var(--amit-green) !important;
+    border-color: var(--amit) !important;
+    color: var(--amit) !important;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 30px;
@@ -275,7 +242,7 @@
 }
 
 .btn-primary-car-outline:hover {
-    background-color: var(--amit-green) !important;
+    background-color: var(--amit) !important;
     color: white !important;
     border-color: #fff !important;
     border: 1px solid;
@@ -318,6 +285,7 @@
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1000;
+    
 }
 
 .nav-item:hover .dropdown-menu {
@@ -325,7 +293,50 @@
     visibility: visible;
     transform: translateY(0);
 }
+.card {
+        position: relative;
+        overflow: hidden;
+    }
 
+    .cards img {
+        transition: transform 0.3s ease;
+    }
+
+    .cards:hover img {
+        transform: scale(1.1); /* Zoom effect */
+       
+    }
+
+    .card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay h4 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+    }
     </style>
 </head>
 <body >
@@ -399,128 +410,101 @@
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <main>
     <button id="scrollTopBtn" title="Go to Top">↑</button>
-    <section class="it-hero-section header-area header-one h-100">
-        <div class="header-content-area">
-            <div class="container">
-                <div class="row align-items-start justify-content-center d-flex h-100">
-                    <!-- <div class="col-lg-6 col-12">
-                        <div class="header-wrapper">
-                            <div class="header-content">
-                                <h1 class="header-title">
-                                    About Us
-                                </h1>
-                                <p class="text-lg">
-                                    We are a passionate team dedicated to driving innovation, excellence, and sustainability in every project. Our mission is to provide exceptional solutions that create a lasting impact. Learn more about our journey, values, and what sets us apart in the industry.
-                                </p>
-                                <div class="header-btn rounded-buttons">
-                                    <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
-                                        LEARN MORE
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                   
-                    <div class="col-lg-12 col-12 justify-content-center d-flex      ">
-                        
-                        <div class="header-image d-none d-lg-block" >
-                            <div class="img-fluid-container ">
-                                <img style="width: 100% !important;height: auto !important;"
-                                    src="./assets/images/amIT.png"
-                                    alt="About Us"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- row -->
-    
-                <!-- New content section -->
-                <div class="container">
-                    <!-- Who We Are Section -->
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <h3 class=" text-amit">Who We Are</h3>
-                            <p class="lead white-text">
+    <section class="it-hero-section header-area header-one h-100  mt-5">
+       <div class="header-content-area amit">
+         <div class="container">
+        <div class="row align-items-start justify-content-start  ">
+            <!-- Left side content (Text) -->
+            <div class="col-lg-6 ">
+                     <div class="header-content">
+                            <h1 class="header-title text-white">Who We Are</h1>
+                            <p class="text-lg  text-white">
                                 We are a dedicated team of technology experts, consultants, and creative professionals who focus on empowering organizations to succeed in an increasingly digital world. We do IT Solution implementation, IT Consulting and IT Services for our esteemed clients from Application Dev & Support to cloud integration, Testing and Data Management. We provide tailored services that drive measurable results and sustainable growth.
                             </p>
                         </div>
-                    </div>
-                
-                    <!-- Our Approach Section -->
-                    <div class="row text-center ">
-                        <div class="col-12 mb-4">
-                            <h3 class="text-amit">Our Approach</h3>
-                            <p class="lead white-text">Our approach is simple: we listen, innovate, implement, and support.</p>
-                        </div>
-                        
-                        <!-- Approach Items -->
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="approach-item">
-                                <i class="bi bi-chat-dots bi-2x"></i> <!-- Changed Icon -->
-                                <h5 class="text-amit">Consultation</h5>
-                                <p class="white-text">We take time to understand your unique business needs, challenges, and objectives to provide effective solutions.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="approach-item">
-                                <i class="bi bi-lightning-charge bi-2x"></i> <!-- Changed Icon -->
-                                <h5 class="text-amit">Innovation</h5>
-                                <p class="white-text">We craft cutting-edge digital strategies, leveraging the latest technologies to help you stay ahead of the curve.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="approach-item">
-                                <i class="bi bi-tools bi-2x"></i> <!-- Changed Icon -->
-                                <h5 class="text-amit">Implementation</h5>
-                                <p class="white-text">We ensure seamless integration, cloud migration, and automation to maximize your operational efficiency.</p>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="approach-item">
-                                <i class="bi bi-headset bi-2x"></i> <!-- Changed Icon -->
-                                <h5 class="text-amit">Support</h5>
-                                <p class="white-text">We offer continuous optimization, robust cybersecurity, and technical assistance to help you thrive in the digital landscape.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-    
-                <!-- <div class="row mt-5">
-                    <div class="col-12">
-                        <div class="additional-content">
-                            <h2 class="section-title">Key Achievements</h2>
-                            <ul class="text-lg">
-                                <li><strong>Innovative Solutions:</strong> Successfully implemented over 100 innovative solutions for clients globally.</li>
-                                <li><strong>Industry Recognition:</strong> Awarded [Award Name] for excellence in [industry/field] in [Year].</li>
-                                <li><strong>Global Reach:</strong> Expanded our services to [#] countries, providing expertise and support worldwide.</li>
-                                <li><strong>Community Impact:</strong> Contributed [Amount] to charity programs and community-building initiatives.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-    
-                <!-- <div class="row mt-5">
-                    <div class="col-12">
-                        <div class="additional-content">
-                            <h2 class="section-title">Our Approach</h2>
-                            <p class="text-lg">
-                                We believe in a customer-first approach, ensuring that each project is tailored to meet the unique needs of our clients. By collaborating with our partners and focusing on sustainable practices, we aim to drive innovation and deliver measurable results.
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- New content section ends -->
-    
+                       <div class="header-btn rounded-3-buttons align-items-end">
+                                <a class="btn primary-btn-outline btn-lg" href="#javascript:void(0)">
+                            LEARN MORE
+                         </a>
+                      </div>
             </div>
-            <!-- container -->
+            <!-- Right side content (Image) -->
+            <div class="col-lg-6 bg-cool-white">
+                <div class="header-image">
+                    <img 
+                        src="./assets/images/amIT.png" 
+                        alt="About Us Image"
+                        class="img-fluid rounded "
+                        style="max-width: 100%; height: auto;"
+                    />
+                </div>
+            </div>
         </div>
-        <!-- header content area -->
+    </div></div>
     </section>
+ <section class="bg-cool-white py-5">
+    <div class="container">
+        <!-- Our Approach Section -->
+        <div class="row text-center mb-5">
+            <div class="col-12 mb-4">
+                <h3 class="text-amit  ">Our Approach</h3>
+                <p class="lead text-muted">Our approach is simple: we listen, innovate, implement, and support.</p>
+            </div>
+
+            <!-- Approach Items -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="approach-item p-4 bg-white shadow-lg rounded text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="bi bi-chat-dots bi-3x fa-2x mb-3"></i> <!-- Changed Icon size -->
+                    <h5 class="text-amit font-weight-semibold">Consultation</h5>
+                    <p class="text-muted">We take time to understand your unique business needs, challenges, and objectives to provide effective solutions.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="approach-item p-4 bg-white shadow-lg rounded text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="bi bi-lightning-charge bi-3x fa-2x mb-3"></i> <!-- Changed Icon size -->
+                    <h5 class="text-amit font-weight-semibold">Innovation</h5>
+                    <p class="text-muted">We craft cutting-edge digital strategies, leveraging the latest technologies to help you stay ahead of the curve.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="approach-item p-4 bg-white shadow-lg rounded text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="bi bi-tools bi-3x fa-2x mb-3"></i> <!-- Changed Icon size -->
+                    <h5 class="text-amit font-weight-semibold">Implementation</h5>
+                    <p class="text-muted">We ensure seamless integration, cloud migration, and automation to maximize your operational efficiency.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="approach-item p-4 bg-white shadow-lg rounded text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="bi bi-headset bi-3x fa-2x mb-3"></i> <!-- Changed Icon size -->
+                    <h5 class="text-amit font-weight-semibold">Support</h5>
+                    <p class="text-muted">We offer continuous optimization, robust cybersecurity, and technical assistance to help you thrive in the digital landscape.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional additional content section -->
+        <!-- <div class="row mt-5">
+            <div class="col-12">
+                <div class="additional-content text-center">
+                    <h2 class="section-title font-weight-bold text-amit mb-3">Key Achievements</h2>
+                    <ul class="text-lg text-muted">
+                        <li><strong>Innovative Solutions:</strong> Successfully implemented over 100 innovative solutions for clients globally.</li>
+                        <li><strong>Industry Recognition:</strong> Awarded [Award Name] for excellence in [industry/field] in [Year].</li>
+                        <li><strong>Global Reach:</strong> Expanded our services to [#] countries, providing expertise and support worldwide.</li>
+                        <li><strong>Community Impact:</strong> Contributed [Amount] to charity programs and community-building initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</section>
+
+
+
     
     
         
