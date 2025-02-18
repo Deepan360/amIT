@@ -275,9 +275,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Include this in all pages
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("header.html")
-    .then(response => response.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+  // fetch("header.html")
+  //   .then(response => response.text())
+  //   .then(data => document.getElementById("header").innerHTML = data);
 
   fetch("footer.html")
     .then(response => response.text())
@@ -338,4 +338,13 @@ document.addEventListener("DOMContentLoaded", function () {
       showSection("content1"); // Change "content1" to your default tab
   }
 });
-
+ document
+   .querySelector(".navbar-toggler")
+   .addEventListener("click", function () {
+     const navbarCollapse = document.querySelector("#collapsibleNavId");
+     if (navbarCollapse.classList.contains("show")) {
+       bootstrap.Collapse.getInstance(navbarCollapse).hide();
+     } else {
+       bootstrap.Collapse.getOrCreateInstance(navbarCollapse).show();
+     }
+   });
