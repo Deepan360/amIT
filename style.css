@@ -67,7 +67,7 @@ color: #333;
     font-family: 'Lato', sans-serif !important;
 }
 li{
-font-family: "Faustina", serif;
+font-family: "Open Sans", serif;
     font-weight: 400 !important;
 }
 
@@ -79,6 +79,13 @@ li span{
     font-family: "Lato" !important;
     color:  #000 !important;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 h1,
 h2,
 h3,
@@ -98,12 +105,12 @@ footer {
     text-decoration: none !important;
 }
 p{
-    font-family: "Faustina", serif;
-  font-weight: 300;
+    font-family: "Open Sans", serif !important;
+  font-weight: 300 !important;
   padding: 0px !important;
 }
 li a{
-    font-family: "Faustina", serif;
+font-family: "Open Sans", serif !important;
     text-decoration: none !important;
 }
 
