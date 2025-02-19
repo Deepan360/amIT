@@ -2536,7 +2536,7 @@ body {
   color: var(--dark-3);
 }
 .header-one .header-content-area .primary-btn-outline {
-  padding: 10px 20px;
+  padding: 10px ;
   border-radius: 30px;
   font-size: 20px !important;
   line-height: normal !important;
@@ -2931,4 +2931,30 @@ h6 .card-title{
       font-family: "lato" !important;
       font-size: 14px !important;
   }
-  
+.abstract-shape {
+    width: 140%;
+    height: 140%;
+    background-color: #ff0055;
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 50%;
+    transform: rotate(-15deg);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.dots-pattern {
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(circle, #000 2px, transparent 2px);
+    background-size: 10px 10px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.image-frame {
+    border-radius: 30% 70% 70% 30% / 50% 30% 70% 50% !important;
+}
+  .header-one .header-content-area {
+     
+      position: relative;
+      padding: 50px 0 !important;
+  }
